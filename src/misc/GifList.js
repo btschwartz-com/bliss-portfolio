@@ -7,9 +7,5 @@ export const GifList = [
         name: "Seymour",
         image: Seymour,
     },
-    {
-        name: "Rowdy",
-        image: Rowdy,
-    },
     
 ];
