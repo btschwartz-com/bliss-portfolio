@@ -14,7 +14,7 @@ const Home = () => {
             return (
             <div key={idx} className='gif'>
                 <p>{gif['name']}</p>
-                {/* <img src={gif['image']} alt="example gif" /> */}
+                <img src={gif['image']} alt="example gif" />
             </div>
             );
         })}
