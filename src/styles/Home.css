@@ -1,0 +1,12 @@
+img .gif {
+    width: "25%";
+    height: "25%";
+    position: "relative";
+    left: "15%";
+    top: "50px";
+}
+.gifContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
