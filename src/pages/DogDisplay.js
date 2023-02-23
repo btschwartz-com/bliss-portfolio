@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { DogList } from "../misc/DogList";
-import GitHubIcon from "@material-ui/icons/GitHub";
 import '../styles/DogDisplay.css'
 
 function DogDisplay() {
@@ -14,7 +13,6 @@ function DogDisplay() {
         <p>
         <b>Skills:</b> {dog.skills}
         </p>
-        <GitHubIcon />
     </div>
     );
 }
