@@ -1,5 +1,5 @@
 
-// import Rowdy from "../assets/gifs/rowdy.gif";
+import Rowdy from "../assets/gifs/rowdy.gif";
 import Seymour from "../assets/gifs/seymour.gif";
 
 export const GifList = [
@@ -7,5 +7,9 @@ export const GifList = [
         name: "Seymour",
         image: Seymour,
     },
+    {
+        name: "Rowdy",
+        image: Rowdy,
+    }
     
 ];
