@@ -1,8 +1,8 @@
 import React from "react";
 
-import "../styles/Home.css";
+import "../../pages/home/Home.css";
 
-import { GifList } from "../misc/GifList";
+import { GifList } from "../../misc/GifList";
 
 // do the same but map each gif to a div
 const Home = () => {

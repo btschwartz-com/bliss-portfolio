@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { DogList } from "../misc/DogList";
-import '../styles/DogDisplay.css'
+import { DogList } from "../../misc/DogList";
+import './DogDisplay.css'
 
 function DogDisplay() {
     const { id } = useParams();
