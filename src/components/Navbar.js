@@ -23,7 +23,7 @@ const Navbar = () => {
         </div>
         <div className="links">
         <Link to="/"> Home </Link>
-        <Link to="/dogs"> Dogs </Link>
+        {/* <Link to="/dogs"> Dogs </Link> */}
         </div>
     </div>
     );
