@@ -1,8 +1,8 @@
 import React from "react";
-import Dog from "../../components/Dog";
-import { DogList } from "../../misc/DogList";
+import Dog from "../Dog";
+import { DogList } from "../../src/misc/DogList";
 
-import "../../pages/dogs/Dogs.css";
+import "./Dogs.css";
 
 
 
