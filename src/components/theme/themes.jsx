@@ -1,4 +1,5 @@
 export const lightTheme = {
+  text_color: 'black',
   background: '#fff',
   color: '#121212',
   accentColor: '#3D84C6',
@@ -22,6 +23,7 @@ export const lightTheme = {
 };
 
 export const darkTheme = {
+  text_color: 'white',
   background: '#121212',
   color: '#eee',
   accentColor: '#3D84C6',

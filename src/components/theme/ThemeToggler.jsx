@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import DarkModeToggle from 'react-dark-mode-toggle';
 import PropTypes from 'prop-types';
-import AppContext from '../AppContext';
+import AppContext from '../../app/AppContext';
 
 function ThemeToggler(props) {
   const { onClick } = props;
+
+  const [theme, settheme] = useState(localStorage.getItem("theme"));
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme ); 
+  }, [theme]);
   const handleOnChange = (darkMode) => {
+    settheme(theme === "dark" ? "light" : "dark");
     darkMode.toggle();
     onClick();
   };

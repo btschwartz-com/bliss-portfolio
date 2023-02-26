@@ -5,6 +5,13 @@ import Typewriter from "typewriter-effect";
 import { introdata, meta } from "../../content_option";
 import { Link } from "react-router-dom";
 
+// make a map with the button name and the route
+const buttonData = [
+  { name: "My Portfolio", route: "/portfolio", id: "button_p" },
+  { name: "Contact Me", route: "/contact", id: "button_h" },
+  { name: "Projects", route: "/projects", id: "button_h" },
+]
+
 export const Home = () => {
   return (
     <HelmetProvider>
@@ -39,22 +46,16 @@ export const Home = () => {
                 </h1>
                 <p className="mb-1x">{introdata.description}</p>
                 <div className="intro_btn-action pb-5">
-                  <Link to="/portfolio" className="text_2">
-                    <div id="button_p" className="ac_btn btn ">
-                      My Portfolio
-                      <div className="ring one"></div>
-                      <div className="ring two"></div>
-                      <div className="ring three"></div>
-                    </div>
-                  </Link>
-                  <Link to="/contact">
-                    <div id="button_h" className="ac_btn btn">
-                      Contact Me
-                      <div className="ring one"></div>
-                      <div className="ring two"></div>
-                      <div className="ring three"></div>
-                    </div>
-                  </Link>
+                  {buttonData.map((button) => (
+                    <Link to={button.route} key={button.name} className="text_2">
+                      <div id={button.id} className="ac_btn btn ">
+                        {button.name}
+                        <div className="ring one"></div>
+                        <div className="ring two"></div>
+                        <div className="ring three"></div>
+                      </div>
+                    </Link>
+                  ))}
                 </div>
               </div>
             </div>
