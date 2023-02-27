@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { ThemeContext } from 'styled-components';
 import "./style.css";
 import {
@@ -9,8 +9,7 @@ import {
   FaYoutube,
   FaTwitch,
 } from "react-icons/fa";
-import { socialprofils } from "../../content_option";
-
+import endpoints from "../../app/endpoints";
 // make a map of the social icons
 const socialIcons = {
   twitter: FaTwitter,
@@ -19,12 +18,25 @@ const socialIcons = {
   linkedin: FaLinkedin,
   youtube: FaYoutube,
   twitch: FaTwitch,
+  email: FaTwitch
 };
 
 
 
 export const Socialicons = () => {
   const { text_color } = useContext(ThemeContext);
+
+
+  const [data, setData] = useState(null);
+
+    useEffect(() => {
+        fetch(endpoints.social, {
+            method: 'GET',
+        })
+            .then((res) => res.json())
+            .then((res) => setData(res.social))
+            .catch((err) => err);
+    }, []);
 
   useEffect(() => {
     const elements = document.querySelectorAll(".stick_follow_icon p, .stick_follow_icon svg");
@@ -35,19 +47,24 @@ export const Socialicons = () => {
 
   return (
     <div className="stick_follow_icon" >
-      <ul>
-        {Object.entries(socialprofils).map(([key, value]) => {
-          const Icon = socialIcons[key];
-            return (
-              <li key={key}>
-                <a href={value}>
-                  <Icon />
-                </a>
-              </li>
-            );
-        })}
-      </ul>
+      {data ? (
+        <ul>
+          {data.map((item, index) => {
+            const Icon = socialIcons[item.name];
+              return (
+                <li key={index}>
+                  <a href={item.href}>
+                    <Icon />
+                  </a>
+                </li>
+              );
+          })}
+        </ul>
+      ) : null}
+      
       <p>Follow Me</p>
     </div>
   );
 };
+
+

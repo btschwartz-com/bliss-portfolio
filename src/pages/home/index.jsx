@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
-import { introdata, meta } from "../../content_option";
 import { Link } from "react-router-dom";
+import endpoints from "../../app/endpoints";
 
 // make a map with the button name and the route
 const buttonData = [
@@ -13,43 +13,54 @@ const buttonData = [
 ]
 
 export const Home = () => {
+
+    const [data, setData] = useState(null);
+
+    useEffect(() => {
+        fetch(endpoints.home, {
+            method: 'GET',
+        })
+            .then((res) => res.json())
+            .then((res) => setData(res))
+            .catch((err) => err);
+    }, []);
+
+
   return (
     <HelmetProvider>
       <section id="home" className="home">
-        <Helmet>
+        {data ? (
+          <div>
+            <Helmet>
           <meta charSet="utf-8" />
-          <title> {meta.title}</title>
-          <meta name="description" content={meta.description} />
+          <title> {data.title}</title>
+          <meta name="description" content={data.description} />
         </Helmet>
         <div className="intro_sec d-block d-lg-flex align-items-center ">
           <div
             className="h_bg-image order-1 order-lg-2 h-100 "
-            style={{ backgroundImage: `url(${introdata.your_img_url})` }}
+            style={{ backgroundImage: `url(${data.img_url})` }}
           ></div>
           <div className="text order-2 order-lg-1 h-100 d-lg-flex justify-content-center">
             <div className="align-self-center ">
               <div className="intro mx-auto">
-                <h2 className="mb-1x">{introdata.title}</h2>
+                <h2 className="mb-1x">{data.greetings}</h2>
                 <h1 className="fluidz-48 mb-1x">
                   <Typewriter
                     options={{
-                      strings: [
-                        introdata.animated.first,
-                        introdata.animated.second,
-                        introdata.animated.third,
-                      ],
+                      strings: data.animated_text,
                       autoStart: true,
                       loop: true,
                       deleteSpeed: 10,
                     }}
                   />
                 </h1>
-                <p className="mb-1x">{introdata.description}</p>
-                <div className="intro_btn-action pb-5">
-                  {buttonData.map((button) => (
-                    <Link to={button.route} key={button.name} className="text_2">
-                      <div id={button.id} className="ac_btn btn ">
-                        {button.name}
+                <p className="mb-1x">{data.about}</p>
+                <div >
+                  {data.buttons.map((item) => (
+                    <Link to={item.route} key={item.name} className="text_2">
+                      <div id={item.id} className="ac_btn btn ">
+                        {item.name}
                         <div className="ring one"></div>
                         <div className="ring two"></div>
                         <div className="ring three"></div>
@@ -61,6 +72,9 @@ export const Home = () => {
             </div>
           </div>
         </div>
+          </div>
+        ): null}
+        
       </section>
     </HelmetProvider>
   );
