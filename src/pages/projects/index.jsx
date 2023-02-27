@@ -10,7 +10,6 @@ import FallbackSpinner from '../../components/fallbackspinner';
 import React from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { meta } from "../../content_option";
 
 const styles = {
     containerStyle: {
@@ -26,6 +25,7 @@ export const Projects = () => {
     const { bsSecondaryVariant } = useContext(ThemeContext);
 
     const [data, setData] = useState(null);
+    const [homeData, setHomeData] = useState(null);
     const [showMore, setShowMore] = useState(false);
 
     useEffect(() => {
@@ -36,16 +36,31 @@ export const Projects = () => {
             .then((res) => setData(res))
             .catch((err) => err);
     }, []);
+
+    useEffect(() => {
+        fetch(endpoints.home, {
+            method: 'GET',
+        })
+            .then((res) => res.json())
+            .then((res) => setHomeData(res))
+            .catch((err) => err);
+    }, []);
+
+
     const numberOfItems = showMore && data ? data.length : 6;
 
     return (
         <HelmetProvider>
         <Container className="About-header">
-            <Helmet>
-            <meta charSet="utf-8" />
-            <title> Projects | {meta.title} </title>{" "}
-            <meta name="description" content={meta.description} />
-            </Helmet>
+            {homeData ? 
+            (
+                <Helmet>
+                    <meta charSet="utf-8" />
+                    <title> Projects | {homeData.title} </title>{" "}
+                    <meta name="description" content={homeData.description} />
+                </Helmet>
+            ) : <FallbackSpinner />}
+            
             <Row className="mb-5 mt-3 pt-md-3">
             <Col lg="8">
                 <h1 className="display-4 mb-4"> Projects </h1>{" "}

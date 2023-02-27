@@ -14,8 +14,8 @@
 
     "buttons": [
         {
-            "name": "My Portfolio",
-            "route": "/portfolio",
+            "name": "Me",
+            "route": "/about",
             "id": "button_p"
         },
         {

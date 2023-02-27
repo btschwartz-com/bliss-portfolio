@@ -5,12 +5,7 @@ import Typewriter from "typewriter-effect";
 import { Link } from "react-router-dom";
 import endpoints from "../../app/endpoints";
 
-// make a map with the button name and the route
-const buttonData = [
-  { name: "My Portfolio", route: "/portfolio", id: "button_p" },
-  { name: "Contact Me", route: "/contact", id: "button_h" },
-  { name: "Projects", route: "/projects", id: "button_h" },
-]
+
 
 export const Home = () => {
 

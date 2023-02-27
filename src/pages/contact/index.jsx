@@ -1,12 +1,28 @@
-import React, { useState } from "react";
-import * as emailjs from "emailjs-com";
+import React, { useState, useEffect } from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
-import { meta } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
-import { contactConfig } from "../../content_option";
+import endpoints from "../../app/endpoints";
+import FallbackSpinner from "../../components/fallbackspinner";
+
+
 
 export const ContactUs = () => {
+
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+      fetch(endpoints.home, {
+          method: 'GET',
+      })
+          .then((res) => res.json())
+          .then((res) => setData(res))
+          .catch((err) => err);
+  }, []);
+
+
+
+
   const [formData, setFormdata] = useState({
     email: "",
     name: "",
@@ -20,41 +36,7 @@ export const ContactUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormdata({ loading: true });
-
-    const templateParams = {
-      from_name: formData.email,
-      user_name: formData.name,
-      to_name: contactConfig.YOUR_EMAIL,
-      message: formData.message,
-    };
-
-    emailjs
-      .send(
-        contactConfig.YOUR_SERVICE_ID,
-        contactConfig.YOUR_TEMPLATE_ID,
-        templateParams,
-        contactConfig.YOUR_USER_ID
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setFormdata({
-            loading: false,
-            alertmessage: "SUCCESS! ,Thankyou for your messege",
-            variant: "success",
-            show: true,
-          });
-        },
-        (error) => {
-          console.log(error.text);
-          setFormdata({
-            alertmessage: `Faild to send!,${error.text}`,
-            variant: "danger",
-            show: true,
-          });
-          document.getElementsByClassName("co_alert")[0].scrollIntoView();
-        }
-      );
+    alert("Your message has been sent. Thank you!");
   };
 
   const handleChange = (e) => {
@@ -66,11 +48,13 @@ export const ContactUs = () => {
 
   return (
     <HelmetProvider>
-      <Container>
+      {data ? 
+        <div>
+          <Container>
         <Helmet>
           <meta charSet="utf-8" />
-          <title>{meta.title} | Contact</title>
-          <meta name="description" content={meta.description} />
+          <title>{data.title} | Contact</title>
+          <meta name="description" content={data.description} />
         </Helmet>
         <Row className="mb-5 mt-3 pt-md-3">
           <Col lg="8">
@@ -96,20 +80,13 @@ export const ContactUs = () => {
             <h3 className="color_sec py-4">Get in touch</h3>
             <address>
               <strong>Email:</strong>{" "}
-              <a href={`mailto:${contactConfig.YOUR_EMAIL}`}>
-                {contactConfig.YOUR_EMAIL}
+              <a href={`mailto:piper@piper.com`}>
+                ben@bruh.com
               </a>
               <br />
               <br />
-              {contactConfig.hasOwnProperty("YOUR_FONE") ? (
-                <p>
-                  <strong>Phone:</strong> {contactConfig.YOUR_FONE}
-                </p>
-              ) : (
-                ""
-              )}
             </address>
-            <p>{contactConfig.description}</p>
+            <p>This is a description</p>
           </Col>
           <Col lg="7" className="d-flex align-items-center">
             <form onSubmit={handleSubmit} className="contact__form w-100">
@@ -161,6 +138,9 @@ export const ContactUs = () => {
           </Col>
         </Row>
       </Container>
+        </div> 
+      : <FallbackSpinner/>}
+      
       <div className={formData.loading ? "loading-bar" : "d-none"}></div>
     </HelmetProvider>
   );
