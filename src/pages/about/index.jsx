@@ -6,7 +6,6 @@ import Fade from 'react-reveal';
 import endpoints from '../../app/endpoints';
 import FallbackSpinner from '../../components/fallbackspinner';
 import { useMediaQuery } from 'usehooks-ts';
-import { Skills } from '../../components/Skills.jsx';
 
 const styles = {
   introTextContainer: {
@@ -21,7 +20,7 @@ const styles = {
     margin: 10,
     justifyContent: 'center',
     alignItems: 'center',
-    display: 'flex',
+    display: 'flex', 
   },
   introRow: {
     display: 'flex',
@@ -40,6 +39,70 @@ const styles = {
     fontWeight: 500,
   },
 };
+
+
+const skillStyles = {
+  iconStyle: {
+    height: 75,
+    width: 75,
+    margin: 10,
+    marginBottom: 0,
+  },
+  introTextContainer: {
+    whiteSpace: 'pre-wrap',
+  },
+};
+
+export const Skills = () => {
+  const [data, setData] = useState(null);
+
+  const renderSkillsIntro = (intro) => (
+    <h4 style={skillStyles.introTextContainer}>
+      <ReactMarkdown children={intro} />
+    </h4>
+  );
+
+  useEffect(() => {
+    fetch(endpoints.skills, {
+      method: 'GET',
+    })
+      .then((res) => res.json())
+      .then((res) => setData(res))
+      .catch((err) => err);
+  }, []);
+
+  return (
+    <>
+      {data ? (
+        <Fade>
+          <div className="section-content-container">
+            <Container>
+              {renderSkillsIntro(data.intro)}
+              {data.skills?.map((rows) => (
+                <div key={rows.title}>
+                  <br />
+                  <h3>{rows.title}</h3>
+                  {rows.items.map((item) => (
+                    <div key={item.title} style={{ display: 'inline-block' }}>
+                      <img
+                        style={skillStyles.iconStyle}
+                        src={item.icon}
+                        alt={item.title}
+                      />
+                      <p>{item.title}</p>
+                    </div>
+                  ))}
+                </div>
+              ))}
+            </Container>
+          </div>
+        </Fade>
+      ) : <FallbackSpinner /> }
+    </>
+  );
+}
+
+
 
 const Bio = ({ data, matches }) => {
   const parseIntro = (text) => (
