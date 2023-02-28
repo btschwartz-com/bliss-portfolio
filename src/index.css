@@ -20,7 +20,7 @@ body {
     overflow-y: visible;
     background-color: var(--bg-color);
     color: var(--text-color);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Arial', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     padding-top: 60px;
@@ -38,7 +38,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Roboto;
+    font-family: Arial;
 }
 
 a,
@@ -64,18 +64,7 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
-.cursor__dot div {
-    z-index: 999999 !important;
-}
 
-.cursor__dot div:last-child {
-    background-color: var(--text-color-3) !important;
-}
-
-.cursor__dot div:first-child {
-    filter: invert(1);
-    background-color: var(--overlay-color) !important;
-}
 
 .color_pr {
     color: var(--primary-color) !important;

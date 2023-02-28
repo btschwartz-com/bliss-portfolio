@@ -6,8 +6,7 @@ import {
 } from "react-router-dom";
 import withRouter from "../hooks/withRouter";
 import AppRoutes from "./routes";
-import Headermain from "../header";
-import AnimatedCursor  from "../hooks/AnimatedCursor";
+import NavBarWithRouter from "../components/NavBar";
 import GlobalStyles from './GlobalStyles';
 import "./App.css";
 
@@ -27,18 +26,8 @@ export default function App() {
       <>
         <GlobalStyles />
         <Router basename={process.env.PUBLIC_URL}>
-          <div className="cursor__dot">
-            <AnimatedCursor
-              innerSize={10}
-              outerSize={15}
-              color="100, 100, 0"
-              outerAlpha={0.4}
-              innerScale={0.7}
-              outerScale={3}
-            />
-          </div>
           <ScrollToTop>
-            <Headermain />
+            <NavBarWithRouter />
             <AppRoutes />
           </ScrollToTop>
         </Router>
