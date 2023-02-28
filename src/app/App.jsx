@@ -7,12 +7,8 @@ import {
 import withRouter from "../hooks/withRouter";
 import AppRoutes from "./routes";
 import Headermain from "../header";
-import AppContext from './AppContext';
-import { ThemeProvider } from 'styled-components';
-import useDarkMode from 'use-dark-mode';
 import AnimatedCursor  from "../hooks/AnimatedCursor";
-import { darkTheme } from '../components/theme/themes';
-import GlobalStyles from '../components/theme/GlobalStyles';
+import GlobalStyles from './GlobalStyles';
 import "./App.css";
 
 function _ScrollToTop(props) {
@@ -26,11 +22,9 @@ const ScrollToTop = withRouter(_ScrollToTop);
 
 export default function App() {
 
-  const darkMode = useDarkMode(true);
 
   return (
-    <AppContext.Provider value={{ darkMode }}>
-      <ThemeProvider theme={darkTheme}>
+      <>
         <GlobalStyles />
         <Router basename={process.env.PUBLIC_URL}>
           <div className="cursor__dot">
@@ -48,7 +42,7 @@ export default function App() {
             <AppRoutes />
           </ScrollToTop>
         </Router>
-      </ThemeProvider>
-    </AppContext.Provider>
+
+    </>
   );
 }
