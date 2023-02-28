@@ -1,0 +1,43 @@
+.my-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin-bottom: 24px;
+    padding: 24px;
+  }
+  
+  .my-card-media {
+    display: none;
+  }
+  
+  .my-card-subtitle {
+    color: #a9a9a9;
+    font-size: 16px;
+    margin-bottom: 8px;
+    margin-left: 5px;
+  }
+  
+  .my-card-text {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 16px;
+  }
+  
+  .my-card-title {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 8px;
+    margin-left: 0;
+  }
+  
+  .my-controls {
+    display: none;
+  }
+  
+  .my-title {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  

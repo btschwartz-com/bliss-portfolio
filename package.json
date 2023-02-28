@@ -5,9 +5,9 @@
   "dependencies": {
     "bootstrap": "^5.2.3",
     "emailjs-com": "^3.2.0",
-    "pretty-timeline": "^1.1.10",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
+    "react-chrono": "^1.22.0",
     "react-dark-mode-toggle": "^0.2.0",
     "react-dom": "^18.2.0",
     "react-helmet-async": "^1.0.7",

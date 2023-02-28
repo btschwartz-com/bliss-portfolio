@@ -1,104 +1,82 @@
-import React, { useEffect, useState, useContext } from 'react';
-import { Timeline, TimelineItem } from 'vertical-timeline-component-for-react';
-import { Container } from 'react-bootstrap';
-import ReactMarkdown from 'react-markdown';
-import { ThemeContext } from 'styled-components';
-import Fade from 'react-reveal';
-import endpoints from '../../app/endpoints';
-import FallbackSpinner from '../../components/fallbackspinner';
+import React, { useState, useEffect } from "react"
+import { Container, Row, Col } from "react-bootstrap";
+import { Chrono } from "react-chrono";
+import MovingComponent from 'react-moving-text';
+import FallbackSpinner from "../../components/fallbackspinner";
+import endpoints from "../../app/endpoints";
 
+import './style.css'
 
-const styles = {
-  ulStyle: {
-    listStylePosition: 'outside',
-    paddingLeft: 20,
-  },
-  subtitleContainerStyle: {
-    marginTop: 10,
-    marginBottom: 10,
-  },
-  subtitleStyle: {
-    display: 'inline-block',
-  },
-  inlineChild: {
-    display: 'inline-block',
-  },
-  itemStyle: {
-    marginBottom: 10,
-  },
-};
-export const Experience = (props) => {
-    const { lineColor, accentColor, color } = useContext(ThemeContext);
+// https://github.com/prabhuignoto/react-chrono#theme
+
+export const Experience = () => {
+
     const [data, setData] = useState(null);
 
     useEffect(() => {
         fetch(endpoints.experiences, {
-        method: 'GET',
-        })
-        .then((res) => res.json())
-        .then((res) => setData(res.experiences))
-        .catch((err) => err);
+            method: 'GET',
+        }).then((res) => res.json()).then((res) => setData(res))
+            .catch((err) => err);
     }, []);
+    
+
+    const word = "Experience".split('');
 
     return (
-        <>
-
-        {data
-            ? (
-            <div className="section-content-container">
-                <Container>
-                <Timeline
-                    lineColor={lineColor}
-                >
-                    {data.map((item) => (
-                    <Fade>
-                        <TimelineItem
-                        key={item.title + item.dateText}
-                        dateText={item.dateText}
-                        dateInnerStyle={{ background: accentColor }}
-                        style={styles.itemStyle}
-                        bodyContainerStyle={{ color }}
-                        >
-                        <h2 className="item-title">
-                            {item.title}
-                        </h2>
-                        <div style={styles.subtitleContainerStyle}>
-                            <h4 style={{ ...styles.subtitleStyle, color: accentColor }}>
-                            {item.subtitle}
-                            </h4>
-                            {item.workType && (
-                            <h5 style={styles.inlineChild}>
-                        &nbsp;·
-                            {' '}
-                            {item.workType}
-                            </h5>
-                            )}
-                        </div>
-                        <ul style={styles.ulStyle}>
-                            {item.workDescription.map((point) => (
-                            <div key={point}>
-                                <li>
-                                <ReactMarkdown
-                                    children={point}
-                                    components={{
-                                    p: 'span',
-                                    }}
-                                />
-                                </li>
-                                <br />
-                            </div>
-                            ))}
-                        </ul>
-                        </TimelineItem>
-                    </Fade>
-                    ))}
-                </Timeline>
-                </Container>
-            </div>
-            ) : <FallbackSpinner /> }
-        </>
-    );
-}
-
-
-
+        <Container>
+            <Row>
+                <Col>
+                <div style={{textAlign: 'center'}} >
+                {word.map((letter, index) =>
+                    letter === ' ' ? '\u00A0\u00A0\u00A0' :
+                    <MovingComponent
+                        key={index}
+                        type="pulse"
+                        duration="1600ms"
+                        delay={`${index * 100}ms`}
+                        direction="normal"
+                        timing="ease"
+                        iteration="infinite"
+                        fillMode="none"
+                        style={{
+                            display: 'inline-block',
+                            fontSize: '3em',
+                            fontFamily: 'Arial, sans-serif',
+                            color: '1, 255, 230'
+                        }}>
+                        {letter}
+                    </MovingComponent>
+                )}
+                </div>
+                </Col>
+              </Row>
+              <hr className="t_border my-4 ml-0 text-left" />
+            {data ? (
+                <Row>
+                <Chrono 
+                    items={data.experiences} 
+                    // mode="VERTICAL" 
+                    theme={{
+                        primary: '#01FFE6',
+                        secondary: 'grey',
+                        cardBgColor: '#000080',
+                        cardForeColor: 'white',
+                        titleColor: 'black',
+                        titleColorActive: 'white',
+                    }}
+                    classNames={{
+                        card: 'my-card',
+                        cardMedia: 'my-card-media',
+                        cardSubTitle: 'my-card-subtitle',
+                        cardText: 'my-card-text',
+                        cardTitle: 'my-card-title',
+                        controls: 'my-controls',
+                        title: 'my-title',
+                    }}
+                />
+            </Row>
+            ) : <FallbackSpinner />}
+        </Container>
+    )
+};
