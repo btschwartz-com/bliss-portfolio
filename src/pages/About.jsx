@@ -18,6 +18,8 @@ const styles = {
 
   sectionContentContainer: {
     marginTop: '64px',
+    maxWidth: '1000px',
+    margin: '0 auto',
   },
 };
 
@@ -81,13 +83,19 @@ export const About = () => {
                 </Col>
               </Row>
               <hr className="t_border my-4 ml-0 text-left" />
-              {bioData ? (
-                <Bio data={bioData} matches={matches} />
-              ) : <FallbackSpinner />}
+              <Row className="justify-content-center">
+                {bioData ? (
+                  <Bio data={bioData} matches={matches}/>
+                ) : <FallbackSpinner />}
+              </Row>
               <hr style={styles.separator} />
+              <Row>
               {skillData && interestData ? (
                 <AboutIcons skills={skillData} interests={interestData}/>
               ) : <FallbackSpinner />}
+              </Row>
+              
+              
               
             </Container>
           </Fade>

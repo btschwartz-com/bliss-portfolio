@@ -57,7 +57,7 @@ export const Experience = () => {
                 <Row>
                 <Chrono 
                     items={data.experiences} 
-                    // mode="VERTICAL" 
+                    mode="VERTICAL" 
                     theme={{
                         primary: '#01FFE6',
                         secondary: 'grey',
