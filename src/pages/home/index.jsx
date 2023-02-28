@@ -7,6 +7,8 @@ import endpoints from "../../app/endpoints";
 
 
 
+
+
 export const Home = () => {
 
     const [data, setData] = useState(null);
@@ -62,6 +64,7 @@ export const Home = () => {
                       </div>
                     </Link>
                   ))}
+                  
                 </div>
               </div>
             </div>

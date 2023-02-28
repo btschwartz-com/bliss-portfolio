@@ -1,185 +1,96 @@
-
 import React, { useState, useEffect } from 'react';
-import ReactMarkdown from 'react-markdown';
-import { Container, Col, Row } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import Fade from 'react-reveal';
 import endpoints from '../../app/endpoints';
-import FallbackSpinner from '../../components/fallbackspinner';
 import { useMediaQuery } from 'usehooks-ts';
+import { Bio } from './Bio';
+import { AboutIcons } from './AboutIcons';
+import FallbackSpinner from '../../components/fallbackspinner';
+import MovingComponent from 'react-moving-text';
+
+
 
 const styles = {
-  introTextContainer: {
-    margin: 10,
-    flexDirection: 'column',
-    whiteSpace: 'pre-wrap',
-    textAlign: 'left',
-    fontSize: '1.2em',
-    fontWeight: 500,
+  separator: {
+    borderTop: '1px solid #d3d3d3',
+    margin: '32px 0',
   },
-  introImageContainer: {
-    margin: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
-    display: 'flex', 
+
+  sectionContentContainer: {
+    marginTop: '64px',
   },
-  introRow: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  introCol: {
-    margin: 10,
-    textAlign: 'center',
-  },
-  skillsListContainer: {
-    margin: 10,
-    textAlign: 'left',
-    fontSize: '1.2em',
-    fontWeight: 500,
-  },
-};
-
-
-const skillStyles = {
-  iconStyle: {
-    height: 75,
-    width: 75,
-    margin: 10,
-    marginBottom: 0,
-  },
-  introTextContainer: {
-    whiteSpace: 'pre-wrap',
-  },
-};
-
-export const Skills = () => {
-  const [data, setData] = useState(null);
-
-  const renderSkillsIntro = (intro) => (
-    <h4 style={skillStyles.introTextContainer}>
-      <ReactMarkdown children={intro} />
-    </h4>
-  );
-
-  useEffect(() => {
-    fetch(endpoints.skills, {
-      method: 'GET',
-    })
-      .then((res) => res.json())
-      .then((res) => setData(res))
-      .catch((err) => err);
-  }, []);
-
-  return (
-    <>
-      {data ? (
-        <Fade>
-          <div className="section-content-container">
-            <Container>
-              {renderSkillsIntro(data.intro)}
-              {data.skills?.map((rows) => (
-                <div key={rows.title}>
-                  <br />
-                  <h3>{rows.title}</h3>
-                  {rows.items.map((item) => (
-                    <div key={item.title} style={{ display: 'inline-block' }}>
-                      <img
-                        style={skillStyles.iconStyle}
-                        src={item.icon}
-                        alt={item.title}
-                      />
-                      <p>{item.title}</p>
-                    </div>
-                  ))}
-                </div>
-              ))}
-            </Container>
-          </div>
-        </Fade>
-      ) : <FallbackSpinner /> }
-    </>
-  );
-}
-
-
-
-const Bio = ({ data, matches }) => {
-  const parseIntro = (text) => (
-    <ReactMarkdown
-      children={text}
-    />
-  );
-
-  return (
-    <>
-      <Fade>
-        <Row style={matches ? null : styles.introRow}>
-          {matches
-            ? (
-              <>
-                <Col style={styles.introTextContainer}>
-                  {parseIntro(data.about)}
-                </Col>
-                <Col style={styles.introImageContainer}>
-                  <img src={data?.imageSource} alt="profile" />
-                </Col>
-              </>
-            )
-            : (
-              <>
-                <Col style={styles.introCol}>
-                  <img src={data?.imageSource} alt="profile" />
-                </Col>
-                <Col style={styles.introCol}>
-                  {parseIntro(data.about)}
-                </Col>
-              </>
-            )}
-        </Row>
-      </Fade>
-    </>
-  );
 };
 
 export const About = () => {
-  const [data, setData] = useState(null);
+  const [bioData, setBioData] = useState(null);
+  const [skillData, setSkillData] = useState(null);
+  const [interestData, setInterestData] = useState(null);
   const matches = useMediaQuery('(min-width: 1000px)');
-
-  const skills = [
-    'React',
-    'JavaScript',
-    'HTML',
-    'CSS',
-    'Node.js',
-    'Express',
-    'MongoDB',
-    'Git',
-  ];
 
   useEffect(() => {
     fetch(endpoints.about, {
       method: 'GET',
-    })
-      .then((res) => res.json())
-      .then((res) => setData(res))
+    }).then((res) => res.json()).then((res) => setBioData(res))
       .catch((err) => err);
   }, []);
 
+  useEffect(() => {
+      fetch(endpoints.skills, {method: 'GET',})
+      .then((res) => res.json()).then((res) => setSkillData(res))
+      .catch((err) => err);
+  }, []);
+
+  useEffect(() => {
+      fetch(endpoints.interests, { method: 'GET', })
+        .then((res) => res.json()).then((res) => setInterestData(res))
+        .catch((err) => err);
+  }, []);
+
+  const word  = "Ben Schwartz".split('');
+  // add a space after the third character
+  // https://yidaoj.github.io/react-moving-text/
+
   return (
-    <>
-      <div className="section-content-container">
-        <Container>
-          {data
-            ? (
-              <>
-                <Bio data={data} matches={matches} />
-                <Skills skills={skills} />
-              </>
-            )
-            : <FallbackSpinner />}
-        </Container>
-      </div>
-    </>
+    <div style={styles.sectionContentContainer}>
+          <Fade>
+            <Container>
+              <Row>
+                <Col>
+                <div className='custom' >
+                {word.map((letter, index) =>
+                  letter === ' ' ? '\u00A0\u00A0\u00A0' :
+                  <MovingComponent
+                    key={index}
+                    type="pulse"
+                    duration="1600ms"
+                    delay={`${index * 100}ms`}
+                    direction="normal"
+                    timing="ease"
+                    iteration="infinite"
+                    fillMode="none"
+                    style={{
+                      display: 'inline-block',
+                      fontSize: '3em',
+                      fontFamily: 'Arial, sans-serif',
+                      color: '1, 255, 230'
+                    }}>
+                    {letter}
+                  </MovingComponent>
+                )}
+              </div>
+                </Col>
+              </Row>
+              <hr className="t_border my-4 ml-0 text-left" />
+              {bioData ? (
+                <Bio data={bioData} matches={matches} />
+              ) : <FallbackSpinner />}
+              <hr style={styles.separator} />
+              {skillData && interestData ? (
+                <AboutIcons skills={skillData} interests={interestData}/>
+              ) : <FallbackSpinner />}
+              
+            </Container>
+          </Fade>
+    </div>
   );
 };

@@ -11,6 +11,8 @@ import { title, description } from '../../app/MetaData';
 import React from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
+import { PopupExample } from './Popup'
+
 const styles = {
     containerStyle: {
         marginBottom: 25,
@@ -96,10 +98,20 @@ export const Projects = () => {
                     <h1 className="display-4 mb-4"> Projects </h1>{" "}
                     <hr className="t_border my-4 ml-0 text-left" />
                 </Col>
+                <Col>
+
+                <PopupExample/>
+            
+                </Col>
+                
+            </Row>
+            <Row className="mb-5 mt-3 pt-md-3">
                 <Col lg="4" className="text-right">
                     {filterButtons}
                 </Col>
             </Row>
+            
+            
         {data
             ? (
             <div className="section-content-container">
