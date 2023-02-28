@@ -11,7 +11,7 @@ import AppContext from './AppContext';
 import { ThemeProvider } from 'styled-components';
 import useDarkMode from 'use-dark-mode';
 import AnimatedCursor  from "../hooks/AnimatedCursor";
-import { darkTheme, lightTheme } from '../components/theme/themes';
+import { darkTheme } from '../components/theme/themes';
 import GlobalStyles from '../components/theme/GlobalStyles';
 import "./App.css";
 
@@ -30,7 +30,7 @@ export default function App() {
 
   return (
     <AppContext.Provider value={{ darkMode }}>
-      <ThemeProvider theme={darkMode.value ? darkTheme : lightTheme}>
+      <ThemeProvider theme={darkTheme}>
         <GlobalStyles />
         <Router basename={process.env.PUBLIC_URL}>
           <div className="cursor__dot">

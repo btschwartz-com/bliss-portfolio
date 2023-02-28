@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react"
 import { Container, Row, Col } from "react-bootstrap";
 import { Chrono } from "react-chrono";
 import MovingComponent from 'react-moving-text';
-import FallbackSpinner from "../../components/fallbackspinner";
+import FallbackSpinner from "../../components/FallbackSpinner";
 import endpoints from "../../app/endpoints";
 
 import './style.css'
 
 // https://github.com/prabhuignoto/react-chrono#theme
+
 
 export const Experience = () => {
 
@@ -74,6 +75,7 @@ export const Experience = () => {
                         controls: 'my-controls',
                         title: 'my-title',
                     }}
+                    
                 />
             </Row>
             ) : <FallbackSpinner />}

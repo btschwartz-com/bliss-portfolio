@@ -3,6 +3,9 @@ import "./style.css";
 import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 // import ThemeToggler from "../components/theme/ThemeToggler";
+import { ContactPopup } from "../components/ContactPopup";
+import { Button } from "react-bootstrap";
+
 
 const Headermain = () => {
   const [isActive, setActive] = useState("false");
@@ -11,6 +14,15 @@ const Headermain = () => {
     setActive(!isActive);
     document.body.classList.toggle("ovhidden");
   };
+
+  const contactButton = (
+    <Button>
+      Contact
+    </Button>
+  )
+
+
+
   // HERE MAKE A NEW ONE
   return (
     <>
@@ -21,6 +33,7 @@ const Headermain = () => {
           </Link>
           <div className="d-flex align-items-center">
           {/* <ThemeToggler /> */}
+          <ContactPopup triggerButton={contactButton} />
           <button className="menu__button  nav_ac" onClick={handleToggle}>
             {!isActive ? <VscClose /> : <VscGrabber />}
           </button>
@@ -43,6 +56,9 @@ const Headermain = () => {
                   </li>
                   <li className="menu_item">
                   <Link onClick={handleToggle} to="/experience" className="my-3">Experience</Link>
+                  </li>
+                  <li className="menu_item">
+                  <Link onClick={handleToggle} to="/education" className="my-3">Education</Link>
                   </li>
                 </ul>
               </div>

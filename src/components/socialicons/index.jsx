@@ -1,5 +1,4 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { ThemeContext } from 'styled-components';
 import "./style.css";
 import {
   FaGithub,
@@ -26,7 +25,6 @@ const socialIcons = {
 
 
 export const Socialicons = () => {
-  const { text_color } = useContext(ThemeContext);
 
 
   const [data, setData] = useState(null);
@@ -40,12 +38,7 @@ export const Socialicons = () => {
             .catch((err) => err);
     }, []);
 
-  useEffect(() => {
-    const elements = document.querySelectorAll(".stick_follow_icon p, .stick_follow_icon svg");
-    elements.forEach((el) => {
-      el.style.setProperty("--text-color", text_color);
-    });
-  }, [text_color]);
+
 
 
 
