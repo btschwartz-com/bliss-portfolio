@@ -11,7 +11,6 @@ import { title, description } from '../../app/MetaData';
 import React from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
-import { PopupExample } from './Popup'
 
 const styles = {
     containerStyle: {
@@ -97,11 +96,6 @@ export const Projects = () => {
                 <Col lg="8">
                     <h1 className="display-4 mb-4"> Projects </h1>{" "}
                     <hr className="t_border my-4 ml-0 text-left" />
-                </Col>
-                <Col>
-
-                <PopupExample/>
-            
                 </Col>
                 
             </Row>

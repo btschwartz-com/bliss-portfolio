@@ -28,11 +28,6 @@
             "name": "Resume",
             "route": "https://drive.google.com/file/d/1wCPzd7fiAko-PfaizeCkd8ZChVdLK7eA/view?usp=sharing",
             "id": "button_h"
-        },
-        {
-            "name": "Contact",
-            "route": "/contact",
-            "id": "button_h"
         }
     ]
 }

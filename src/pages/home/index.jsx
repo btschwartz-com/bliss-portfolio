@@ -5,6 +5,7 @@ import Typewriter from "typewriter-effect";
 import { Link } from "react-router-dom";
 import endpoints from "../../app/endpoints";
 
+import { ContactPopup } from "../contact/contact";
 
 
 
@@ -21,6 +22,17 @@ export const Home = () => {
             .then((res) => setData(res))
             .catch((err) => err);
     }, []);
+
+    const contactButton = (
+      <div className="text_2">
+          <div className="ac_btn btn ">
+            Contact
+            <div className="ring one"></div>
+            <div className="ring two"></div>
+            <div className="ring three"></div>
+          </div>
+      </div>
+    )
 
 
   return (
@@ -64,7 +76,7 @@ export const Home = () => {
                       </div>
                     </Link>
                   ))}
-                  
+                  <ContactPopup triggerButton={contactButton}/>
                 </div>
               </div>
             </div>

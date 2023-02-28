@@ -10,6 +10,8 @@ import {
   FaTwitch,
 } from "react-icons/fa";
 import endpoints from "../../app/endpoints";
+
+
 // make a map of the social icons
 const socialIcons = {
   twitter: FaTwitter,
@@ -44,6 +46,8 @@ export const Socialicons = () => {
       el.style.setProperty("--text-color", text_color);
     });
   }, [text_color]);
+
+
 
   return (
     <div className="stick_follow_icon" >
