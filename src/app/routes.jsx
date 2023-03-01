@@ -6,7 +6,7 @@ import { Projects } from "../pages/Projects";
 import { About } from "../pages/About";
 import { Socialicons } from "../components/socialicons";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import { Experience } from "../pages/experience";
+import { Experience } from "../pages/Experience";
 import { Education } from "../pages/Education";
 
 
