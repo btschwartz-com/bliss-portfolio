@@ -60,7 +60,7 @@ const IconsList = ({ items }) => {
     );
 };
 
-export const AboutIcons = (skills, interests) => {
+export const AboutIcons = () => {
     const [skillData, setSkillData] = useState(null);
     const [interestData, setInterestData] = useState(null);
     
@@ -92,37 +92,37 @@ export const AboutIcons = (skills, interests) => {
 
     return (
         <>
-        {skillData ? (
-            <Fade>
-            <div className="section-content-container">
-                {interestData ? (
-                    <Container>
-                        {interestData.interests?.map((rows) => (
-                        <div key={rows.title}>
-                        <br />
-                        <h3 style={styles.skillTitle}>{rows.title}</h3>
-                        <IconsList items={rows.items} />
-                        </div>
-                        ))}
-                    </Container>
-                ) : <FallbackSpinner />}
-                
-                <hr className="t_border my-4 ml-0 text-left" />
-                {skillData ? (
-                    <Container>
-                    {/* {renderSkillsIntro(data.intro)} */}
-                    {skillData.skills?.map((rows) => (
-                        <div key={rows.title}>
-                        <br />
-                        <h3 style={styles.skillTitle}>{rows.title}</h3>
-                        <IconsList items={rows.items} />
-                        </div>
+        <div className="section-content-container">
+            {interestData ? (
+                <Fade>
+                <Container>
+                    {interestData.interests?.map((rows) => (
+                    <div key={rows.title}>
+                    <br />
+                    <h3 style={styles.skillTitle}>{rows.title}</h3>
+                    <IconsList items={rows.items} />
+                    </div>
                     ))}
-                    </Container>
-                ) : <FallbackSpinner /> }
-            </div>
-            </Fade>
+                </Container>
+                </Fade>
+            ) : <FallbackSpinner />}
+            
+            <hr className="t_border my-4 ml-0 text-left" />
+            {skillData ? (
+                <Container>
+                {/* {renderSkillsIntro(data.intro)} */}
+                {skillData.skills?.map((rows) => (
+                    <Fade>
+                    <div key={rows.title}>
+                    <br />
+                    <h3 style={styles.skillTitle}>{rows.title}</h3>
+                    <IconsList items={rows.items} />
+                    </div>
+                    </Fade>
+                ))}
+                </Container>
             ) : <FallbackSpinner /> }
+        </div>
         </>
     );
 };

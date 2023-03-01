@@ -61,36 +61,39 @@ export const About = () => {
 
   return (
     <div style={styles.sectionContentContainer}>
-          <Fade>
             <Container>
               <Row>
                 <PageTitle title="Ben Schwartz" />
               </Row>
-              <Row className="justify-content-center">
-                {bioData ? (
-                  <Bio data={bioData} matches={matches}/>
-                ) : <FallbackSpinner />}
-              </Row>
-              <hr style={styles.separator} />
-              <Row>
-              <div className="d-flex flex-wrap justify-content-center">
-                  {homeData ? (
-                    <>
-                      {homeData.buttons.map((item) => (
-                      item.name !== 'Me' &&
-                      <Link to={item.route} key={item.name} className="text_2">
-                        <div id={item.id} className="ac_btn btn ">
-                          {item.name}
-                          <div className="ring one"></div>
-                          <div className="ring two"></div>
-                          <div className="ring three"></div>
-                        </div>
-                      </Link>
-                    ))}
-                    </>
+              
+              <Fade>
+                <Row className="justify-content-center">
+                  {bioData ? (
+                    <Bio data={bioData} matches={matches}/>
                   ) : <FallbackSpinner />}
-              </div>
+                </Row>
+              </Fade>
+              <Fade>
+              <Row>
+                <div className="d-flex flex-wrap justify-content-center">
+                    {homeData ? (
+                      <>
+                        {homeData.buttons.map((item) => (
+                        item.name !== 'Me' &&
+                        <Link to={item.route} key={item.name} className="text_2">
+                          <div id={item.id} className="ac_btn btn ">
+                            {item.name}
+                            <div className="ring one"></div>
+                            <div className="ring two"></div>
+                            <div className="ring three"></div>
+                          </div>
+                        </Link>
+                      ))}
+                      </>
+                    ) : <FallbackSpinner />}
+                </div>
               </Row>
+              </Fade>
               <hr style={styles.separator} />
               <Row>
               {skillData && interestData ? (
@@ -101,7 +104,6 @@ export const About = () => {
               
               
             </Container>
-          </Fade>
     </div>
   );
 };

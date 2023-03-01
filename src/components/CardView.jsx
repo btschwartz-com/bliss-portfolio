@@ -1,6 +1,6 @@
 import { useState, useEffect, } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import Fade from 'react-reveal/Fade';
+import Fade from 'react-reveal';
 import ProjectCard from './ProjectCard';
 import FallbackSpinner from './FallbackSpinner';
 import { title, description } from '../app/MetaData';

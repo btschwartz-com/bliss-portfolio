@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react"
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import { Chrono } from "react-chrono";
-import MovingComponent from 'react-moving-text';
 import FallbackSpinner from "../../components/FallbackSpinner";
 import endpoints from "../../app/endpoints";
 
 import './style.css'
+import { PageTitle } from "../../components/PageTitle";
 
 // https://github.com/prabhuignoto/react-chrono#theme
 
@@ -22,37 +22,11 @@ export const Experience = () => {
     }, []);
     
 
-    const word = "Experience".split('');
-
     return (
         <Container>
             <Row>
-                <Col>
-                <div style={{textAlign: 'center'}} >
-                {word.map((letter, index) =>
-                    letter === ' ' ? '\u00A0\u00A0\u00A0' :
-                    <MovingComponent
-                        key={index}
-                        type="pulse"
-                        duration="1600ms"
-                        delay={`${index * 100}ms`}
-                        direction="normal"
-                        timing="ease"
-                        iteration="infinite"
-                        fillMode="none"
-                        style={{
-                            display: 'inline-block',
-                            fontSize: '3em',
-                            fontFamily: 'Arial, sans-serif',
-                            color: '1, 255, 230'
-                        }}>
-                        {letter}
-                    </MovingComponent>
-                )}
-                </div>
-                </Col>
-              </Row>
-              <hr className="t_border my-4 ml-0 text-left" />
+                <PageTitle title="Experience" />
+            </Row>
             {data ? (
                 <Row>
                 <Chrono 
