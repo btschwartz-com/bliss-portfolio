@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import Fade from 'react-reveal';
 import endpoints from '../app/endpoints';
 import { useMediaQuery } from 'usehooks-ts';
 import { Bio } from '../components/Bio';
 import { AboutIcons } from '../components/AboutIcons';
 import FallbackSpinner from '../components/FallbackSpinner';
-import MovingComponent from 'react-moving-text';
 import { Link } from 'react-router-dom';
+import { PageTitle } from '../components/PageTitle';
 
 
 
@@ -57,41 +57,15 @@ export const About = () => {
   }, []);
 
 
-  const word  = "Ben Schwartz".split('');
-  // add a space after the third character
-  // https://yidaoj.github.io/react-moving-text/
+  
 
   return (
     <div style={styles.sectionContentContainer}>
           <Fade>
             <Container>
               <Row>
-                <Col>
-                <div className='custom' >
-                {word.map((letter, index) =>
-                  letter === ' ' ? '\u00A0\u00A0\u00A0' :
-                  <MovingComponent
-                    key={index}
-                    type="pulse"
-                    duration="1600ms"
-                    delay={`${index * 100}ms`}
-                    direction="normal"
-                    timing="ease"
-                    iteration="infinite"
-                    fillMode="none"
-                    style={{
-                      display: 'inline-block',
-                      fontSize: '3em',
-                      fontFamily: 'Arial, sans-serif',
-                      color: '1, 255, 230'
-                    }}>
-                    {letter}
-                  </MovingComponent>
-                )}
-              </div>
-                </Col>
+                <PageTitle title="Ben Schwartz" />
               </Row>
-              <hr className="t_border my-4 ml-0 text-left" />
               <Row className="justify-content-center">
                 {bioData ? (
                   <Bio data={bioData} matches={matches}/>
@@ -99,7 +73,7 @@ export const About = () => {
               </Row>
               <hr style={styles.separator} />
               <Row>
-              <div className="d-flex flex-wrap">
+              <div className="d-flex flex-wrap justify-content-center">
                   {homeData ? (
                     <>
                       {homeData.buttons.map((item) => (
@@ -115,7 +89,7 @@ export const About = () => {
                     ))}
                     </>
                   ) : <FallbackSpinner />}
-                </div>
+              </div>
               </Row>
               <hr style={styles.separator} />
               <Row>

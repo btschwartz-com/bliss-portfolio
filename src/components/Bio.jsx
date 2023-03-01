@@ -22,7 +22,10 @@ const styles = {
         display: 'flex',
         maxWidth: '90%',
     },
+    
 };
+
+
 
 export const Bio = ({ data, matches }) => {
     const parseIntro = (text) => (
@@ -31,32 +34,29 @@ export const Bio = ({ data, matches }) => {
         />
     );
 
-    return (
-        <>
-        <Fade> 
-            <Row style={styles.introRow}>
-                {matches ? (
-                    <>
+
+    if (matches) {
+        return (
+            <Fade>
+                <Row>
                     <Col style={styles.introTextContainer}>
                         {parseIntro(data.about)}
                     </Col>
                     <Col style={styles.introImageContainer}>
                         <img src={data?.imageSource} alt="profile" />
                     </Col>
-                    </>
-                ) : (
-                    <>
-                    <Row style={styles.introImageContainer}>
-                        <img style={{maxWidth: '90%'}} src={data?.imageSource} alt="profile" />
-                    </Row>
-                    <Row style={styles.introTextContainer}>
+                </Row>
+            </Fade>
+        );
+    }
+    else {
+        return (
+            <Fade>
+                <img style={{maxWidth: '90%'}} src={data?.imageSource} alt="profile" />
+                <div style={styles.introTextContainer}>
                     {parseIntro(data.about)}
-                    </Row>
-                    </>
-                )}
-            </Row>
-
-        </Fade>
-        </>
-    );
+                </div>
+            </Fade>
+        );
+    }
 };

@@ -4,12 +4,12 @@ import Fade from 'react-reveal/Fade';
 import ProjectCard from './ProjectCard';
 import FallbackSpinner from './FallbackSpinner';
 import { title, description } from '../app/MetaData';
-import MovingComponent from 'react-moving-text';
 
 
 
 import React from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import { PageTitle } from './PageTitle';
 
 
 const styles = {
@@ -75,7 +75,6 @@ export const CardView = (props) => {
     const moreLimit = 6;
     const numberOfItems = showMore && filteredData ? filteredData.length : moreLimit;
     
-    const word = pageTitle.split('');
 
     return (
         <HelmetProvider>
@@ -86,32 +85,8 @@ export const CardView = (props) => {
                 <meta name="description" content={description} />
             </Helmet>
             <Row>
-                <Col>
-                <div style={{textAlign: 'center'}} >
-                {word.map((letter, index) =>
-                    letter === ' ' ? '\u00A0\u00A0\u00A0' :
-                    <MovingComponent
-                        key={index}
-                        type="pulse"
-                        duration="1600ms"
-                        delay={`${index * 100}ms`}
-                        direction="normal"
-                        timing="ease"
-                        iteration="infinite"
-                        fillMode="none"
-                        style={{
-                            display: 'inline-block',
-                            fontSize: '3em',
-                            fontFamily: 'Arial, sans-serif',
-                            color: '1, 255, 230'
-                        }}>
-                        {letter}
-                    </MovingComponent>
-                )}
-                </div>
-                </Col>
+                <PageTitle title={pageTitle}/>
             </Row>
-            <hr className="t_border my-4 ml-0 text-left" />
             <Row className="mb-5 mt-3 pt-md-3">
                 <Col lg="6" className="text-right">
                     {filterButtons}
