@@ -1,5 +1,6 @@
 import React from 'react';
 import MovingComponent from 'react-moving-text';
+import LightSpeed from 'react-reveal/LightSpeed';
 
 // https://yidaoj.github.io/react-moving-text/
 
@@ -16,6 +17,8 @@ export const PageTitle = ({ title }) => {
     const letters = title.split('');
 
     return (
+        <>
+        <LightSpeed>
         <div style={{textAlign: 'center'}}>
         {letters.map((letter, index) =>
             letter === ' ' ? '\u00A0\u00A0\u00A0' :
@@ -33,8 +36,13 @@ export const PageTitle = ({ title }) => {
             {letter}
             </MovingComponent>
         )}
+        
+        
+        </div>
+        </LightSpeed>
         <hr className="t_border my-4 ml-0 text-left"
             style={{color: '#FFCB05', borderWidth: '2px'}}/>
-        </div>
+        
+        </>
     );
 };

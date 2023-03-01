@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 // import ReactMarkdown from 'react-markdown';
 import { Container } from 'react-bootstrap';
-import Fade from 'react-reveal';
+import Fade from 'react-reveal/Fade';
 import endpoints from '../app/endpoints';
 import FallbackSpinner from './FallbackSpinner';
 
@@ -49,6 +49,7 @@ const styles = {
 
 const IconsList = ({ items }) => {
     return (
+        <Fade>
         <div style={styles.iconsListContainer}>
         {items.map((item) => (
             <div key={item.title} style={styles.skillContainer}>
@@ -57,6 +58,7 @@ const IconsList = ({ items }) => {
             </div>
         ))}
         </div>
+        </Fade>
     );
 };
 
@@ -64,13 +66,6 @@ export const AboutIcons = () => {
     const [skillData, setSkillData] = useState(null);
     const [interestData, setInterestData] = useState(null);
     
-
-    // const renderSkillsIntro = (intro) => (
-    //     <h4 style={styles.introTextContainer}>
-    //     <ReactMarkdown children={intro} />
-    //     </h4>
-    // );
-
     useEffect(() => {
         fetch(endpoints.skills, {
         method: 'GET',
@@ -109,18 +104,18 @@ export const AboutIcons = () => {
             
             <hr className="t_border my-4 ml-0 text-left" />
             {skillData ? (
+                <Fade>
                 <Container>
                 {/* {renderSkillsIntro(data.intro)} */}
                 {skillData.skills?.map((rows) => (
-                    <Fade>
                     <div key={rows.title}>
                     <br />
                     <h3 style={styles.skillTitle}>{rows.title}</h3>
                     <IconsList items={rows.items} />
                     </div>
-                    </Fade>
                 ))}
                 </Container>
+                </Fade>
             ) : <FallbackSpinner /> }
         </div>
         </>

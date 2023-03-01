@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { Col, Row } from 'react-bootstrap';
-import Fade from 'react-reveal';
+import Slide from 'react-reveal/Slide';
 
 
 const styles = {
@@ -26,37 +26,44 @@ const styles = {
 };
 
 
-
 export const Bio = ({ data, matches }) => {
     const parseIntro = (text) => (
         <ReactMarkdown
         children={text}
         />
     );
+    
 
 
     if (matches) {
         return (
-            <Fade>
                 <Row>
                     <Col style={styles.introTextContainer}>
-                        {parseIntro(data.about)}
+                        <Slide left>
+                            {parseIntro(data.about)}
+                        </Slide>
                     </Col>
                     <Col style={styles.introImageContainer}>
-                        <img src={data?.imageSource} alt="profile" />
+                        <Slide right>
+                            <img src={data?.imageSource} alt="profile" />
+                        </Slide>
                     </Col>
+                    
                 </Row>
-            </Fade>
         );
     }
     else {
         return (
-            <Fade>
+            <>
+            <Slide left>
                 <img style={{maxWidth: '90%'}} src={data?.imageSource} alt="profile" />
+            </Slide>
+            <Slide right>
                 <div style={styles.introTextContainer}>
                     {parseIntro(data.about)}
                 </div>
-            </Fade>
+            </Slide>
+            </>
         );
     }
 };

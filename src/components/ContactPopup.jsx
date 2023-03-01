@@ -59,7 +59,7 @@ export const ContactPopup = () => {
     };
 
     const handleShow = () => setShow(true);
-
+//#FFCB05
     
 
     return (
@@ -74,6 +74,11 @@ export const ContactPopup = () => {
             .btn-blue {
             background-color: #00274C;
             color: white;
+            border: 2px solid #FFCB05;
+            transition: border-color 0.3s ease-in-out; /* Add a transition effect for the border color change */
+            }
+            .btn-blue:hover {
+                border-color: #FFCB05; /* Change the border color on hover */
             }
             `}
         </style>

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Row } from 'react-bootstrap';
-import Fade from 'react-reveal';
 import endpoints from '../app/endpoints';
 import { useMediaQuery } from 'usehooks-ts';
 import { Bio } from '../components/Bio';
@@ -66,14 +65,11 @@ export const About = () => {
                 <PageTitle title="Ben Schwartz" />
               </Row>
               
-              <Fade>
-                <Row className="justify-content-center">
-                  {bioData ? (
-                    <Bio data={bioData} matches={matches}/>
-                  ) : <FallbackSpinner />}
-                </Row>
-              </Fade>
-              <Fade>
+              <Row className="justify-content-center">
+                {bioData ? (
+                  <Bio data={bioData} matches={matches}/>
+                ) : <FallbackSpinner />}
+              </Row>
               <Row>
                 <div className="d-flex flex-wrap justify-content-center">
                     {homeData ? (
@@ -93,16 +89,12 @@ export const About = () => {
                     ) : <FallbackSpinner />}
                 </div>
               </Row>
-              </Fade>
               <hr style={styles.separator} />
               <Row>
               {skillData && interestData ? (
                 <AboutIcons skills={skillData} interests={interestData}/>
               ) : <FallbackSpinner />}
               </Row>
-              
-              
-              
             </Container>
     </div>
   );
