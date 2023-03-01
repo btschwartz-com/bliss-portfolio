@@ -59,9 +59,9 @@ export const Experience = () => {
                     items={data.experiences} 
                     mode="VERTICAL" 
                     theme={{
-                        primary: '#01FFE6',
-                        secondary: 'grey',
-                        cardBgColor: '#000080',
+                        primary:  '#00274C',
+                        secondary: '#1E1E1E',
+                        cardBgColor: '#1E1E1E',
                         cardForeColor: 'white',
                         titleColor: 'black',
                         titleColorActive: 'white',

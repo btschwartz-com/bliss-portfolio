@@ -39,13 +39,23 @@ const styles = {
         top: 0,
         color: 'white',
         padding: '5px 10px',
-        borderRadius: '0 10px 0 0',
+        borderRadius: '0 10px 0 10px',
         fontSize: 14,
         fontWeight: 'bold',
     },
     cardFooter: {
         backgroundColor: '#181818',
     }
+};
+
+const badgeColors = {
+    white: 'light',
+    yellow: 'warning',
+    green: 'success',
+    blue: 'primary',
+    cyan: 'info',
+    red: 'danger',
+    gray: 'secondary'
 };
 
 
@@ -107,16 +117,17 @@ const ProjectCard = (props) => {
                 {project.tags && (
                     <Card.Footer style={styles.cardFooter}>
                         {project.tags.map((tag) => (
-                            <Badge
-                                key={tag}
-                                pill
-                                bg='light'
-                                text='dark'
-                                style={styles.badgeStyle}
-                            >
-                                {tag}
-                            </Badge>
-                        ))}
+                    <Badge
+                        key={tag.text}
+                        pill
+                        bg={badgeColors[tag.color]}
+                        text='dark'
+                        style={styles.badgeStyle}
+                    >
+                        {tag.text}
+                    </Badge>
+                ))}
+                        
                     </Card.Footer>
                 )}
             </Card>

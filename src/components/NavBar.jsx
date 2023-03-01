@@ -2,6 +2,7 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react';
 import withRouter from '../hooks/withRouter';
 import endpoints from '../app/endpoints';
+import { ContactPopup } from './ContactPopup';
 
 const styles = {
   navbarCustom: {
@@ -11,6 +12,10 @@ const styles = {
     fontFamily: 'Arial',
   },
 };
+
+const contactButton = (
+  <button style={{ backgroundColor: '#00274C', color: 'white', padding: '10px', border: 'none', borderRadius: '5px' }}>Contact Me</button>
+)
 
 const NavBar = () => {
   const [data, setData] = useState(null);
@@ -44,6 +49,10 @@ const NavBar = () => {
             className="d-inline-block align-top"
           />{' '}
         </Navbar.Brand>
+        <Navbar.Brand >
+          <ContactPopup triggerButton={contactButton}/>
+          
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto ">
@@ -56,6 +65,12 @@ const NavBar = () => {
                 {section.title}
               </Nav.Link>
             ))}
+          </Nav>
+          <Nav>
+            <Nav.Link href="#deets">More deets</Nav.Link>
+            <Nav.Link eventKey={2} href="#memes">
+              Dank memes
+            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

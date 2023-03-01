@@ -50,7 +50,7 @@ const styles = {
     fontFamily: 'Arial',
     fontSize: '16px',
     padding: '10px 20px',
-    backgroundColor: '#01FFE6',
+    backgroundColor: '#FFCB05',
     color: 'black',
     border: 'none',
     borderRadius: '5px',
@@ -77,7 +77,7 @@ const styles = {
 
 const popup_styles = {
   width: '60%',
-  background: '#000080',
+  background: '#00274C',
   fontFamily: 'Arial',
   borderRadius: '10px',
 };

@@ -21,11 +21,12 @@ const styles = {
     },
     filterButtonStyle: {
         marginRight: 10,
+        marginTop: 10,
     },
     selectedFilterButtonStyle: {
-        backgroundColor: "#007bff",
+        backgroundColor: '#00274C',
         color: "#fff",
-        borderColor: "#007bff",
+        borderColor: '#00274C',
     },
 };
 

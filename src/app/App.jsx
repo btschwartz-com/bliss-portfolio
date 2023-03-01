@@ -28,6 +28,7 @@ export default function App() {
         <Router basename={process.env.PUBLIC_URL}>
           <ScrollToTop>
             <NavBarWithRouter />
+            <br/>
             <AppRoutes />
           </ScrollToTop>
         </Router>
