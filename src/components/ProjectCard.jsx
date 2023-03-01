@@ -143,7 +143,10 @@ const ProjectCard = (props) => {
             text: PropTypes.string.isRequired,
             href: PropTypes.string.isRequired,
         })),
-        tags: PropTypes.arrayOf(PropTypes.string),
+        tags: PropTypes.arrayOf(PropTypes.shape({
+            text: PropTypes.string.isRequired,
+            color: PropTypes.string.isRequired,
+        })),
     }).isRequired,
     };
 

@@ -1,156 +1,124 @@
 import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
-import Popup from 'reactjs-popup';
+import Modal from 'react-bootstrap/Modal';
 import endpoints from '../app/endpoints';
 import FallbackSpinner from './FallbackSpinner';
 
+
 const styles = {
-  modal_popup: {
-    fontFamily: 'Arial',
-    fontSize: '12px',
-    color: 'white',
-    textAlign: 'center',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    margin: '20px',
-    marginBottom: '10px',
-    borderRadius: '10px',
-  },
-  header: {
-    width: '100%',
-    borderBottom: '1px solid gray',
-    marginBottom: '20px',
-  },
-  modal_title: {
-    fontFamily: 'Arial',
-    fontSize: '24px',
-    margin: 0,
-  },
-  content: {
-    width: '100%',
-    marginBottom: '20px',
-  },
-  modal_paragraph: {
-    fontFamily: 'Arial',
-    margin: 0,
-    fontSize: '20px',
-  },
-  email: {
-    marginTop: '15px',
-    fontSize: '24px',
-    fontFamily: 'Courier New',
-  },
-  actions: {
-    width: '100%',
-    marginBottom: '20px',
-  },
-  pretty_button: {
-    fontFamily: 'Arial',
-    fontSize: '16px',
-    padding: '10px 20px',
-    backgroundColor: '#FFCB05',
-    color: 'black',
-    border: 'none',
-    borderRadius: '5px',
-    cursor: 'pointer',
-    transition: 'all 0.3s ease',
-  },
-  pretty_button_hover: {
-    backgroundColor: '#0066cc',
-  },
-  close: {
-    cursor: 'pointer',
-    position: 'absolute',
-    display: 'block',
-    padding: '2px 5px',
-    lineHeight: '20px',
-    right: '-10px',
-    top: '-10px',
-    fontSize: '24px',
-    background: '#ffffff',
-    borderRadius: '18px',
-    border: '1px solid #cfcece',
-  },
-};
-
-const popup_styles = {
-  width: '60%',
-  background: '#00274C',
-  fontFamily: 'Arial',
-  borderRadius: '10px',
+    emailButton: {
+        backgroundColor: '#FFCB05',
+        color: 'black',
+        marginRight: 'auto',
+    },
+    emailText: {
+        fontSize: '20px',
+        color: '#FFCB05',
+        fontFamily: 'Courier New',
+    },
+    closeButton: {
+        marginLeft: 'auto',
+    },
+    modalHeader: {
+        backgroundColor: '#00274C',
+        color: 'white',
+    },
+    modalBody: {
+        backgroundColor: '#00274C',
+        color: 'white',
+    },
+    modalFooter: {
+        backgroundColor: '#00274C',
+        color: 'white',
+        borderTop: 'none',
+    },
 };
 
 
-export const ContactPopup = (props) => {
-  const [showEmail, setShowEmail] = useState(false);
-  const [data, setData] = useState({});
-  const [blur, setBlur] = useState(false);
+export const ContactPopup = () => {
+    const [show, setShow] = useState(false);
+    const [showEmail, setShowEmail] = useState(false);
+    const [data, setData] = useState({});
 
-  useEffect(() => {
-    fetch(endpoints.contact, {
-      method: 'GET',
-    })
-      .then((res) => res.json())
-      .then((res) => setData(res))
-      .catch((err) => err);
-  }, []);
+    useEffect(() => {
+        fetch(endpoints.contact, {
+        method: 'GET',
+        })
+        .then((res) => res.json())
+        .then((res) => setData(res))
+        .catch((err) => err);
+    }, []);
 
-  const handleClick = () => {
-    setShowEmail(true);
-    setBlur(true);
-  };
+    const handleClose = () => {
+        setShowEmail(false);
+        setShow(false);
+    };
 
-  const handleClose = () => {
-    setShowEmail(false);
-    setBlur(false);
-  };
+    const handleClick = () => {
+        setShowEmail(true);
+    };
 
-  return (
-    <div className={blur ? 'blur' : ''}> {/* Add blur class if blur state is true */}
-      <Popup
-        trigger={props.triggerButton}
-        modal
-        nested
-        contentStyle={popup_styles}
-        onClose={handleClose}
-      >
-        {data ? (
-          <div>
-            <div style={styles.modal_popup}>
-              <div style={styles.header}>
-                <h2 style={styles.modal_title}>{data.contact?.title}</h2>
-              </div>
-              <div style={styles.content}>
-                <p style={styles.modal_paragraph}>
-                  {data.contact?.body}
-                </p>
-              </div>
-              <div style={styles.actions}>
+    const handleShow = () => setShow(true);
+
+    
+
+    return (
+        <>
+        <style type="text/css">
+            {`
+            .btn-flat {
+            background-color: #FFCB05;
+            color: black;
+            }
+
+            .btn-blue {
+            background-color: #00274C;
+            color: white;
+            }
+            `}
+        </style>
+        <Button variant="blue" onClick={handleShow}>
+            Contact Me
+        </Button>
+
+        
+
+        <Modal
+            show={show}
+            onHide={handleClose}
+            backdrop="static"
+            keyboard={false}
+            centered
+        >
+            {data ? (
+            <>
+                <Modal.Header style={styles.modalHeader} closeButton>
+                <Modal.Title>{data.contact?.title}</Modal.Title>
+                </Modal.Header>
+                <Modal.Body style={styles.modalBody}>
+                {data.contact?.body}
+                </Modal.Body>
+                <Modal.Footer style={styles.modalFooter}>
                 {showEmail ? (
-                  <p style={styles.email}>{data.contact?.email}</p>
+                    <p style={styles.emailText}>{data.contact?.email}</p>
                 ) : (
-                  <Button
-                    style={styles.pretty_button}
-                    onMouseEnter={(e) =>
-                      (e.target.style.backgroundColor = styles.pretty_button_hover.backgroundColor)
-                    }
-                    onMouseLeave={(e) =>
-                      (e.target.style.backgroundColor = styles.pretty_button.backgroundColor)
-                    }
-                    onClick={handleClick}
-                  >
+                    <Button style={styles.emailButton} onClick={handleClick}>
                     My Email
-                  </Button>
+                    </Button>
                 )}
-              </div>
-            </div>
-          </div>
-        ) : (
-          <FallbackSpinner />
-        )}
-      </Popup>
-    </div>
-  );
+                <Button
+                    variant="secondary"
+                    style={styles.closeButton}
+                    onClick={handleClose}
+                >
+                    Close
+                </Button>
+                </Modal.Footer>
+            </>
+            ) : (
+            <FallbackSpinner />
+            )}
+        </Modal>
+        </>
+    );
 };

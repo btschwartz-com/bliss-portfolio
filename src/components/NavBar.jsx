@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import withRouter from '../hooks/withRouter';
 import endpoints from '../app/endpoints';
 import { ContactPopup } from './ContactPopup';
+import { Link } from 'react-router-dom';
 
 const styles = {
   navbarCustom: {
@@ -10,15 +11,25 @@ const styles = {
   },
   navLink: {
     fontFamily: 'Arial',
+    padding: '0 12px',
+    display: 'flex',
+    margin: '5px',
+    alignItems: 'center',
+    justifyContent: 'center',
+    textDecoration: 'none',
+    color: 'white',
   },
 };
 
-const contactButton = (
-  <button style={{ backgroundColor: '#00274C', color: 'white', padding: '10px', border: 'none', borderRadius: '5px' }}>Contact Me</button>
-)
+
+
 
 const NavBar = () => {
   const [data, setData] = useState(null);
+  const [expanded, setExpanded] = useState(false);
+
+
+
 
   useEffect(() => {
     fetch(endpoints.navbar, {
@@ -29,6 +40,11 @@ const NavBar = () => {
       .catch((err) => err);
   }, []);
 
+
+  const handleLinkClick = () => {
+    setExpanded(false);
+  };
+
   return (
     <Navbar
       fixed="top"
@@ -37,10 +53,13 @@ const NavBar = () => {
       className="navbar-custom"
       collapseOnSelect
       expand={false}
+      expanded={expanded}
+      onToggle={(expanded) => setExpanded(expanded)}
       style={styles.navbarCustom}
     >
       <Container>
-        <Navbar.Brand href="/">
+        <Navbar.Brand>
+          <Link to="/" className="text_2" onClick={handleLinkClick}>
           <img
             alt=""
             src={data?.logo?.source}
@@ -48,29 +67,21 @@ const NavBar = () => {
             height={data?.logo?.height}
             className="d-inline-block align-top"
           />{' '}
+          </Link>
         </Navbar.Brand>
         <Navbar.Brand >
-          <ContactPopup triggerButton={contactButton}/>
-          
+          <ContactPopup/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto ">
             {data?.sections?.map((section, index) => (
-              <Nav.Link
-                key={index}
-                href={section.href}
-                style={styles.navLink}
-              >
-                {section.title}
-              </Nav.Link>
+              <Link to={section.href} key={section.title} className="text_2" onClick={handleLinkClick}>
+                <div id={index} style={styles.navLink} >
+                  {section.title}
+                </div>
+              </Link>
             ))}
-          </Nav>
-          <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
-            </Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

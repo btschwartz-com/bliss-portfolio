@@ -7,6 +7,7 @@ import { Bio } from '../components/Bio';
 import { AboutIcons } from '../components/AboutIcons';
 import FallbackSpinner from '../components/FallbackSpinner';
 import MovingComponent from 'react-moving-text';
+import { Link } from 'react-router-dom';
 
 
 
@@ -27,6 +28,7 @@ export const About = () => {
   const [bioData, setBioData] = useState(null);
   const [skillData, setSkillData] = useState(null);
   const [interestData, setInterestData] = useState(null);
+  const [homeData, setHomeData] = useState(null);
   const matches = useMediaQuery('(min-width: 1000px)');
 
   useEffect(() => {
@@ -47,6 +49,13 @@ export const About = () => {
         .then((res) => res.json()).then((res) => setInterestData(res))
         .catch((err) => err);
   }, []);
+
+  useEffect(() => {
+      fetch(endpoints.home, { method: 'GET', })
+        .then((res) => res.json()).then((res) => setHomeData(res))
+        .catch((err) => err);
+  }, []);
+
 
   const word  = "Ben Schwartz".split('');
   // add a space after the third character
@@ -87,6 +96,26 @@ export const About = () => {
                 {bioData ? (
                   <Bio data={bioData} matches={matches}/>
                 ) : <FallbackSpinner />}
+              </Row>
+              <hr style={styles.separator} />
+              <Row>
+              <div className="d-flex flex-wrap">
+                  {homeData ? (
+                    <>
+                      {homeData.buttons.map((item) => (
+                      item.name !== 'Me' &&
+                      <Link to={item.route} key={item.name} className="text_2">
+                        <div id={item.id} className="ac_btn btn ">
+                          {item.name}
+                          <div className="ring one"></div>
+                          <div className="ring two"></div>
+                          <div className="ring three"></div>
+                        </div>
+                      </Link>
+                    ))}
+                    </>
+                  ) : <FallbackSpinner />}
+                </div>
               </Row>
               <hr style={styles.separator} />
               <Row>

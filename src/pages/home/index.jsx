@@ -23,16 +23,7 @@ export const Home = () => {
             .catch((err) => err);
     }, []);
 
-    // const contactButton = (
-    //   <div className="text_2">
-    //       <div className="ac_btn btn ">
-    //         Contact
-    //         <div className="ring one"></div>
-    //         <div className="ring two"></div>
-    //         <div className="ring three"></div>
-    //       </div>
-    //   </div>
-    // )
+
 
 
   return (
