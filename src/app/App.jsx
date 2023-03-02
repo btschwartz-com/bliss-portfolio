@@ -9,6 +9,8 @@ import AppRoutes from "./routes";
 import NavBarWithRouter from "../components/NavBar";
 import GlobalStyles from '../styles/GlobalStyles';
 import "../styles/App.css";
+import { LoadingScreen } from "../components/LoadingScreen";
+import { Fade } from "react-reveal";
 
 function _ScrollToTop(props) {
   const { pathname } = useLocation();
@@ -21,27 +23,26 @@ const ScrollToTop = withRouter(_ScrollToTop);
 
 export default function App() {
   const [loading, setLoading] = useState(true);
-  const spinner = document.getElementById("spinner");
-  if (spinner) {
-    setTimeout(() => {
-      spinner.style.display = "none";
-      setLoading(false);
-    }, 2000);
-  }
 
   return (
-    !loading &&
-    (<>
-        <GlobalStyles />
+    <>
+      <GlobalStyles />
+      {loading ? (
+        <LoadingScreen onFinishLoading={() => setLoading(false)}/>
+      ) : (
+        
         <Router basename={process.env.PUBLIC_URL}>
           <ScrollToTop>
             <NavBarWithRouter />
-            <br/>
+            <br />
+            <Fade>
             <AppRoutes />
+            </Fade>
           </ScrollToTop>
         </Router>
-
-    </>)
+        
+      )}
+      
+    </>
   );
 }
-

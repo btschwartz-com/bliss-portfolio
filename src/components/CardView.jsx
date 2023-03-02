@@ -78,7 +78,8 @@ export const CardView = (props) => {
     return (
         <Container className="About-header">
             <Row>
-                <PageTitle title={pageTitle + ' \u2192 ' + selectedCategory}/>
+                <PageTitle title={pageTitle}/>
+                {/* <PageTitle title={pageTitle + ' \u2192 ' + selectedCategory}/> */}
             </Row>
             <Row className="mb-5 mt-3 pt-md-3">
                 <Col lg="6" className="text-right">
