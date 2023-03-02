@@ -26,6 +26,7 @@ const styles = {
 };
 
 
+
 export const Bio = ({ data, matches }) => {
     const parseIntro = (text) => (
         <ReactMarkdown

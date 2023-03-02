@@ -3,12 +3,10 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import { Fade } from 'react-reveal';
 import ProjectCard from './ProjectCard';
 import FallbackSpinner from './FallbackSpinner';
-import { title, description } from '../app/MetaData';
 
 
 
 import React from "react";
-import { Helmet, HelmetProvider } from "react-helmet-async";
 import { PageTitle } from './PageTitle';
 
 
@@ -77,13 +75,7 @@ export const CardView = (props) => {
     
 
     return (
-        <HelmetProvider>
         <Container className="About-header">
-            <Helmet>
-                <meta charSet="utf-8" />
-                <title> {pageTitle} | {title} </title>{" "}
-                <meta name="description" content={description} />
-            </Helmet>
             <Row>
                 <PageTitle title={pageTitle}/>
             </Row>
@@ -125,6 +117,5 @@ export const CardView = (props) => {
                 ) : <FallbackSpinner /> 
             }
         </Container>
-        </HelmetProvider>
     );
 };

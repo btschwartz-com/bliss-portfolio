@@ -7,8 +7,8 @@ import {
 import withRouter from "../hooks/withRouter";
 import AppRoutes from "./routes";
 import NavBarWithRouter from "../components/NavBar";
-import GlobalStyles from './GlobalStyles';
-import "./App.css";
+import GlobalStyles from '../styles/GlobalStyles';
+import "../styles/App.css";
 
 function _ScrollToTop(props) {
   const { pathname } = useLocation();

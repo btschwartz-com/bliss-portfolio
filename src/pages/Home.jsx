@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "./style.css";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import "../styles/Home.css";
+import { HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
 import { Link } from "react-router-dom";
-import endpoints from "../../app/endpoints";
+import endpoints from "../app/endpoints";
+import { MyHelmet } from "../components/MyHelmet";
 
 // import { ContactPopup } from "../contact/contact";
 
@@ -31,11 +32,10 @@ export const Home = () => {
       <section id="home" className="home">
         {data ? (
           <div>
-            <Helmet>
-          <meta charSet="utf-8" />
-          <title> {data.title}</title>
-          <meta name="description" content={data.description} />
-        </Helmet>
+        <MyHelmet 
+                title={data.meta.title} 
+                description={data.meta.description}
+        />
         <div className="intro_sec d-block d-lg-flex align-items-center ">
           <div
             className="h_bg-image order-1 order-lg-2 h-100 "

@@ -6,11 +6,13 @@ import FallbackSpinner from '../components/FallbackSpinner';
 
 import React from "react";
 import { CardView } from '../components/CardView';
+import { HelmetProvider } from "react-helmet-async";
+import { MyHelmet } from '../components/MyHelmet';
+
 
 
 
 export const Education = () => {
-
     const [data, setData] = useState(null);
 
     useEffect(() => {
@@ -25,16 +27,22 @@ export const Education = () => {
     const categories = ['Courses', 'Freelance', 'Certificates']
     const pageTitle = 'Education'
     return (
-        <>
+        <HelmetProvider>
         {data ? (
+            <>
+            <MyHelmet 
+                title={data.meta.title} 
+                description={data.meta.description}
+            />
             <CardView
                 cards={data.education}
                 categories={categories}
                 pageTitle={pageTitle}
             />
+            </>
         ): <FallbackSpinner />}
         
-        </>
+        </HelmetProvider>
         
     );
 };

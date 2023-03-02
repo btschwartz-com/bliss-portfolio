@@ -9,6 +9,10 @@ import { Link } from 'react-router-dom';
 import { PageTitle } from '../components/PageTitle';
 
 
+import { HelmetProvider } from 'react-helmet-async';
+import { MyHelmet } from '../components/MyHelmet';
+
+
 
 const styles = {
   separator: {
@@ -24,29 +28,15 @@ const styles = {
 };
 
 export const About = () => {
-  const [bioData, setBioData] = useState(null);
-  const [skillData, setSkillData] = useState(null);
-  const [interestData, setInterestData] = useState(null);
+  const [data, setData] = useState(null);
   const [homeData, setHomeData] = useState(null);
   const matches = useMediaQuery('(min-width: 1000px)');
 
   useEffect(() => {
     fetch(endpoints.about, {
       method: 'GET',
-    }).then((res) => res.json()).then((res) => setBioData(res))
+    }).then((res) => res.json()).then((res) => setData(res))
       .catch((err) => err);
-  }, []);
-
-  useEffect(() => {
-      fetch(endpoints.skills, {method: 'GET',})
-      .then((res) => res.json()).then((res) => setSkillData(res))
-      .catch((err) => err);
-  }, []);
-
-  useEffect(() => {
-      fetch(endpoints.interests, { method: 'GET', })
-        .then((res) => res.json()).then((res) => setInterestData(res))
-        .catch((err) => err);
   }, []);
 
   useEffect(() => {
@@ -59,43 +49,53 @@ export const About = () => {
   
 
   return (
+    <HelmetProvider>
     <div style={styles.sectionContentContainer}>
-            <Container>
-              <Row>
-                <PageTitle title="Ben Schwartz" />
-              </Row>
-              
+      
+        <Container>
+          <Row>
+            <PageTitle title="Ben Schwartz" />
+          </Row>
+          
+          
+            {data ? (
               <Row className="justify-content-center">
-                {bioData ? (
-                  <Bio data={bioData} matches={matches}/>
+                  <MyHelmet 
+                    title={data.meta.title} 
+                    description={data.meta.description}
+                  />
+              
+              <Bio data={data} matches={matches}/>
+              </Row>
+            ) : <FallbackSpinner />}
+         
+          <Row>
+            <div className="d-flex flex-wrap justify-content-center">
+                {homeData ? (
+                  <>
+                    {homeData.buttons.map((item) => (
+                    item.name !== 'Me' &&
+                    <Link to={item.route} key={item.name} className="text_2">
+                      <div id={item.id} className="ac_btn btn ">
+                        {item.name}
+                        <div className="ring one"></div>
+                        <div className="ring two"></div>
+                        <div className="ring three"></div>
+                      </div>
+                    </Link>
+                  ))}
+                  </>
                 ) : <FallbackSpinner />}
-              </Row>
-              <Row>
-                <div className="d-flex flex-wrap justify-content-center">
-                    {homeData ? (
-                      <>
-                        {homeData.buttons.map((item) => (
-                        item.name !== 'Me' &&
-                        <Link to={item.route} key={item.name} className="text_2">
-                          <div id={item.id} className="ac_btn btn ">
-                            {item.name}
-                            <div className="ring one"></div>
-                            <div className="ring two"></div>
-                            <div className="ring three"></div>
-                          </div>
-                        </Link>
-                      ))}
-                      </>
-                    ) : <FallbackSpinner />}
-                </div>
-              </Row>
-              <hr style={styles.separator} />
-              <Row>
-              {skillData && interestData ? (
-                <AboutIcons skills={skillData} interests={interestData}/>
-              ) : <FallbackSpinner />}
-              </Row>
-            </Container>
+            </div>
+          </Row>
+          <hr style={styles.separator} />
+          <Row>
+          {data ? (
+            <AboutIcons icons={data.icons}/>
+          ) : <FallbackSpinner />}
+          </Row>
+        </Container>
     </div>
+    </HelmetProvider>
   );
 };
