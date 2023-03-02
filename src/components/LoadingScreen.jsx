@@ -6,6 +6,7 @@ const styles = {
         backgroundColor: "black",
         height: "100vh",
         display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
         opacity: 1,
@@ -15,17 +16,23 @@ const styles = {
         color: "white",
         fontSize: "1.5em",
         alignItems: "center",
-        
+        display: "flex",
     },
-    letterStyle: {       
-        display: 'inline-block',
-        fontSize: '3em',
-        fontFamily: 'Arial, sans-serif',
-        color: 'white'
+    letterStyle: {
+        display: "inline-block",
+        fontSize: "3em",
+        fontFamily: "Arial, sans-serif",
+        color: "white",
+        margin: "0.2em",
     },
-};
+    gifContainer: {
+        marginTop: "2em",
+        maxWidth: "100%",
+        maxHeight: "50%",
+    },
+    };
 
-export const LoadingScreen = ({ onFinishLoading }) => {
+    export const LoadingScreen = ({ onFinishLoading }) => {
     const [visible, setVisible] = useState(true);
 
     useEffect(() => {
@@ -48,7 +55,6 @@ export const LoadingScreen = ({ onFinishLoading }) => {
         };
     }, [onFinishLoading]);
 
-
     const letters = "Ben".split();
 
     return (
@@ -59,26 +65,30 @@ export const LoadingScreen = ({ onFinishLoading }) => {
             pointerEvents: visible ? "auto" : "none",
         }}
         >
-
-            <div style={styles.message}>
+        <div style={styles.message}>
             {letters.map((letter, index) =>
-                letter === ' ' ? '\u00A0\u00A0\u00A0' :
-                letters.map((letter, index) =>
+            letter === " " ? (
+                "\u00A0\u00A0\u00A0"
+            ) : (
                 <MovingComponent
-                    type="blur"
-                    duration="2000ms"
-                    delay="index * 100ms"
-                    direction="normal"
-                    timing="ease"
-                    iteration="infinite"
-                    fillMode="none"
-                    style={styles.letterStyle}
-                    >
-                    {letter}
-                </MovingComponent>)
+                key={index}
+                type="blur"
+                duration="2000ms"
+                delay={`${index * 100}ms`}
+                direction="normal"
+                timing="ease"
+                iteration="infinite"
+                fillMode="none"
+                style={styles.letterStyle}
+                >
+                {letter}
+                </MovingComponent>
+            )
             )}
-            </div>
+        </div>
+        <div style={styles.gifContainer}>
+            <img src="dog.gif" alt="loading dog" />
+        </div>
         </div>
     );
 };
-
