@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import MovingComponent from "react-moving-text";
+// import MovingComponent from "react-moving-text";
 
 const styles = {
     container: {
@@ -60,7 +60,7 @@ const styles = {
         };
     }, [onFinishLoading]);
 
-    const letters = "Ben".split();
+    // const letters = "Hello".split();
 
     return (
         <div
@@ -70,7 +70,7 @@ const styles = {
             pointerEvents: visible ? "auto" : "none",
         }}
         >
-            <div style={styles.message}>
+            {/* <div style={styles.message}>
                 {letters.map((letter, index) =>
                 letter === " " ? (
                     "\u00A0\u00A0\u00A0"
@@ -90,10 +90,10 @@ const styles = {
                     </MovingComponent>
                 )
                 )}
-            </div>
-            {/* <div style={styles.gifContainer}>
-                <img src="dog.gif" alt="loading dog" />
             </div> */}
+            <div style={styles.gifContainer}>
+                <img src="images/loading.gif" alt="loading dog" />
+            </div>
         </div>
     );
 };

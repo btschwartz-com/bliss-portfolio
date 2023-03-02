@@ -1,13 +1,13 @@
 import React from 'react';
 import MovingComponent from 'react-moving-text';
 import { LightSpeed } from 'react-reveal';
-import { Flip, Zoom, Bounce } from 'react-reveal';
+import { Zoom, Bounce } from 'react-reveal';
 import Jump from 'react-reveal/Jump';
 import Jello from 'react-reveal/Jello';
 import RubberBand from 'react-reveal/RubberBand';
 
 const getRandomComponent = () => {   
-  const components = [Flip, Zoom, Bounce, Jump, Jello, RubberBand];
+  const components = [Zoom, Bounce, Jump, Jello, RubberBand];
   const randomIndex = Math.floor(Math.random() * components.length);
   const component = components[randomIndex] || LightSpeed;
   return component;
@@ -23,8 +23,15 @@ const styles = {
     }
 };
 
-export const PageTitle = ({ title, random = true }) => {
+export const PageTitle = ({ title, subtitle, random = true }) => {
     const letters = title.split('');
+
+    if (subtitle) {
+        console.log(subtitle);
+    } // HERE
+    else {
+        console.log('No subtitle');
+    }
 
     const RevealComponent = random ? getRandomComponent() : LightSpeed;
 
