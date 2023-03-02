@@ -25,6 +25,19 @@ const styles = {
     maxWidth: '1000px',
     margin: '0 auto',
   },
+  // sectionContentContainer: {
+  //   marginTop: '64px',
+  //   maxWidth: '1000px',
+  //   margin: '0 auto',
+  //   flex: '1 0 auto',
+  //   position: 'relative',
+  //   width: '100%',
+  //   transition: 'all .5s ease-in',
+  //   height: '100vh',
+  //   overflowY: 'hidden',
+  //   overflowX: 'hidden'
+  // },
+  
 };
 
 export const About = () => {
@@ -51,13 +64,10 @@ export const About = () => {
   return (
     <HelmetProvider>
     <div style={styles.sectionContentContainer}>
-      
         <Container>
           <Row>
             <PageTitle title="Ben Schwartz" />
           </Row>
-          
-          
             {data ? (
               <Row className="justify-content-center">
                   <MyHelmet 
@@ -68,7 +78,7 @@ export const About = () => {
               <Bio data={data} matches={matches}/>
               </Row>
             ) : <FallbackSpinner />}
-         
+
           <Row>
             <div className="d-flex flex-wrap justify-content-center">
                 {homeData ? (

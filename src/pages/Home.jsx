@@ -27,7 +27,7 @@ export const Home = () => {
 
   return (
     <HelmetProvider>
-      <section id="home" className="home" style={{ height: "100vh", overflow: "hidden" }}>
+      <section id="home" className="home">
         {data ? (
         <div>
           <MyHelmet 
@@ -56,10 +56,12 @@ export const Home = () => {
             <div className="text order-2 order-lg-1 h-100 d-lg-flex justify-content-center">
               <div className="align-self-center ">
                 <div className="intro mx-auto">
-                  <Slide top>
-                  <h2 className="mb-1x">{data.greetings}</h2>
+                <h2 className="mb-1x">
+                  <Slide top cascade>
+                  {data.greetings}
                   </Slide>
-                  <Slide left>
+                  </h2>
+                  <Slide right>
                   <h1 className="fluidz-48 mb-1x">
                     <Typewriter
                       options={{
@@ -71,7 +73,7 @@ export const Home = () => {
                     />
                   </h1>
                   </Slide>
-                  <Slide right>
+                  <Slide left>
                   <p className="mb-1x">{data.about}</p>
                   </Slide>
                   <Slide bottom>

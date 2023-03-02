@@ -65,22 +65,20 @@ export const ContactPopup = () => {
     return (
         <>
         <style type="text/css">
-            {`
-            .btn-flat {
-            background-color: #FFCB05;
-            color: black;
-            }
-
+        {`
             .btn-blue {
             background-color: #00274C;
             color: white;
             border: 2px solid #FFCB05;
-            transition: border-color 0.3s ease-in-out; /* Add a transition effect for the border color change */
+            transition: all 0.3s ease-in-out; /* Add a transition effect for all properties */
             }
+
             .btn-blue:hover {
-                border-color: #FFCB05; /* Change the border color on hover */
+            background-color: #FFCB05;
+            color: black;
+            border-color: #FFCB05; /* Change the border color on hover */
             }
-            `}
+        `}
         </style>
         <Button variant="blue" onClick={handleShow}>
             Contact Me

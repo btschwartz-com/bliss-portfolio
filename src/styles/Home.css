@@ -5,6 +5,9 @@ section {
     -webkit-transition: all .5s ease-in;
     -o-transition: all .5s ease-in;
     transition: all .5s ease-in;
+    height: "100vh";
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .who_am_I {

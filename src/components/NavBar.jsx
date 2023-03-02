@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 const styles = {
   navbarCustom: {
     fontFamily: 'Arial',
+    backgroundColor: '#00274C'
   },
   navLink: {
     fontFamily: 'Arial',
@@ -48,7 +49,7 @@ const NavBar = () => {
   return (
     <Navbar
       fixed="top"
-      bg="dark"
+      bg="custom"
       variant="dark"
       className="navbar-custom"
       collapseOnSelect
@@ -58,6 +59,7 @@ const NavBar = () => {
       style={styles.navbarCustom}
     >
       <Container>
+        
         <Navbar.Brand>
           <Link to="/" className="text_2" onClick={handleLinkClick}>
           <img
@@ -69,6 +71,7 @@ const NavBar = () => {
           />{' '}
           </Link>
         </Navbar.Brand>
+        
         <Navbar.Brand >
           <ContactPopup/>
         </Navbar.Brand>
