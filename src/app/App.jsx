@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
   BrowserRouter as Router,
@@ -20,10 +20,18 @@ function _ScrollToTop(props) {
 const ScrollToTop = withRouter(_ScrollToTop);
 
 export default function App() {
-
+  const [loading, setLoading] = useState(true);
+  const spinner = document.getElementById("spinner");
+  if (spinner) {
+    setTimeout(() => {
+      spinner.style.display = "none";
+      setLoading(false);
+    }, 2000);
+  }
 
   return (
-      <>
+    !loading &&
+    (<>
         <GlobalStyles />
         <Router basename={process.env.PUBLIC_URL}>
           <ScrollToTop>
@@ -33,7 +41,7 @@ export default function App() {
           </ScrollToTop>
         </Router>
 
-    </>
+    </>)
   );
 }
 
