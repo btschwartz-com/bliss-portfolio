@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 // import MovingComponent from "react-moving-text";
+import { Fade } from "react-reveal";
 
 const styles = {
     container: {
@@ -43,7 +44,7 @@ const styles = {
     useEffect(() => {
         const timer = setTimeout(() => {
         setVisible(false);
-        }, 1500);
+        }, 1750);
 
         return () => {
         clearTimeout(timer);
@@ -53,7 +54,7 @@ const styles = {
     useEffect(() => {
         const timer = setTimeout(() => {
         onFinishLoading();
-        }, 2000);
+        }, 2250);
 
         return () => {
         clearTimeout(timer);
@@ -91,9 +92,11 @@ const styles = {
                 )
                 )}
             </div> */}
+            <Fade>
             <div style={styles.gifContainer}>
                 <img src="images/loading.gif" alt="loading dog" />
             </div>
+            </Fade>
         </div>
     );
 };
