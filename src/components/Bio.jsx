@@ -4,6 +4,7 @@ import { Col, Row } from 'react-bootstrap';
 import Slide from 'react-reveal/Slide';
 
 
+
 const styles = {
     introTextContainer: {
         margin: 15,
@@ -21,6 +22,11 @@ const styles = {
         alignItems: 'center',
         display: 'flex',
         maxWidth: '90%',
+    },
+    image: {
+        maxWidth: '90%',
+        // make rounded edges
+        borderRadius: '7%',
     },
     
 };
@@ -46,7 +52,7 @@ export const Bio = ({ data, matches }) => {
                     </Col>
                     <Col style={styles.introImageContainer}>
                         <Slide right>
-                            <img src={data?.imageSource} alt="profile" />
+                            <img style={styles.image} src={data?.imageSource} alt="profile" />
                         </Slide>
                     </Col>
                     
@@ -57,7 +63,7 @@ export const Bio = ({ data, matches }) => {
         return (
             <>
             <Slide left>
-                <img style={{maxWidth: '90%'}} src={data?.imageSource} alt="profile" />
+                <img style={styles.image} src={data?.imageSource} alt="profile" />
             </Slide>
             <Slide right>
                 <div style={styles.introTextContainer}>
