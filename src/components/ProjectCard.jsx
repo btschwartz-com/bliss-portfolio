@@ -23,10 +23,11 @@ const styles = {
         marginTop: 20,
         fontSize: 24,
         fontWeight: 700,
-        color: '#FFCB05',
+        color: 'white',
     },
     cardTextStyle: {
         textAlign: 'left',
+        color: 'gray',
     },
     linkStyle: {
         textDecoration: 'none',
@@ -39,6 +40,29 @@ const styles = {
         position: 'absolute',
         top: 0,
         color: 'white',
+        backgroundColor: '#00274C',
+        padding: '5px 10px',
+        borderRadius: '0 10px 0 10px',
+        fontSize: 14,
+        fontWeight: 'bold',
+    },
+    leftBubbleStyle: {
+        position: 'absolute',
+        top: 0,
+        color: 'white',
+        backgroundColor: '#007bff',
+        left: 0,
+        padding: '5px 10px',
+        borderRadius: '0 10px 0 10px',
+        fontSize: 14,
+        fontWeight: 'bold',
+    },
+    rightBubbleStyle: {
+        position: 'absolute',
+        top: 0,
+        color: 'black',
+        backgroundColor: '#FFCB05',
+        right: 0,
         padding: '5px 10px',
         borderRadius: '0 10px 0 10px',
         fontSize: 14,
@@ -60,10 +84,6 @@ const badgeColors = {
 };
 
 
-const leftColor = '#007bff';
-const rightColor = '#F700FF';
-
-
 
 const ProjectCard = (props) => {
     const parseBodyText = (text) => <ReactMarkdown children={text} />;
@@ -80,22 +100,14 @@ const ProjectCard = (props) => {
                 text='light'
             >
                 {project.leftBubble && (
-                    <div style={{
-                        ...styles.bubbleStyle,
-                        backgroundColor: leftColor,
-                        left: 0
-                        }}>
+                    <div style={styles.leftBubbleStyle}>
                         {project.leftBubble}
                     </div>
                 )}
                 {project.rightBubble && (
-                    <div style={{
-                        ...styles.bubbleStyle,
-                        backgroundColor: rightColor,
-                        right: 0
-                        }}>
-                        {project.rightBubble}
-                    </div>
+                    <div style={styles.rightBubbleStyle}>
+                    {project.rightBubble}
+                </div>
                 )}
                 <Card.Img variant="top" src={project?.image} />
                 <Card.Body>

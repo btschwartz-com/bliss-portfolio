@@ -7,8 +7,6 @@ import endpoints from "../app/endpoints";
 import MyHelmet from "../components/MyHelmet";
 import Slide from "react-reveal/Slide";
 
-// import { ContactPopup } from "../contact/contact";
-
 
 
 
@@ -76,7 +74,7 @@ const Home = () => {
                   <Slide left>
                   <p className="mb-1x">{data.about}</p>
                   </Slide>
-                  <Slide bottom>
+                  <Slide right>
                   <div >
                     {data.buttons.map((item) => (
                       <Link to={item.route} key={item.name} className="text_2">

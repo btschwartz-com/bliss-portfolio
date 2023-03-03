@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import "./style.css";
+import "../styles/SocialIcons.css";
 import {
   FaGithub,
   FaTwitter,
@@ -8,7 +8,7 @@ import {
   FaYoutube,
   FaTwitch,
 } from "react-icons/fa";
-import endpoints from "../../app/endpoints";
+import endpoints from "../app/endpoints";
 
 
 // make a map of the social icons
@@ -21,6 +21,7 @@ const socialIcons = {
   twitch: FaTwitch,
   email: FaTwitch
 };
+
 
 
 
@@ -37,9 +38,6 @@ const Socialicons = () => {
             .then((res) => setData(res.social))
             .catch((err) => err);
     }, []);
-
-
-
 
 
   return (
