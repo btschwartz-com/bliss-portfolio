@@ -9,7 +9,7 @@ import AppRoutes from "./routes";
 import NavBarWithRouter from "../components/NavBar";
 import GlobalStyles from '../styles/GlobalStyles';
 import "../styles/App.css";
-import { LoadingScreen } from "../components/LoadingScreen";
+import LoadingScreen from "../components/LoadingScreen";
 import { Fade } from "react-reveal";
 
 function _ScrollToTop(props) {

@@ -24,7 +24,7 @@ const socialIcons = {
 
 
 
-export const Socialicons = () => {
+const Socialicons = () => {
 
 
   const [data, setData] = useState(null);
@@ -63,5 +63,8 @@ export const Socialicons = () => {
     </div>
   );
 };
+
+
+export default Socialicons;
 
 

@@ -2,7 +2,7 @@ import { Navbar, Nav, Container } from 'react-bootstrap';
 import React, { useEffect, useState } from 'react';
 import withRouter from '../hooks/withRouter';
 import endpoints from '../app/endpoints';
-import { ContactPopup } from './ContactPopup';
+import ContactPopup from './ContactPopup';
 import { Link } from 'react-router-dom';
 
 const styles = {

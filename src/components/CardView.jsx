@@ -7,7 +7,7 @@ import FallbackSpinner from './FallbackSpinner';
 
 
 import React from "react";
-import { PageTitle } from './PageTitle';
+import PageTitle from './PageTitle';
 
 
 const styles = {
@@ -28,7 +28,7 @@ const styles = {
     },
 };
 
-export const CardView = (props) => {
+const CardView = (props) => {
 
     const { pageTitle, cards, categories } = props;
 
@@ -121,3 +121,5 @@ export const CardView = (props) => {
         </Container>
     );
 };
+
+export default CardView;

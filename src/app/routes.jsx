@@ -1,13 +1,13 @@
 import React from "react";
 import { Route, Routes} from "react-router-dom";
 import withRouter from "../hooks/withRouter"
-import { Home } from "../pages/Home";
-import { Projects } from "../pages/Projects";
-import { About } from "../pages/About";
-import { Socialicons } from "../components/socialicons";
+import Home from "../pages/Home";
+import Projects from "../pages/Projects";
+import About from "../pages/About";
+import Socialicons from "../components/socialicons";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import { Experience } from "../pages/Experience";
-import { Education } from "../pages/Education";
+import Experience from "../pages/Experience";
+import Education from "../pages/Education";
 
 
 

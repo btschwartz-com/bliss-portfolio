@@ -4,7 +4,7 @@ import { HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
 import { Link } from "react-router-dom";
 import endpoints from "../app/endpoints";
-import { MyHelmet } from "../components/MyHelmet";
+import MyHelmet from "../components/MyHelmet";
 import Slide from "react-reveal/Slide";
 
 // import { ContactPopup } from "../contact/contact";
@@ -12,7 +12,7 @@ import Slide from "react-reveal/Slide";
 
 
 
-export const Home = () => {
+const Home = () => {
 
     const [data, setData] = useState(null);
 
@@ -102,3 +102,5 @@ export const Home = () => {
     </HelmetProvider>
   );
 };
+
+export default Home;

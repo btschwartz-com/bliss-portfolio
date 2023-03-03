@@ -61,7 +61,7 @@ const IconsList = ({ items }) => {
     );
 };
 
-export const AboutIcons = (props) => {
+const AboutIcons = (props) => {
     const { icons } = props;
 
 
@@ -85,3 +85,5 @@ export const AboutIcons = (props) => {
         </>
     );
 };
+
+export default AboutIcons;

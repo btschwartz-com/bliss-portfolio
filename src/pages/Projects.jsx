@@ -6,13 +6,13 @@ import FallbackSpinner from '../components/FallbackSpinner';
 
 
 import React from "react";
-import { CardView } from '../components/CardView';
+import CardView from '../components/CardView';
 import { HelmetProvider } from 'react-helmet-async';
-import { MyHelmet } from '../components/MyHelmet';
+import MyHelmet from '../components/MyHelmet';
 
 
 
-export const Projects = () => {
+const Projects = () => {
 
     const [data, setData] = useState(null);
 
@@ -47,3 +47,5 @@ export const Projects = () => {
         
     );
 };
+
+export default Projects;

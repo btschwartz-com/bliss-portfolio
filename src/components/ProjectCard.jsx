@@ -23,6 +23,7 @@ const styles = {
         marginTop: 20,
         fontSize: 24,
         fontWeight: 700,
+        color: '#FFCB05',
     },
     cardTextStyle: {
         textAlign: 'left',
@@ -63,8 +64,10 @@ const leftColor = '#007bff';
 const rightColor = '#F700FF';
 
 
+
 const ProjectCard = (props) => {
     const parseBodyText = (text) => <ReactMarkdown children={text} />;
+    
 
     const { project } = props;
 

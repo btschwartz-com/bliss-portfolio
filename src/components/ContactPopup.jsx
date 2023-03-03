@@ -35,7 +35,7 @@ const styles = {
 };
 
 
-export const ContactPopup = () => {
+const ContactPopup = () => {
     const [show, setShow] = useState(false);
     const [showEmail, setShowEmail] = useState(false);
     const [data, setData] = useState({});
@@ -125,3 +125,6 @@ export const ContactPopup = () => {
         </>
     );
 };
+
+
+export default ContactPopup;

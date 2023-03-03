@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import MovingComponent from "react-moving-text";
+import MovingComponent from "react-moving-text";
 import { Fade } from "react-reveal";
 
 const styles = {
@@ -23,7 +23,7 @@ const styles = {
         alignItems: "center",
         display: "flex",
         justifyContent: "center",
-        marginBottom: "15vh",
+        // marginBottom: "15vh",
     },
     letterStyle: {
         display: "inline-block",
@@ -35,10 +35,16 @@ const styles = {
     gifContainer: {
         maxWidth: "100%",
         maxHeight: "50%",
-    },
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100%",
+        height: "100vh",
+        boxSizing: "border-box",
+      },
     };
 
-    export const LoadingScreen = ({ onFinishLoading }) => {
+const LoadingScreen = ({ onFinishLoading }) => {
     const [visible, setVisible] = useState(true);
 
     useEffect(() => {
@@ -61,7 +67,7 @@ const styles = {
         };
     }, [onFinishLoading]);
 
-    // const letters = "Hello".split();
+    const letters = "Hello".split();
 
     return (
         <div
@@ -71,7 +77,7 @@ const styles = {
             pointerEvents: visible ? "auto" : "none",
         }}
         >
-            {/* <div style={styles.message}>
+            <div style={styles.message}>
                 {letters.map((letter, index) =>
                 letter === " " ? (
                     "\u00A0\u00A0\u00A0"
@@ -91,7 +97,7 @@ const styles = {
                     </MovingComponent>
                 )
                 )}
-            </div> */}
+            </div>
             <Fade>
             <div style={styles.gifContainer}>
                 <img src="images/loading.gif" alt="loading dog" />
@@ -100,3 +106,5 @@ const styles = {
         </div>
     );
 };
+
+export default LoadingScreen;

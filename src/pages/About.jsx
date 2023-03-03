@@ -2,15 +2,15 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row } from 'react-bootstrap';
 import endpoints from '../app/endpoints';
 import { useMediaQuery } from 'usehooks-ts';
-import { Bio } from '../components/Bio';
-import { AboutIcons } from '../components/AboutIcons';
+import Bio from '../components/Bio';
+import AboutIcons from '../components/AboutIcons';
 import FallbackSpinner from '../components/FallbackSpinner';
 import { Link } from 'react-router-dom';
-import { PageTitle } from '../components/PageTitle';
+import PageTitle from '../components/PageTitle';
 
 
 import { HelmetProvider } from 'react-helmet-async';
-import { MyHelmet } from '../components/MyHelmet';
+import MyHelmet from '../components/MyHelmet';
 
 
 
@@ -24,23 +24,17 @@ const styles = {
     marginTop: '64px',
     maxWidth: '1000px',
     margin: '0 auto',
+    flex: '1 0 auto',
+    position: 'relative',
+    width: '100%',
+    transition: 'all .5s ease-in',
+    overflowY: 'scroll',
+    overflowX: 'hidden'
   },
-  // sectionContentContainer: {
-  //   marginTop: '64px',
-  //   maxWidth: '1000px',
-  //   margin: '0 auto',
-  //   flex: '1 0 auto',
-  //   position: 'relative',
-  //   width: '100%',
-  //   transition: 'all .5s ease-in',
-  //   height: '100vh',
-  //   overflowY: 'hidden',
-  //   overflowX: 'hidden'
-  // },
   
 };
 
-export const About = () => {
+const About = () => {
   const [data, setData] = useState(null);
   const [homeData, setHomeData] = useState(null);
   const matches = useMediaQuery('(min-width: 1000px)');
@@ -109,3 +103,5 @@ export const About = () => {
     </HelmetProvider>
   );
 };
+
+export default About;

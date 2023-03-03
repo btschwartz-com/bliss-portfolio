@@ -4,12 +4,12 @@ import { Chrono } from "react-chrono";
 import FallbackSpinner from "../components/FallbackSpinner";
 import endpoints from "../app/endpoints";
 
-import { PageTitle } from "../components/PageTitle";
+import PageTitle from "../components/PageTitle";
 
 // https://github.com/prabhuignoto/react-chrono#theme
 
 
-export const Experience = () => {
+const Experience = () => {
 
     const [data, setData] = useState(null);
 
@@ -100,49 +100,6 @@ export const Experience = () => {
     )
 };
 
+export default Experience;
 
-
-// .my-card {
-//     border-radius: 10px;
-//     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-//     margin-bottom: 24px;
-//     padding: 24px;
-//   }
-  
-//   .my-card-media {
-//     display: none;
-//   }
-  
-//   .my-card-subtitle {
-//     color: #FFCB05;
-//     font-size: 16px;
-//     margin-bottom: 8px;
-//     margin-left: 5px;
-//   }
-  
-//   .my-card-text {
-//     font-size: 18px;
-//     line-height: 1.5;
-//     margin-bottom: 16px;
-//   }
-  
-//   .my-card-title {
-//     color: white;
-//     font-size: 24px;
-//     margin-bottom: 8px;
-//     margin-left: 0;
-//   }
-  
-//   .my-controls {
-//     display: none;
-//   }
-  
-//   .my-title {
-//     color: white;
-//     font-size: 15px;
-//     font-weight: bold;
-//     margin-bottom: 24px;
-//     text-align: center;
-//   }
-  
 

@@ -33,7 +33,7 @@ const styles = {
 
 
 
-export const Bio = ({ data, matches }) => {
+const Bio = ({ data, matches }) => {
     const parseIntro = (text) => (
         <ReactMarkdown
         children={text}
@@ -74,3 +74,5 @@ export const Bio = ({ data, matches }) => {
         );
     }
 };
+
+export default Bio;

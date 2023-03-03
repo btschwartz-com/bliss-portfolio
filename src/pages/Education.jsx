@@ -5,14 +5,14 @@ import FallbackSpinner from '../components/FallbackSpinner';
 
 
 import React from "react";
-import { CardView } from '../components/CardView';
+import CardView from '../components/CardView';
 import { HelmetProvider } from "react-helmet-async";
-import { MyHelmet } from '../components/MyHelmet';
+import MyHelmet from '../components/MyHelmet';
 
 
 
 
-export const Education = () => {
+const Education = () => {
     const [data, setData] = useState(null);
 
     useEffect(() => {
@@ -46,3 +46,5 @@ export const Education = () => {
         
     );
 };
+
+export default Education;
