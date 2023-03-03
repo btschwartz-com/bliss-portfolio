@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
-    Button, Card, Badge, Col,
+    Button, Card, Badge, Col, Modal
 } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
@@ -68,9 +68,25 @@ const styles = {
         fontSize: 14,
         fontWeight: 'bold',
     },
+    closeButton: {
+        marginLeft: 'auto',
+    },
     cardFooter: {
         backgroundColor: '#181818',
-    }
+    },
+    modalHeader: {
+        backgroundColor: '#00274C',
+        color: 'white',
+    },
+    modalBody: {
+        backgroundColor: '#00274C',
+        color: 'white',
+    },
+    modalFooter: {
+        backgroundColor: '#00274C',
+        color: 'white',
+        borderTop: 'none',
+    },
 };
 
 const badgeColors = {
@@ -85,9 +101,52 @@ const badgeColors = {
 
 
 
+
+
+const MyModal = (props) => {
+    const { show, handleClose, data } = props;
+    return (
+        <Modal 
+            show={show} 
+            onHide={handleClose}
+            backdrop="static"
+            keyboard={false}
+            centered
+        >
+            <Modal.Header style={styles.modalHeader} closeButton>
+                <Modal.Title>{data.title}</Modal.Title>
+            </Modal.Header>
+            <Modal.Body style={styles.modalBody}>
+                {data.body}
+            </Modal.Body>
+            <Modal.Footer style={styles.modalFooter}>
+            <Button
+                    variant="secondary"
+                    style={styles.closeButton}
+                    onClick={handleClose}
+                >
+                    Close
+                </Button>
+            </Modal.Footer>
+        </Modal>
+    );
+};
+
+
+
 const ProjectCard = (props) => {
     const parseBodyText = (text) => <ReactMarkdown children={text} />;
-    
+
+    const [show, setShow] = useState(false); // for modal
+
+    const onLinkClick = (linkData) => {
+        if (!linkData.is_modal) {
+            window.open(linkData.data, '_blank');
+        }
+        else {
+            setShow(true);
+        }
+    };
 
     const { project } = props;
 
@@ -119,14 +178,23 @@ const ProjectCard = (props) => {
 
                 <Card.Body>
                     {project?.links?.map((link) => (
+                        <>
                         <Button
-                            key={link.href}
+                            key={link.data}
                             style={styles.buttonStyle}
                             variant={'outline-light'}
-                            onClick={() => window.open(link.href, '_blank')}
+                            onClick={() => onLinkClick(link)}
                         >
                             {link.text}
                         </Button>
+                        {link.is_modal && (
+                            <MyModal
+                                show={show}
+                                handleClose={() => setShow(false)}
+                                data={link.data}
+                            />
+                        )}
+                        </>
                     ))}
                 </Card.Body>
                 {project.tags && (
@@ -156,7 +224,8 @@ const ProjectCard = (props) => {
         image: PropTypes.string,
         links: PropTypes.arrayOf(PropTypes.shape({
             text: PropTypes.string.isRequired,
-            href: PropTypes.string.isRequired,
+            is_modal: PropTypes.bool,
+            data: PropTypes.string.isRequired,
         })),
         tags: PropTypes.arrayOf(PropTypes.shape({
             text: PropTypes.string.isRequired,

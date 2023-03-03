@@ -14,11 +14,11 @@
             "links": [
                 {
                     "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/dev-portfolio"
+                    "data": "https://github.com/mayankagarwal09/dev-portfolio"
                 },
                 {
                     "text": "Live",
-                    "href": "https://mayankagarwal.me"
+                    "data": "https://mayankagarwal.me"
                 }
             ],
             "tags": [
@@ -61,11 +61,11 @@
             "links": [
                 {
                     "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/Caaring"
+                    "data": "https://github.com/mayankagarwal09/Caaring"
                 },
                 {
                     "text": "Live",
-                    "href": "http://caaring.herokuapp.com"
+                    "data": "http://caaring.herokuapp.com"
                 }
             ],
             "tags": [
@@ -108,7 +108,7 @@
             "links": [
                 {
                     "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/QuietHours-Android"
+                    "data": "https://github.com/mayankagarwal09/QuietHours-Android"
                 }
             ],
             "tags": [
@@ -151,7 +151,7 @@
             "links": [
                 {
                     "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/SecureChatApp"
+                    "data": "https://github.com/mayankagarwal09/SecureChatApp"
                 }
             ],
             "tags": [
@@ -194,7 +194,7 @@
             "links": [
                 {
                     "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/mvvm-sample-app"
+                    "data": "https://github.com/mayankagarwal09/mvvm-sample-app"
                 }
             ],
             "tags": [
@@ -237,7 +237,7 @@
             "links": [
                 {
                     "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/Paginated-App-Feeds-List"
+                    "data": "https://github.com/mayankagarwal09/Paginated-App-Feeds-List"
                 }
             ],
             "tags": [
@@ -280,7 +280,7 @@
             "links": [
                 {
                     "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/task-tracker-app"
+                    "data": "https://github.com/mayankagarwal09/task-tracker-app"
                 }
             ],
             "tags": [
@@ -323,7 +323,7 @@
             "links": [
                 {
                     "text": "GitHub",
-                    "href": "https://github.com/mayankagarwal09/img-encrypt-sdes"
+                    "data": "https://github.com/mayankagarwal09/img-encrypt-sdes"
                 }
             ],
             "tags": [

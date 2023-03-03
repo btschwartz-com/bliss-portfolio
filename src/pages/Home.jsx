@@ -77,7 +77,7 @@ const Home = () => {
                   <Slide right>
                   <div >
                     {data.buttons.map((item) => (
-                      <Link to={item.route} key={item.name} className="text_2">
+                      <Link to={item.route} key={item.name} target={item.type === "link" ? "_blank" : "_self"} className="text_2">
                         <div id={item.id} className="ac_btn btn ">
                           {item.name}
                           <div className="ring one"></div>

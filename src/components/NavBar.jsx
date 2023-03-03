@@ -79,7 +79,7 @@ const NavBar = () => {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto ">
             {data?.sections?.map((section, index) => (
-              <Link to={section.href} key={section.title} className="text_2" onClick={handleLinkClick}>
+              <Link to={section.href} key={section.title} target={section.type === "link" ? "_blank" : "_self"} className="text_2" onClick={handleLinkClick}>
                 <div id={index} style={styles.navLink} >
                   {section.title}
                 </div>
