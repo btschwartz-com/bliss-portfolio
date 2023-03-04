@@ -72,7 +72,7 @@ const Home = () => {
                   </h1>
                   </Slide>
                   <Slide left>
-                  <p className="mb-1x">{data.about}</p>
+                  <p className="mb-1x" style={{ overflowWrap: 'break-word' }}>{data.about}</p>
                   </Slide>
                   <Slide right>
                   <div >

@@ -39,29 +39,6 @@ const styles = {
     bubbleStyle: {
         position: 'absolute',
         top: 0,
-        color: 'white',
-        backgroundColor: '#00274C',
-        padding: '5px 10px',
-        borderRadius: '0 10px 0 10px',
-        fontSize: 14,
-        fontWeight: 'bold',
-    },
-    leftBubbleStyle: {
-        position: 'absolute',
-        top: 0,
-        color: 'white',
-        backgroundColor: '#007bff',
-        left: 0,
-        padding: '5px 10px',
-        borderRadius: '0 10px 0 10px',
-        fontSize: 14,
-        fontWeight: 'bold',
-    },
-    rightBubbleStyle: {
-        position: 'absolute',
-        top: 0,
-        color: 'black',
-        backgroundColor: '#FFCB05',
         right: 0,
         padding: '5px 10px',
         borderRadius: '0 10px 0 10px',
@@ -158,15 +135,14 @@ const ProjectCard = (props) => {
                 }}
                 text='light'
             >
-                {project.leftBubble && (
-                    <div style={styles.leftBubbleStyle}>
-                        {project.leftBubble}
+                {project.bubble?.exists && (
+                    <div style={{
+                            ...styles.bubbleStyle,
+                            color: project.bubble.text_color,
+                            backgroundColor: project.bubble.background_color,
+                            }}>
+                        {project.bubble.text}
                     </div>
-                )}
-                {project.rightBubble && (
-                    <div style={styles.rightBubbleStyle}>
-                    {project.rightBubble}
-                </div>
                 )}
                 <Card.Img variant="top" src={project?.image} />
                 <Card.Body>

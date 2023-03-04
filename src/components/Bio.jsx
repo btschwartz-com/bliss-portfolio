@@ -15,6 +15,7 @@ const styles = {
         fontWeight: 500,
         justifyContent: 'center',
         fontFamily: 'Arial, sans-serif',
+        overflowWrap: 'break-all',
     },
     introImageContainer: {
         margin: 10,
