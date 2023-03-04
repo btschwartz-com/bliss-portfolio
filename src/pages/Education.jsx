@@ -24,7 +24,7 @@ const Education = () => {
             .catch((err) => err);
     }, []);
 
-    const categories = ['Courses', 'Freelance', 'Certificates']
+    const categories = ['Courses', 'Certificates']
     const pageTitle = 'Education'
     return (
         <HelmetProvider>
