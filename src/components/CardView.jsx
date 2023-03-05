@@ -39,19 +39,24 @@ const CardView = (props) => {
     // append All to the beginning of categories
     const buttons = ['All', ...categories];
     useEffect(() => {
+        let filtered;
         if (cards) {
             if (selectedCategory === "All") {
-                setFilteredData(cards);
+                filtered = cards;
             } 
             else if (selectedCategory === "Featured") {
-                setFilteredData(cards.filter((card) => card.is_featured));
+                filtered = cards.filter((card) => card.is_featured);
             }
             else {
-                setFilteredData(cards.filter((card) => card.category === selectedCategory));
+                filtered = cards.filter((card) => card.category === selectedCategory);
             }
         } else {
-            setFilteredData([]);
+            filtered = [];
         }
+        // Randomly sort the filtered data
+        filtered.sort(() => Math.random() - 0.5);
+        // Set the sorted filtered data as the state of filteredData
+        setFilteredData(filtered);
     }, [cards, selectedCategory]);
 
     const handleCategoryFilter = (category) => {
@@ -70,7 +75,8 @@ const CardView = (props) => {
         </Button>
     ));
 
-    const moreLimit = 6;
+    const featuredCards = cards.filter((card) => card.is_featured);
+    const moreLimit = featuredCards.length > 0 ? featuredCards.length : 6;
     const numberOfItems = showMore && filteredData ? filteredData.length : moreLimit;
 
 
