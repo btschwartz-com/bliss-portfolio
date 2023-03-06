@@ -38,6 +38,7 @@ const Education = () => {
                 cards={data.education}
                 categories={categories}
                 pageTitle={pageTitle}
+                page="education"
             />
             </>
         ): <FallbackSpinner />}

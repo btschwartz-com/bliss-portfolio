@@ -25,12 +25,12 @@ const styles = {
         backgroundColor: '#00274C',
         color: "#fff",
         borderColor: '#00274C',
-    },
+    }
 };
 
 const CardView = (props) => {
 
-    const { pageTitle, cards, categories } = props;
+    const { pageTitle, cards, categories, page } = props;
 
     const [showMore, setShowMore] = useState(false);
     const [selectedCategory, setSelectedCategory] = useState(categories[0]);
@@ -87,6 +87,17 @@ const CardView = (props) => {
                 <PageTitle title={pageTitle} subtitle={selectedCategory}/>
                 {/* <PageTitle title={pageTitle + ' \u2192 ' + selectedCategory}/> */}
             </Row>
+            {page === 'projects' && (
+                <Row>
+                    <div style={{backgroundColor: '#FFCB05', borderRadius: 10, padding: 10, width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'black'}}>
+                        <p style={{fontWeight: 'bold', color: 'black', margin: 0}}>
+                            Check out my <a href="https://github.com/btchwartz12" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', color: 'blue'}}>GitHub</a> for more of my projects!
+                        </p>
+                    </div>
+                </Row>
+            
+            )}
+
             <Row className="mb-5 mt-3 pt-md-3">
                 <Col lg="6" className="text-right">
                     {filterButtons}
@@ -129,3 +140,4 @@ const CardView = (props) => {
 };
 
 export default CardView;
+

@@ -201,7 +201,7 @@ const ProjectCard = (props) => {
         links: PropTypes.arrayOf(PropTypes.shape({
             text: PropTypes.string.isRequired,
             is_modal: PropTypes.bool,
-            data: PropTypes.string.isRequired,
+            data: PropTypes.any.isRequired,
         })),
         tags: PropTypes.arrayOf(PropTypes.shape({
             text: PropTypes.string.isRequired,

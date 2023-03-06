@@ -4,6 +4,7 @@ import withRouter from '../hooks/withRouter';
 import endpoints from '../app/endpoints';
 import ContactPopup from './ContactPopup';
 import { Link } from 'react-router-dom';
+import { socialIconsImages } from './SocialIcons';
 
 const styles = {
   navbarCustom: {
@@ -29,8 +30,16 @@ const NavBar = () => {
   const [data, setData] = useState(null);
   const [expanded, setExpanded] = useState(false);
 
+  const [socialIcons, setSocialIcons] = useState(null);
 
-
+  useEffect(() => {
+      fetch(endpoints.social, {
+          method: 'GET',
+      })
+          .then((res) => res.json())
+          .then((res) => setSocialIcons(res.navbar))
+          .catch((err) => err);
+  }, []);
 
   useEffect(() => {
     fetch(endpoints.navbar, {
@@ -73,7 +82,20 @@ const NavBar = () => {
         </Navbar.Brand>
         
         <Navbar.Brand >
-          <ContactPopup/>
+          <>
+          {socialIcons?.github && (
+            <a href={socialIcons.github} target="_blank" rel="noopener noreferrer" style={{marginRight: 10}}>
+              <socialIconsImages.github />
+            </a>
+          )}
+          <ContactPopup />
+          {socialIcons?.linkedin && (
+            <a href={socialIcons.linkedin} target="_blank" rel="noopener noreferrer" style={{marginLeft: 10}}>
+              <socialIconsImages.linkedin />
+            </a>
+          )}
+          </>
+          
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">

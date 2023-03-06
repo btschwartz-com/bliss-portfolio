@@ -1,5 +1,4 @@
 import React from 'react';
-// import ReactMarkdown from 'react-markdown';
 import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 

@@ -12,7 +12,7 @@ import endpoints from "../app/endpoints";
 
 
 // make a map of the social icons
-const socialIcons = {
+export const socialIconsImages = {
   twitter: FaTwitter,
   github: FaGithub,
   facebook: FaFacebookF,
@@ -45,7 +45,7 @@ const Socialicons = () => {
       {data ? (
         <ul>
           {data.map((item, index) => {
-            const Icon = socialIcons[item.name];
+            const Icon = socialIconsImages[item.name];
               return (
                 <li key={index}>
                   <a href={item.href}>

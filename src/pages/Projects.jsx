@@ -39,6 +39,7 @@ const Projects = () => {
                 cards={data.projects}
                 categories={categories}
                 pageTitle={pageTitle}
+                page="projects"
             />
             </>
         ): <FallbackSpinner />}
