@@ -39,25 +39,36 @@ const CardView = (props) => {
     // append All to the beginning of categories
     const buttons = ['All', ...categories];
     useEffect(() => {
-        let filtered;
-        if (cards) {
-            if (selectedCategory === "All") {
-                filtered = cards;
-            } 
-            else if (selectedCategory === "Featured") {
-                filtered = cards.filter((card) => card.is_featured);
-            }
-            else {
-                filtered = cards.filter((card) => card.category === selectedCategory);
-            }
+    let filtered;
+    if (cards) {
+        if (selectedCategory === "All") {
+            filtered = cards;
+        } else if (selectedCategory === "Featured") {
+            filtered = cards.filter((card) => card.is_featured);
         } else {
-            filtered = [];
+            filtered = cards.filter((card) => card.category === selectedCategory);
         }
-        // Randomly sort the filtered data
-        filtered.sort(() => Math.random() - 0.5);
-        // Set the sorted filtered data as the state of filteredData
-        setFilteredData(filtered);
-    }, [cards, selectedCategory]);
+    } else {
+        filtered = [];
+    }
+    if (page === 'projects') {
+        const priorityLevels = {};
+        // Group cards by priority level
+        filtered.forEach((card) => {
+            if (!priorityLevels[card.priority]) {
+                priorityLevels[card.priority] = [];
+            }
+            priorityLevels[card.priority].push(card);
+        });
+        // Randomly sort each priority level and concatenate the results
+        const randomized = Object.keys(priorityLevels).flatMap((priority) => {
+            return priorityLevels[priority].sort(() => Math.random() - 0.5);
+        });
+        filtered = randomized;
+    }
+    setFilteredData(filtered);
+    }, [cards, selectedCategory, page]);
+
 
     const handleCategoryFilter = (category) => {
         setSelectedCategory(category);
@@ -91,7 +102,7 @@ const CardView = (props) => {
                 <Row>
                     <div style={{backgroundColor: '#FFCB05', borderRadius: 10, padding: 10, width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'black'}}>
                         <p style={{fontWeight: 'bold', color: 'black', margin: 0}}>
-                            Check out my <a href="https://github.com/btchwartz12" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', color: 'blue'}}>GitHub</a> for more of my projects!
+                            Check out my <a href="https://github.com/btschwartz12" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', color: 'blue'}}>GitHub</a> for more of my projects!
                         </p>
                     </div>
                 </Row>
