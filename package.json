@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "animate.css": "^4.1.1",
+    "animejs": "^3.2.1",
     "bootstrap": "^5.2.3",
     "css-loader": "^6.7.3",
     "depcheck": "^1.4.3",

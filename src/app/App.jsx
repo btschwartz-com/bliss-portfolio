@@ -22,14 +22,12 @@ function _ScrollToTop(props) {
 const ScrollToTop = withRouter(_ScrollToTop);
 
 export default function App() {
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
 
   return (
     <>
       <GlobalStyles />
-        {loading ? (
-          <LoadingScreen onFinishLoading={() => setLoading(false)}/>
-        ) : (
+
           <BrowserRouter basename={process.env.BASE_NAME}>
             <ScrollToTop>
               <NavBarWithRouter />
@@ -40,7 +38,7 @@ export default function App() {
             </ScrollToTop>
           </BrowserRouter>
           
-        )}
+
       
       
     </>

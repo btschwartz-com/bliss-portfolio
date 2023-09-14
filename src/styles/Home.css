@@ -193,6 +193,10 @@ section {
         height: auto;
         min-height: 75vh;
         margin-bottom: 30px;
+        order: 2; /* This will put the image on the bottom */
+    }
+    .intro_sec .text {
+        order: 1; /* This will put the text on top */
     }
     .intro_sec .h_bg-image .block {
         top: unset;
