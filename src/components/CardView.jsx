@@ -9,13 +9,17 @@ import FallbackSpinner from './FallbackSpinner.jsx';
 import React from "react";
 import PageTitle from './PageTitle.jsx';
 
+import "animate.css";
+
 
 const styles = {
     containerStyle: {
         marginBottom: 25,
     },
     showMoreStyle: {
+        width: '100%',
         margin: 25,
+        
     },
     filterButtonStyle: {
         marginRight: 10,
@@ -173,6 +177,7 @@ const CardView = (props) => {
                         <Button
                         style={styles.showMoreStyle}
                         variant={'light'}
+                        className="animate__animated animate__pulse animate__infinite"
                         onClick={() => setShowMore(true)}
                         >
                         show more
