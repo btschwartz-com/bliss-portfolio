@@ -144,6 +144,8 @@ const Home = () => {
                             ))}
                         </div>
 
+                        
+
                         <div style={{ marginBottom: 20}}>
                           {data.buttons.map((item, index) => (
                             <div className={button_animations[index % button_animations.length] + " animate__delay-2s"}>

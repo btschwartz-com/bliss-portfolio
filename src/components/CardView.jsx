@@ -109,13 +109,28 @@ const CardView = (props) => {
                 {/* <PageTitle title={pageTitle + ' \u2192 ' + selectedCategory}/> */}
             </Row>
             {page === 'projects' && (
+                <>
                 <Row>
                     <div style={{backgroundColor: '#FFCB05', borderRadius: 10, padding: 10, width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'black'}}>
                         <p style={{fontWeight: 'bold', color: 'black', margin: 0}}>
                             Check out my <a href="https://github.com/btschwartz12" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', color: 'blue'}}>GitHub</a>!
                         </p>
                     </div>
+                    
                 </Row>
+
+                <Row>
+                    <img 
+                        src="https://ghchart.rshah.org/00274C/btschwartz12"  
+                        alt="btschwartz12's Github Chart" 
+                        style={{marginTop: 20}}
+                        className="center-image"
+                        onError={(e) => { e.target.style.display = 'none'; }} 
+                    />
+                </Row>
+                <hr className="t_border my-4 ml-0 text-left"
+            style={{color: '#FFCB05', borderWidth: '2px'}}/>
+                </>
             
             )}
 

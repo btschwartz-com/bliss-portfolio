@@ -109,6 +109,7 @@ const About = () => {
             </div>
           </Row>
           <hr style={styles.separator} />
+
           <Row>
           {data ? (
             <AboutIcons icons={data.icons}/>
