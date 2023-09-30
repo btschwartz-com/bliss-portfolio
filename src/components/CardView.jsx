@@ -121,7 +121,7 @@ const CardView = (props) => {
 
                 <Row>
                     <img 
-                        src="https://ghchart.rshah.org/00274C/btschwartz12"  
+                        src="https://ghchart.rshah.org/ab8902/btschwartz12"  
                         alt="btschwartz12's Github Chart" 
                         style={{marginTop: 20}}
                         className="center-image"
