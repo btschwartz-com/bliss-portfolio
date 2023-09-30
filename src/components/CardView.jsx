@@ -38,7 +38,7 @@ const CardView = (props) => {
 
     const buttons = ['All', ...categories];
 
-    const [showMore, setShowMore] = useState(false);
+    const [showMore, setShowMore] = useState(true);
     const [selectedCategory, setSelectedCategory] = useState(buttons[0]);
     const [filteredData, setFilteredData] = useState([]);
 
@@ -112,7 +112,7 @@ const CardView = (props) => {
                 <Row>
                     <div style={{backgroundColor: '#FFCB05', borderRadius: 10, padding: 10, width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', color: 'black'}}>
                         <p style={{fontWeight: 'bold', color: 'black', margin: 0}}>
-                            Check out my <a href="https://github.com/btschwartz12" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', color: 'blue'}}>GitHub</a> for more of my projects!
+                            Check out my <a href="https://github.com/btschwartz12" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'none', color: 'blue'}}>GitHub</a>!
                         </p>
                     </div>
                 </Row>
