@@ -1,271 +1,284 @@
 {
+    "meta": {
+        "title": "Ben Schwartz | About",
+        "description": "TODO"
+    },
     "about": "Hello! My name is **Ben**, a software developer intern based in Solon, OH. I enjoy building things for the internet, mobile applications, integrated systems, and everything in between. My goal is to contribute to high-performing systems that are reliable, scalable, and able to evolve over time.\n\n\nI am currently an undergrad at the **University of Michigan** studying Computer Science and a teaching assistant for a cybersecurity course, planning to graduate in April 2024.\n\n\nI have also been working as a software devloper intern with **Hyland Software** since the summer of 2023, and I'm always looking for new opportunities to learn and grow as a software developer!",
+    "imageSource": "static/media/about/profile.png",
     "icons": [
         {
+            "title": "Interests",
             "items": [
                 {
-                    "icon": "static/media/about/icons/baseball.png",
-                    "title": "Baseball"
+                    "title": "Baseball",
+                    "icon": "static/media/about/icons/baseball.png"
                 },
                 {
-                    "icon": "static/media/about/icons/golf.png",
-                    "title": "Golf"
+                    "title": "Golf",
+                    "icon": "static/media/about/icons/golf.png"
                 },
                 {
-                    "icon": "static/media/about/icons/teaching.png",
-                    "title": "Teaching"
+                    "title": "Teaching",
+                    "icon": "static/media/about/icons/teaching.png"
                 },
                 {
-                    "icon": "static/media/about/icons/cleveland.png",
-                    "title": "Cleveland Sports"
+                    "title": "Cleveland Sports",
+                    "icon": "static/media/about/icons/cleveland.png"
                 },
                 {
-                    "icon": "static/media/about/icons/tv.png",
-                    "title": "This"
+                    "title": "This",
+                    "icon": "static/media/about/icons/tv.png"
                 },
                 {
-                    "icon": "static/media/about/icons/dog.png",
-                    "title": "Dogs"
+                    "title": "Dogs",
+                    "icon": "static/media/about/icons/dog.png"
                 },
                 {
-                    "icon": "static/media/about/icons/personal-projects.png",
-                    "title": "Personal Projects"
+                    "title": "Personal Projects",
+                    "icon": "static/media/about/icons/personal-projects.png"
                 },
                 {
-                    "icon": "static/media/about/icons/chatgpt.png",
-                    "title": "ChatGPT"
+                    "title": "ChatGPT",
+                    "icon": "static/media/about/icons/chatgpt.png"
                 }
-            ],
-            "title": "Interests"
+            ]
         },
         {
+            "title": "Languages",
             "items": [
                 {
-                    "icon": "static/media/about/icons/python.png",
-                    "title": "Python"
+                    "title": "Python",
+                    "icon": "static/media/about/icons/python.png"
                 },
                 {
-                    "icon": "static/media/about/icons/java.png",
-                    "title": "Java"
+                    "title": "Java",
+                    "icon": "static/media/about/icons/java.png"
                 },
                 {
-                    "icon": "static/media/about/icons/js.png",
-                    "title": "JavaScript"
+                    "title": "JavaScript",
+                    "icon": "static/media/about/icons/js.png"
                 },
                 {
-                    "icon": "static/media/about/icons/c-plus-plus.svg",
-                    "title": "C / C++"
+                    "title": "C / C++",
+                    "icon": "static/media/about/icons/c-plus-plus.svg"
                 },
                 {
-                    "icon": "static/media/about/icons/c-sharp.svg",
-                    "title": "C #"
+                    "title": "C #",
+                    "icon": "static/media/about/icons/c-sharp.svg"
                 },
                 {
-                    "icon": "static/media/about/icons/swift.svg",
-                    "title": "Swift"
+                    "title": "Swift",
+                    "icon": "static/media/about/icons/swift.svg"
                 },
                 {
-                    "icon": "static/media/about/icons/icp.svg",
-                    "title": "Motoko"
+                    "title": "Motoko",
+                    "icon": "static/media/about/icons/icp.svg"
                 },
                 {
-                    "icon": "static/media/about/icons/php.svg",
-                    "title": "PHP"
+                    "title": "PHP",
+                    "icon": "static/media/about/icons/php.svg"
                 },
                 {
-                    "icon": "static/media/about/icons/html_css.svg",
-                    "title": "CSS / HTML"
+                    "title": "CSS / HTML",
+                    "icon": "static/media/about/icons/html_css.svg"
                 },
                 {
-                    "icon": "static/media/about/icons/sql.png",
-                    "title": "SQL"
+                    "title": "SQL",
+                    "icon": "static/media/about/icons/sql.png"
                 },
                 {
-                    "icon": "static/media/about/icons/bash.png",
-                    "title": "Bash"
+                    "title": "Bash",
+                    "icon": "static/media/about/icons/bash.png"
                 },
                 {
-                    "icon": "static/media/about/icons/assembly.png",
-                    "title": "Assembly"
+                    "title": "Assembly",
+                    "icon": "static/media/about/icons/assembly.png"
                 }
-            ],
-            "title": "Languages"
+            ]
         },
         {
+            "title": "Frameworks & Technologies",
             "items": [
                 {
-                    "icon": "static/media/about/icons/android_new.png",
-                    "title": "Android"
+                    "title": "Android",
+                    "icon": "static/media/about/icons/android_new.png"
                 },
                 {
-                    "icon": "static/media/about/icons/react.png",
-                    "title": "React"
+                    "title": "React",
+                    "icon": "static/media/about/icons/react.png"
                 },
                 {
-                    "icon": "static/media/about/icons/nodejs.png",
-                    "title": "Nodejs"
+                    "title": "Nodejs",
+                    "icon": "static/media/about/icons/nodejs.png"
                 },
                 {
-                    "icon": "static/media/about/icons/python.png",
-                    "title": "Flask"
+                    "title": "Flask",
+                    "icon": "static/media/about/icons/python.png"
                 },
                 {
-                    "icon": "static/media/about/icons/tkinter.png",
-                    "title": "Tkinter"
+                    "title": "Tkinter",
+                    "icon": "static/media/about/icons/tkinter.png"
                 },
                 {
-                    "icon": "static/media/about/icons/chrome-extension.svg",
-                    "title": "Chrome Extension"
+                    "title": "Chrome Extension",
+                    "icon": "static/media/about/icons/chrome-extension.svg"
                 },
                 {
-                    "icon": "static/media/about/icons/boomi.svg",
-                    "title": "Boomi"
+                    "title": "Boomi",
+                    "icon": "static/media/about/icons/boomi.svg"
                 },
                 {
-                    "icon": "static/media/about/icons/swagger.svg",
-                    "title": "Swagger"
+                    "title": "Swagger",
+                    "icon": "static/media/about/icons/swagger.svg"
                 },
                 {
-                    "icon": "static/media/about/icons/dotnet.png",
-                    "title": ".NET Core"
+                    "title": ".NET Core",
+                    "icon": "static/media/about/icons/dotnet.png"
                 },
                 {
-                    "icon": "static/media/about/icons/dotnet.png",
-                    "title": "Razor Libraries"
+                    "title": "Razor Libraries",
+                    "icon": "static/media/about/icons/dotnet.png"
                 },
                 {
-                    "icon": "static/media/about/icons/blockchain.png",
-                    "title": "Blockchain"
+                    "title": "Blockchain",
+                    "icon": "static/media/about/icons/blockchain.png"
                 },
                 {
-                    "icon": "static/media/about/icons/bootstrap.svg",
-                    "title": "Bootstrap"
+                    "title": "Bootstrap",
+                    "icon": "static/media/about/icons/bootstrap.svg"
                 },
                 {
-                    "icon": "static/media/about/icons/jquery.svg",
-                    "title": "jQuery"
+                    "title": "jQuery",
+                    "icon": "static/media/about/icons/jquery.svg"
                 },
                 {
-                    "icon": "static/media/about/icons/ef.png",
-                    "title": "Entity Framework"
+                    "title": "Entity Framework",
+                    "icon": "static/media/about/icons/ef.png"
                 },
                 {
-                    "icon": "static/media/about/icons/icp.svg",
-                    "title": "Internet Computer"
+                    "title": "Internet Computer",
+                    "icon": "static/media/about/icons/icp.svg"
                 }
-            ],
-            "title": "Frameworks & Technologies"
+            ]
         },
         {
+            "title": "Tools",
             "items": [
                 {
-                    "icon": "static/media/about/icons/git.png",
-                    "title": "Git"
+                    "title": "Git",
+                    "icon": "static/media/about/icons/git.png"
                 },
                 {
-                    "icon": "static/media/about/icons/docker.png",
-                    "title": "Docker"
+                    "title": "Docker",
+                    "icon": "static/media/about/icons/docker.png"
                 },
                 {
-                    "icon": "static/media/about/icons/visual-studio.svg",
-                    "title": "Visual Studio"
+                    "title": "Visual Studio",
+                    "icon": "static/media/about/icons/visual-studio.svg"
                 },
                 {
-                    "icon": "static/media/about/icons/visual-studio-code.png",
-                    "title": "Visual Studio Code"
+                    "title": "Visual Studio Code",
+                    "icon": "static/media/about/icons/visual-studio-code.png"
                 },
                 {
-                    "icon": "static/media/about/icons/xcode.png",
-                    "title": "Xcode"
+                    "title": "Xcode",
+                    "icon": "static/media/about/icons/xcode.png"
                 },
                 {
-                    "icon": "static/media/about/icons/gdb.svg",
-                    "title": "GDB"
+                    "title": "GDB",
+                    "icon": "static/media/about/icons/gdb.svg"
                 },
                 {
-                    "icon": "static/media/about/icons/mysql.png",
-                    "title": "MySQL"
+                    "title": "MySQL",
+                    "icon": "static/media/about/icons/mysql.png"
                 },
                 {
-                    "icon": "static/media/about/icons/octopus.svg",
-                    "title": "Octopus Deploy"
+                    "title": "Octopus Deploy",
+                    "icon": "static/media/about/icons/octopus.svg"
                 },
                 {
-                    "icon": "static/media/about/icons/jenkins.svg",
-                    "title": "Jenkins"
+                    "title": "Jenkins",
+                    "icon": "static/media/about/icons/jenkins.svg"
                 },
                 {
-                    "icon": "static/media/about/icons/bitbucket.svg",
-                    "title": "Bitbucket"
+                    "title": "Bitbucket",
+                    "icon": "static/media/about/icons/bitbucket.svg"
                 },
                 {
-                    "icon": "static/media/about/icons/jira.svg",
-                    "title": "Jira"
+                    "title": "Jira",
+                    "icon": "static/media/about/icons/jira.svg"
                 },
                 {
-                    "icon": "static/media/about/icons/confluence.png",
-                    "title": "Confluence"
+                    "title": "Confluence",
+                    "icon": "static/media/about/icons/confluence.png"
                 },
                 {
-                    "icon": "static/media/about/icons/postman.svg",
-                    "title": "Postman"
+                    "title": "Postman",
+                    "icon": "static/media/about/icons/postman.svg"
                 },
                 {
-                    "icon": "static/media/about/icons/sqlserver.svg",
-                    "title": "SQL Server"
+                    "title": "SQL Server",
+                    "icon": "static/media/about/icons/sqlserver.svg"
                 },
                 {
-                    "icon": "static/media/about/icons/phpmyadmin.png",
-                    "title": "phpMyAdmin"
+                    "title": "phpMyAdmin",
+                    "icon": "static/media/about/icons/phpmyadmin.png"
                 }
-            ],
-            "title": "Tools"
+            ]
         },
         {
+            "title": "Platforms",
             "items": [
                 {
-                    "icon": "static/media/about/icons/macos.png",
-                    "title": "MacOS"
+                    "title": "MacOS",
+                    "icon": "static/media/about/icons/macos.png"
                 },
                 {
-                    "icon": "static/media/about/icons/ubuntu.svg",
-                    "title": "Ubuntu"
+                    "title": "Ubuntu",
+                    "icon": "static/media/about/icons/ubuntu.svg"
                 },
                 {
-                    "icon": "static/media/about/icons/linux.png",
-                    "title": "Linux"
+                    "title": "Linux",
+                    "icon": "static/media/about/icons/linux.png"
                 },
                 {
-                    "icon": "static/media/about/icons/windows.svg",
-                    "title": "Windows"
+                    "title": "Windows",
+                    "icon": "static/media/about/icons/windows.svg"
                 },
                 {
-                    "icon": "static/media/about/icons/android-studio.png",
-                    "title": "Android Studio"
+                    "title": "Android Studio",
+                    "icon": "static/media/about/icons/android-studio.png"
                 },
                 {
-                    "icon": "static/media/about/icons/ios.svg",
-                    "title": "iOS"
+                    "title": "iOS",
+                    "icon": "static/media/about/icons/ios.svg"
                 },
                 {
-                    "icon": "static/media/about/icons/fusion.png",
-                    "title": "Fusion"
+                    "title": "Fusion",
+                    "icon": "static/media/about/icons/fusion.png"
                 },
                 {
-                    "icon": "static/media/about/icons/ado.svg",
-                    "title": "Azure"
+                    "title": "Azure",
+                    "icon": "static/media/about/icons/ado.svg"
                 },
                 {
-                    "icon": "static/media/about/icons/aws.svg",
-                    "title": "AWS"
+                    "title": "AWS",
+                    "icon": "static/media/about/icons/aws.svg"
                 }
-            ],
-            "title": "Platforms"
+            ]
+        },
+        {
+            "title": "string",
+            "items": [
+                {
+                    "title": "string",
+                    "icon": "string"
+                },
+                {
+                    "title": "string",
+                    "icon": "string"
+                }
+            ]
         }
-    ],
-    "imageSource": "static/media/about/profile.png",
-    "meta": {
-        "description": "TODO",
-        "title": "Ben Schwartz | About"
-    }
+    ]
 }

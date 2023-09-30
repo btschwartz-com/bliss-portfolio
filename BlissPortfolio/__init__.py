@@ -1,7 +1,6 @@
 import os
 import pathlib
 import flask
-from flask_mysqldb import MySQL
 from BlissPortfolio.blueprints.main import main_bp
 
 app = flask.Flask(__name__)
@@ -14,7 +13,6 @@ app.register_blueprint(main_bp, url_prefix='/portfolio')
 app.static_folder = 'static'
 app.template_folder = 'templates'
 
-mysql = MySQL(app)
 
 
 
