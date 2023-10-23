@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
     Button, Card, Badge, Col
 } from 'react-bootstrap';
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import PropTypes from 'prop-types';
 import TextBody from './TextBody.jsx';
 import CardModal from './CardModal.jsx';
@@ -52,6 +53,16 @@ const styles = {
     cardFooter: {
         backgroundColor: '#181818',
     },
+    collapsibleBody: {
+        maxHeight: '300px',
+        overflow: 'hidden',
+        transition: 'max-height 0.8s ease-out',
+    },
+    collapsedBody: {
+        maxHeight: '0',
+        overflow: 'hidden',
+        transition: 'max-height 0.3s ease-in',
+    },
     
 };
 
@@ -69,6 +80,7 @@ const badgeColors = {
 const ProjectCard = (props) => {
 
     const [show, setShow] = useState(false); // for modal
+    const [isCollapsed, setIsCollapsed] = useState(false);
     const [videoShow, setVideoShow] = useState(false); // for video modal
 
     const onLinkClick = (linkData) => {
@@ -80,7 +92,21 @@ const ProjectCard = (props) => {
         }
     };
 
-    const { project } = props;
+    const { project, expand } = props;
+
+    useEffect(() => {
+        // Delay to allow for a smooth initial transition
+        
+
+        if (expand) {
+            setIsCollapsed(false);
+        } else {
+            setTimeout(() => setIsCollapsed(true), 100);
+        }
+    }, []);
+
+    
+    
 
     return (
         <Col>
@@ -106,7 +132,7 @@ const ProjectCard = (props) => {
                         ...styles.bubbleStyle,
                         borderRadius: '0 0 0 10px',
                         color: '#FFFFFF',
-                        backgroundColor: 'maroon',
+                        backgroundColor: '#00274C',
                         }}
                     >
                         Click Me!
@@ -119,9 +145,14 @@ const ProjectCard = (props) => {
                 />
                 <Card.Body>
                     <Card.Title style={styles.cardTitleStyle}>{project.title}</Card.Title>
-                    <Card.Text style={styles.cardTextStyle}>
-                        <TextBody text={project.bodyText} />
-                    </Card.Text>
+                    <div style={isCollapsed ? styles.collapsedBody : styles.collapsibleBody}>
+                        <Card.Text style={styles.cardTextStyle}>
+                            <TextBody text={project.bodyText} />
+                        </Card.Text>
+                    </div>
+                    <Button variant="link" onClick={() => setIsCollapsed(!isCollapsed)}>
+                        {isCollapsed ? <FaChevronDown style={{ color: '#FFCB05' }} /> : <FaChevronUp style={{ color: '#FFCB05' }} />}
+                    </Button>
                 </Card.Body>
 
                 <Card.Body>

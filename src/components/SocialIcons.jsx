@@ -54,8 +54,6 @@ const Socialicons = () => {
           })}
         </ul>
       ) : null}
-      
-      <p>Follow Me</p>
     </div>
   );
 };

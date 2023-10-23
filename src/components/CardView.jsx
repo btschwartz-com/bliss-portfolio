@@ -38,7 +38,7 @@ const CardView = (props) => {
 
     const buttons = ['All', ...categories];
 
-    const [showMore, setShowMore] = useState(false);
+    const [showMore, setShowMore] = useState(true);
     const [selectedCategory, setSelectedCategory] = useState(buttons[0]);
     const [filteredData, setFilteredData] = useState([]);
 
@@ -133,10 +133,10 @@ const CardView = (props) => {
                     {page === 'projects' ? (
                         <>
                         {featuredFilteredData.length > 0 && (
-                            <Row xs={1} sm={1} md={1} lg={1} className="g-4">
+                            <Row xs={1} sm={1} md={2} lg={2} className="g-4">
                                 <Fade >
-                                {featuredFilteredData.map((project) => (
-                                    <ProjectCard key={project.title} project={project} />
+                                {featuredFilteredData.map((project, index) => (
+                                    <ProjectCard key={project.title} project={project} expand={false} />
                                 ))}
                                 </Fade>
                             </Row>
@@ -145,8 +145,8 @@ const CardView = (props) => {
                         {nonFeaturedFilteredData.length > 0 && (
                             <Row xs={1} sm={1} md={2} lg={3} className="g-4">
                                 <Fade >
-                                {nonFeaturedFilteredData.slice(0, numberOfItems).map((project) => (
-                                    <ProjectCard key={project.title} project={project} />
+                                {nonFeaturedFilteredData.slice(0, numberOfItems).map((project, index ) => (
+                                    <ProjectCard key={project.title} project={project} expand={false} />
                                 ))}
                                 </Fade>
                             </Row>
@@ -169,7 +169,7 @@ const CardView = (props) => {
                     )}
                     
 
-                    {!showMore
+                    {/* {!showMore
                         && 
                         filteredData.length > moreLimit
                         &&
@@ -182,7 +182,7 @@ const CardView = (props) => {
                         >
                         show more
                         </Button>
-                        )}
+                        )} */}
                     </Container>
                 </div>
                 ) : <FallbackSpinner /> 

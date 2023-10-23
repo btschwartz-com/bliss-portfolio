@@ -110,7 +110,7 @@ const Home = () => {
                 <MyHelmet title={data.meta.title} description={data.meta.description} />
                 <div className="intro_sec d-block d-lg-flex align-items-center ">
                   <div
-                    className="h_bg-image order-1 order-lg-2 h-100 animate__animated animate__zoomIn"
+                    className="h_bg-image order-1 order-lg-2 h-100 animate__animated animate__fadeIn"
                     style={{
                       backgroundImage: `url(${data.img_url})`,
                       backgroundSize: "cover",
@@ -123,7 +123,7 @@ const Home = () => {
                   </div>
                   <div className="text order-2 order-lg-1 h-100 d-lg-flex justify-content-center">
                     
-                    <ParticlesBg className="animate__animated animate__flipInX animate__delay-1s" type={type} num={num} style={{ backgroundColor: 'black'}} 
+                    <ParticlesBg className="animate__animated animate__flipInX animate__delay" type={type} num={num} style={{ backgroundColor: 'black'}} 
                       bg={{position: "absolute",
                           zIndex: -1,
                           top: 0,
@@ -134,19 +134,19 @@ const Home = () => {
                     <div className="align-self-center">
                       <div className="intro mx-auto" style={{marginTop: "20px"}}>
                       
-                        <div className="animate__animated animate__flipInX" style={{marginBottom: "3rem"}}>
+                        <div className="animate__animated animate__fadeInTopLeft" style={{marginBottom: "3rem"}}>
                           <h2 className="mb-1x" style={{fontSize: 40, fontWeight: 'bold'}} >{data.greetings}</h2>
                         </div>
 
                         <div style={{ ...styles.bodyStyle}}>
                             {data.about.map((sentence, index) => (
-                              <p className={bullet_animations[index % bullet_animations.length] + " animate__delay-1s"}>{'» ' + sentence}</p>
+                              <p className={bullet_animations[index % bullet_animations.length] + " animate__delay"}>{'» ' + sentence}</p>
                             ))}
                         </div>
 
                         <div style={{ marginBottom: 20}}>
                           {data.buttons.map((item, index) => (
-                            <div className={button_animations[index % button_animations.length] + " animate__delay-2s"}>
+                            <div className={button_animations[index % button_animations.length] + " animate__delay"}>
                             <Link
                               to={item.route}
                               key={item.name}
