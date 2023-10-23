@@ -54,7 +54,7 @@ const styles = {
         backgroundColor: '#181818',
     },
     collapsibleBody: {
-        maxHeight: '300px',
+        maxHeight: '500px',
         overflow: 'hidden',
         transition: 'max-height 0.8s ease-out',
     },
@@ -115,6 +115,8 @@ const ProjectCard = (props) => {
                     ...styles.cardStyle,
                 }}
                 text='light'
+                onMouseEnter={() => setIsCollapsed(false)}
+                onMouseLeave={() => setIsCollapsed(true)}
             >
                 {project.bubble?.exists ? (
                     <div
