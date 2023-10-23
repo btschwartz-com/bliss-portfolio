@@ -24,7 +24,7 @@ const AnimatedWord = ({ word, style }) => {
                     key={index}
                     type="effect3D"
                     duration="2500ms"
-                    delay={`${index * 100}ms`}
+                    delay="5000ms"
                     direction="normal"
                     timing="ease"
                     iteration="infinite"
@@ -69,15 +69,15 @@ const PageTitle = ({ title, subtitle, random = true }) => {
 
     return (
         <>
-        <AttentionSeeker effect={randomEffect}>
+        {/* <AttentionSeeker effect={randomEffect}> */}
             <div style={styles.stackedTitle}>
                 <AnimatedWord word={title} style={styles.titleLetterStyle} />
-                {subtitle &&
-                    <AnimatedWord word={subtitle} style={styles.subtitleLetterStyle} />
-                }
+                {/* {subtitle &&
+                    <div style={styles.subtitleLetterStyle}>{subtitle}</div>
+                } */}
             </div>
             
-        </AttentionSeeker>
+        {/* </AttentionSeeker> */}
         <hr className="t_border my-4 ml-0 text-left"
             style={{color: '#FFCB05', borderWidth: '2px'}}/>
         </>

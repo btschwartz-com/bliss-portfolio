@@ -1,7 +1,7 @@
 function getRandomBgType() {
     const types = [
-      { 'type': 'circle', 'num': 4 },
-      { 'type': 'thick', 'num': 8 },
+      { 'type': 'circle', 'num': 1 },
+      { 'type': 'thick', 'num': 1 },
     ]
     const randomIndex = Math.floor(Math.random() * types.length);
     return types[randomIndex];

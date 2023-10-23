@@ -104,7 +104,7 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav >
-            <Zoom cascade duration='200'>
+            <Zoom cascade duration='70'>
             {data?.sections?.map((section, index) => (
               <Link to={section.href} key={section.title} target={section.type === "link" ? "_blank" : "_self"} className="text_2" onClick={handleLinkClick}>
                 <div id={index} style={styles.navLink} >
