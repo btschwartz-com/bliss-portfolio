@@ -42,10 +42,10 @@ async function getEndpoint(key) {
 
         const data = await response.json(); // Assuming the response is in JSON format
         cache[key] = data; // Store the fetched data in the cache
-        console.log(`Fetched endpoint for ${key}.`);
+        // console.log(`Fetched endpoint for ${key}.`);
         return data;
     } catch (error) {
-        console.log(`Using default endpoint for ${key}. Error: ${error}`);
+        console.error(`Using default endpoint for ${key}. Error: ${error}`);
         
         // Fetch the static data if the API fails
         const staticResponse = await fetch(default_endpoints[key]);

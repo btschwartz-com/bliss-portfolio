@@ -55,17 +55,14 @@ const Home = () => {
 
   const finishLoading = (source) => {
     if (source === 'loader') {
-      console.log('loader finished');
       setLoaderFinished(true);
     } else if (source === 'image') {
-      console.log('image loaded');
       setImageLoaded(true);
     }
   };
 
   useEffect(() => {
-    console.log('loaderFinished', loaderFinished);
-    console.log('imageLoaded', imageLoaded);
+
     if (loaderFinished && imageLoaded) {
       setIsLoading(false);
     }
