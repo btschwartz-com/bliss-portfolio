@@ -41,6 +41,9 @@ const Home = () => {
 
   const { hasAnimated, setHasAnimated } = useContext(AnimationContext);
 
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const [loaderFinished, setLoaderFinished] = useState(false);
+
   
 
   useEffect(() => {
@@ -50,12 +53,23 @@ const Home = () => {
     handleExternalLinks();
   }, [isLoading, location]);
 
-  const finishLoading = (imageLoaded = false) => {
-    if (imageLoaded) {
-      setIsLoading(false);
-      setHasAnimated(true);
+  const finishLoading = (source) => {
+    if (source === 'loader') {
+      console.log('loader finished');
+      setLoaderFinished(true);
+    } else if (source === 'image') {
+      console.log('image loaded');
+      setImageLoaded(true);
     }
   };
+
+  useEffect(() => {
+    console.log('loaderFinished', loaderFinished);
+    console.log('imageLoaded', imageLoaded);
+    if (loaderFinished && imageLoaded) {
+      setIsLoading(false);
+    }
+  }, [loaderFinished, imageLoaded]); 
 
   const handleExternalLinks = () => {
     const allLinks = Array.from(document.querySelectorAll('a'));
@@ -77,10 +91,10 @@ const Home = () => {
         setData(res);
 
         const img = new Image();
-        img.onload = () => finishLoading(true); // Call finishLoading when image is loaded
+        img.onload = () => finishLoading('image');
         img.src = res.img_url;
 
-        preloadEndpoints('home'); // Continue with your existing logic
+        preloadEndpoints('home');
       })
       .catch((err) => console.error(err));
   }, []);
@@ -102,12 +116,12 @@ const Home = () => {
 
   const { type, num } = getRandomBgType();
 
-
+  const handleLoaderFinished = () => finishLoading('loader');
 
   return (
     <>
     {isLoading && !hasAnimated ? (
-        <Loader finishLoading={finishLoading} />
+        <Loader finishLoading={handleLoaderFinished} />
       ) : (
         <HelmetProvider>
           <section id="home" className="home">
