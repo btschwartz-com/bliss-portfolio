@@ -42,7 +42,7 @@
         }
     ],
     "greetings": "Hi, I'm Ben",
-    "img_url": "static/media/home/picture.png",
+    "img_url": "static/media/home/picture.webp",
     "logo_url": "static/media/logo.svg",
     "meta": {
         "description": "TODO",
