@@ -50,9 +50,11 @@ const Home = () => {
     handleExternalLinks();
   }, [isLoading, location]);
 
-  const finishLoading = () => {
-    setIsLoading(false);
-    setHasAnimated(true);
+  const finishLoading = (imageLoaded = false) => {
+    if (imageLoaded) {
+      setIsLoading(false);
+      setHasAnimated(true);
+    }
   };
 
   const handleExternalLinks = () => {
@@ -73,7 +75,12 @@ const Home = () => {
     getEndpoint('home')
       .then((res) => {
         setData(res);
-        preloadEndpoints('home'); // Preload the rest after loading home data, excluding 'home'
+
+        const img = new Image();
+        img.onload = () => finishLoading(true); // Call finishLoading when image is loaded
+        img.src = res.img_url;
+
+        preloadEndpoints('home'); // Continue with your existing logic
       })
       .catch((err) => console.error(err));
   }, []);
