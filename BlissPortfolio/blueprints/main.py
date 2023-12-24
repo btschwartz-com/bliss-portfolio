@@ -1,6 +1,7 @@
 # blueprints/main.py
 
 from flask import Blueprint, render_template, request, send_from_directory
+import flask
 import requests
 
 main_bp = Blueprint('main', __name__)
@@ -20,6 +21,11 @@ def serve_static(path):
 @main_bp.route("/piper/dog")
 def serve_dog():
     return "YES"
+
+@main_bp.route("/resume")
+@main_bp.route("/resume.pdf")
+def serve_resume():
+    return flask.redirect('https://btschwartz.com/api/resume.pdf')
 
 @main_bp.route("/public/<path:path>")
 def serve_public(path):
