@@ -2,7 +2,7 @@
     "social": [
         {
             "name": "linkedin",
-            "href": "https://www.linkedin.com/in/ben-schwartz-1b700b225/"
+            "href": "https://www.linkedin.com/in/ben-schwartz-1b700b225"
         },
         {
             "name": "github",
@@ -10,7 +10,7 @@
         }
     ],
     "navbar": {
-        "linkedin": "https://www.linkedin.com/in/ben-schwartz-1b700b225/",
+        "linkedin": "https://www.linkedin.com/in/ben-schwartz-1b700b225",
         "github": "https://github.com/btschwartz12"
     }
 }

@@ -10,11 +10,12 @@
         "I improve engineering systems"
     ],
     "about": [
-        "Senior and teaching assistant at the University of Michigan studying Computer Science.",
+        "Senior at the University of Michigan studying Computer Science.",
+        "Cybersecurity Teaching Assistant.",
         "Software Developer Intern with Hyland Software.",
         "Check out my dogs, then the stuff below!"
     ],
-    "img_url": "static/media/home/picture.webp",
+    "img_url": "static/media/home/picture-big.webp",
     "logo_url": "static/media/logo.svg",
     "buttons": [
         {

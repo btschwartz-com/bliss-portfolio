@@ -3,8 +3,8 @@
         "title": "Ben Schwartz | About",
         "description": "TODO"
     },
-    "about": "Hello! My name is **Ben**, a software developer intern based in Solon, OH. I enjoy building things for the internet, mobile applications, integrated systems, and everything in between. My goal is to contribute to high-performing systems that are reliable, scalable, and able to evolve over time.\n\n\nI am currently an undergrad at the **University of Michigan** studying Computer Science and a teaching assistant for a cybersecurity course, planning to graduate in April 2024.\n\n\nI have also been working as a software devloper intern with **Hyland Software** since the summer of 2023, and I'm always looking for new opportunities to learn and grow as a software developer!",
-    "imageSource": "static/media/about/profile.png",
+    "about": "Hello! My name is **Ben**, a software developer intern based in Solon, OH. I love building things for the internet, mobile applications, integrated systems, and making them safe! My goal is to contribute to high-performing solutions that are secure, reliable, scalable, and able to evolve over time.\r\n\r\n\r\nI am currently an undergrad at the **University of Michigan** studying Computer Science and a teaching assistant for a cybersecurity course, planning to graduate in April 2024.\r\n\r\n\r\nI have also been working as a software devloper intern with **Hyland Software** since the summer of 2023, and I'm always looking for new opportunities to learn and grow as a software developer!",
+    "imageSource": "static/media/about/profile.webp",
     "icons": [
         {
             "title": "Interests",
@@ -93,6 +93,14 @@
                 {
                     "title": "Assembly",
                     "icon": "static/media/about/icons/assembly.png"
+                },
+                {
+                    "title": "TypeScript",
+                    "icon": "static/media/about/icons/ts.svg"
+                },
+                {
+                    "title": "Go",
+                    "icon": "static/media/about/icons/go.svg"
                 }
             ]
         },
@@ -264,19 +272,6 @@
                 {
                     "title": "AWS",
                     "icon": "static/media/about/icons/aws.svg"
-                }
-            ]
-        },
-        {
-            "title": "string",
-            "items": [
-                {
-                    "title": "string",
-                    "icon": "string"
-                },
-                {
-                    "title": "string",
-                    "icon": "string"
                 }
             ]
         }

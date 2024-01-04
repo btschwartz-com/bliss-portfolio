@@ -36,7 +36,7 @@
                 },
                 {
                     "text": "C++",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "BFS",
@@ -80,7 +80,7 @@
                 },
                 {
                     "text": "C++",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Priority Queues",
@@ -128,7 +128,7 @@
                 },
                 {
                     "text": "C++",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Hash Maps",
@@ -172,7 +172,7 @@
                 },
                 {
                     "text": "C++",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "TSP",
@@ -224,7 +224,7 @@
                 },
                 {
                     "text": "C",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Dynamic Memory",
@@ -268,7 +268,7 @@
                 },
                 {
                     "text": "C++",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Inheritance",
@@ -320,7 +320,7 @@
                 },
                 {
                     "text": "C++",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "The Big Three",
@@ -376,7 +376,7 @@
                 },
                 {
                     "text": "C++",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Recursion",
@@ -432,7 +432,7 @@
                 },
                 {
                     "text": "C",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "RISC Assembly",
@@ -480,7 +480,7 @@
                 },
                 {
                     "text": "C",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "RISC Assembly",
@@ -536,7 +536,7 @@
                 },
                 {
                     "text": "C",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "RISC Assembly",
@@ -588,7 +588,7 @@
                 },
                 {
                     "text": "Python",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Hash Algorithms",
@@ -636,7 +636,7 @@
                 },
                 {
                     "text": "Python",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "SQL",
@@ -680,7 +680,7 @@
                 },
                 {
                     "text": "Python",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Network Security",
@@ -724,11 +724,11 @@
                 },
                 {
                     "text": "Python",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "C",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Ghidra",
@@ -783,11 +783,11 @@
                 },
                 {
                     "text": "Python",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "C",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Autopsy",
@@ -844,11 +844,11 @@
             "tags": [
                 {
                     "text": "Python",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "React",
-                    "color": "red"
+                    "color": "yellow"
                 },
                 {
                     "text": "HTML",
@@ -860,11 +860,11 @@
                 },
                 {
                     "text": "JavaScript",
-                    "color": "gray"
+                    "color": "yellow"
                 },
                 {
                     "text": "AWS",
-                    "color": "red"
+                    "color": "yellow"
                 },
                 {
                     "text": "UX",
@@ -924,11 +924,11 @@
                 },
                 {
                     "text": "Python",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "MapReduce",
-                    "color": "red"
+                    "color": "yellow"
                 },
                 {
                     "text": "Distributed Systems",
@@ -952,7 +952,7 @@
                 },
                 {
                     "text": "AWS",
-                    "color": "red"
+                    "color": "yellow"
                 }
             ]
         },
@@ -988,7 +988,7 @@
                 },
                 {
                     "text": "Python",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Concurrent Servers",
@@ -1020,11 +1020,11 @@
                 },
                 {
                     "text": "MapReduce",
-                    "color": "red"
+                    "color": "yellow"
                 },
                 {
                     "text": "AWS",
-                    "color": "red"
+                    "color": "yellow"
                 }
             ]
         },
@@ -1060,7 +1060,7 @@
                 },
                 {
                     "text": "Python",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Graph Theory",
@@ -1104,11 +1104,11 @@
                 },
                 {
                     "text": "Scheme",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Functional Programming",
-                    "color": "red"
+                    "color": "gray"
                 },
                 {
                     "text": "Recursion",
@@ -1156,15 +1156,15 @@
                 },
                 {
                     "text": "uC",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "C++",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Python",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Abstract Syntax Trees",
@@ -1210,10 +1210,10 @@
             "tags": [
                 {
                     "text": "Python",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
-                    "text": "ChatGPT",
+                    "text": "OpenAI",
                     "color": "green"
                 },
                 {
@@ -1222,7 +1222,7 @@
                 },
                 {
                     "text": "PyPi Deployment",
-                    "color": "red"
+                    "color": "gray"
                 }
             ]
         },
@@ -1247,7 +1247,7 @@
             "tags": [
                 {
                     "text": "Java",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Swing",
@@ -1274,11 +1274,8 @@
             "links": [
                 {
                     "text": "GitHub",
-                    "is_modal": true,
-                    "data": {
-                        "title": "Private Repository",
-                        "body": "I prefer to keep my code for this private, but I am happy to share it with anyone interested! Please contact me!"
-                    }
+                    "is_modal": false,
+                    "data": "https://github.com/btschwartz12/bliss-portfolio"
                 }
             ],
             "bubble": {
@@ -1287,11 +1284,11 @@
             "tags": [
                 {
                     "text": "Python",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "React",
-                    "color": "red"
+                    "color": "yellow"
                 },
                 {
                     "text": "HTML",
@@ -1303,7 +1300,7 @@
                 },
                 {
                     "text": "JavaScript",
-                    "color": "gray"
+                    "color": "yellow"
                 },
                 {
                     "text": "UX",
@@ -1319,7 +1316,7 @@
                 },
                 {
                     "text": "Flask",
-                    "color": "red"
+                    "color": "yellow"
                 },
                 {
                     "text": "Nginx",
@@ -1348,7 +1345,7 @@
             "tags": [
                 {
                     "text": "JavaScript",
-                    "color": "gray"
+                    "color": "yellow"
                 },
                 {
                     "text": "HTML",
@@ -1360,7 +1357,7 @@
                 },
                 {
                     "text": "Google Chrome Extension Development",
-                    "color": "red"
+                    "color": "gray"
                 },
                 {
                     "text": "Canvas",
@@ -1407,15 +1404,15 @@
             "tags": [
                 {
                     "text": "C++",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "iOS Development",
-                    "color": "red"
+                    "color": "gray"
                 },
                 {
                     "text": "Swift",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Web Development",
@@ -1431,7 +1428,7 @@
                 },
                 {
                     "text": "JavaScript",
-                    "color": "gray"
+                    "color": "yellow"
                 },
                 {
                     "text": "Game Development",
@@ -1465,7 +1462,7 @@
             "tags": [
                 {
                     "text": "C++",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "macOS",
@@ -1473,11 +1470,11 @@
                 },
                 {
                     "text": "Swift",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Swift UI",
-                    "color": "red"
+                    "color": "gray"
                 }
             ]
         },
@@ -1502,11 +1499,11 @@
             "tags": [
                 {
                     "text": "Swift",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "iOS Development",
-                    "color": "red"
+                    "color": "gray"
                 },
                 {
                     "text": "Xcode",
@@ -1518,7 +1515,7 @@
                 },
                 {
                     "text": "Swift UI",
-                    "color": "red"
+                    "color": "gray"
                 },
                 {
                     "text": "APIs",
@@ -1561,15 +1558,15 @@
             "tags": [
                 {
                     "text": "C++",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "iOS Development",
-                    "color": "red"
+                    "color": "gray"
                 },
                 {
                     "text": "Swift",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "macOS Development",
@@ -1585,7 +1582,7 @@
                 },
                 {
                     "text": "Swift UI",
-                    "color": "red"
+                    "color": "gray"
                 },
                 {
                     "text": "Model-View-Controller",
@@ -1614,7 +1611,7 @@
             "tags": [
                 {
                     "text": "Swift",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "macOS Development",
@@ -1630,7 +1627,7 @@
                 },
                 {
                     "text": "Swift UI",
-                    "color": "red"
+                    "color": "gray"
                 },
                 {
                     "text": "Google Sheets API",
@@ -1663,7 +1660,7 @@
             "tags": [
                 {
                     "text": "C++",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Web Scraping",
@@ -1708,19 +1705,19 @@
             "tags": [
                 {
                     "text": "Python",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "MySQL",
-                    "color": "gray"
+                    "color": "yellow"
                 },
                 {
                     "text": "Flask",
-                    "color": "red"
+                    "color": "yellow"
                 },
                 {
                     "text": "REST APIs",
-                    "color": "red"
+                    "color": "gray"
                 },
                 {
                     "text": "Swagger UI",
@@ -1747,8 +1744,11 @@
             "links": [
                 {
                     "text": "GitHub",
-                    "is_modal": false,
-                    "data": "{'title': 'Private Repository', 'is_modal': True, 'body': \"Since this has sensitive information, I can't make it public. However, I can show you privately if you want though, just contact me!\"}"
+                    "is_modal": true,
+                    "data": {
+                        "title": "Private Repository",
+                        "body": "I prefer to keep my code for this private, but I am happy to share it with anyone interested! Please contact me!"
+                    }
                 }
             ],
             "bubble": {
@@ -1757,7 +1757,7 @@
             "tags": [
                 {
                     "text": "Python",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "OOP",
@@ -1804,8 +1804,11 @@
             "links": [
                 {
                     "text": "GitHub",
-                    "is_modal": false,
-                    "data": "{'title': 'Private Repository', 'is_modal': True, 'body': \"Since this has sensitive information, I can't make it public. However, I can show you privately if you want though, just contact me!\"}"
+                    "is_modal": true,
+                    "data": {
+                        "title": "Private Repository",
+                        "body": "I prefer to keep my code for this private, but I am happy to share it with anyone interested! Please contact me!"
+                    }
                 }
             ],
             "bubble": {
@@ -1814,7 +1817,7 @@
             "tags": [
                 {
                     "text": "Python",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "OOP",
@@ -1865,7 +1868,7 @@
             "tags": [
                 {
                     "text": "Ubuntu",
-                    "color": "gray"
+                    "color": "yellow"
                 },
                 {
                     "text": "VPS",
@@ -1877,7 +1880,7 @@
                 },
                 {
                     "text": "MySQL",
-                    "color": "gray"
+                    "color": "yellow"
                 },
                 {
                     "text": "Linux",
@@ -1923,11 +1926,11 @@
             "tags": [
                 {
                     "text": "Python",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "React",
-                    "color": "red"
+                    "color": "yellow"
                 },
                 {
                     "text": "HTML",
@@ -1939,7 +1942,7 @@
                 },
                 {
                     "text": "JavaScript",
-                    "color": "gray"
+                    "color": "yellow"
                 },
                 {
                     "text": "UX",
@@ -1951,7 +1954,7 @@
                 },
                 {
                     "text": "Flask",
-                    "color": "red"
+                    "color": "yellow"
                 }
             ]
         },
@@ -1981,11 +1984,11 @@
             "tags": [
                 {
                     "text": "Python",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "React",
-                    "color": "red"
+                    "color": "yellow"
                 },
                 {
                     "text": "HTML",
@@ -1997,7 +2000,7 @@
                 },
                 {
                     "text": "JavaScript",
-                    "color": "gray"
+                    "color": "yellow"
                 },
                 {
                     "text": "UX",
@@ -2009,11 +2012,11 @@
                 },
                 {
                     "text": "Flask",
-                    "color": "red"
+                    "color": "yellow"
                 },
                 {
                     "text": "REST APIs",
-                    "color": "red"
+                    "color": "gray"
                 },
                 {
                     "text": "JSON Web Tokens",
@@ -2037,7 +2040,7 @@
                 {
                     "text": "GitHub",
                     "is_modal": false,
-                    "data": "{'title': 'Private Repository', 'is_modal': True, 'body': \"Since this has sensitive information, I can't make it public. However, I can show you privately if you want though, just contact me!\"}"
+                    "data": "https://github.com/btschwartz12/health-monitor"
                 }
             ],
             "bubble": {
@@ -2046,11 +2049,11 @@
             "tags": [
                 {
                     "text": "C#",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
-                    "text": "ASP.NET Core",
-                    "color": "red"
+                    "text": ".NET",
+                    "color": "yellow"
                 },
                 {
                     "text": "Model-View-Controller",
@@ -2066,7 +2069,7 @@
                 },
                 {
                     "text": "REST APIs",
-                    "color": "red"
+                    "color": "gray"
                 },
                 {
                     "text": "Large Code Bases",
@@ -2098,7 +2101,7 @@
                 {
                     "text": "GitHub",
                     "is_modal": false,
-                    "data": "{'title': 'Private Repository', 'is_modal': True, 'body': \"Since this has sensitive information, I can't make it public. However, I can show you privately if you want though, just contact me!\"}"
+                    "data": "https://github.com/btschwartz12/health-monitor"
                 }
             ],
             "bubble": {
@@ -2107,11 +2110,11 @@
             "tags": [
                 {
                     "text": "C#",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
-                    "text": "ASP.NET Core",
-                    "color": "red"
+                    "text": ".NET",
+                    "color": "yellow"
                 },
                 {
                     "text": "Model-View-Controller",
@@ -2152,18 +2155,18 @@
             "tags": [
                 {
                     "text": "React",
-                    "color": "red"
+                    "color": "yellow"
                 },
                 {
                     "text": "REST APIs",
-                    "color": "red"
+                    "color": "gray"
                 },
                 {
                     "text": "AI",
                     "color": "gray"
                 },
                 {
-                    "text": "ChatGPT",
+                    "text": "OpenAI",
                     "color": "green"
                 }
             ]
@@ -2194,7 +2197,7 @@
             "tags": [
                 {
                     "text": "React",
-                    "color": "red"
+                    "color": "yellow"
                 },
                 {
                     "text": "HTML",
@@ -2206,14 +2209,14 @@
                 },
                 {
                     "text": "JavaScript",
-                    "color": "gray"
+                    "color": "yellow"
                 },
                 {
                     "text": "REST APIs",
-                    "color": "red"
+                    "color": "gray"
                 },
                 {
-                    "text": "ChatGPT",
+                    "text": "OpenAI",
                     "color": "green"
                 },
                 {
@@ -2222,11 +2225,11 @@
                 },
                 {
                     "text": "Node.js",
-                    "color": "gray"
+                    "color": "yellow"
                 },
                 {
                     "text": "Express.js",
-                    "color": "red"
+                    "color": "gray"
                 },
                 {
                     "text": "Vite",
@@ -2234,6 +2237,247 @@
                 },
                 {
                     "text": "Integrations",
+                    "color": "gray"
+                }
+            ]
+        },
+        {
+            "priority": 2,
+            "is_featured": false,
+            "category": "School",
+            "title": "Multiprocessor Thread Library",
+            "bodyText": "Implemented a kernel-level thread library that supports the creation of threads and synchronization mechanisms including mutex and condition variable. Written in C++20.",
+            "image": "static/media/projects/482-p2/482p2.png",
+            "video": "static/media/projects/482-p2/482p2.mp4",
+            "links": [
+                {
+                    "text": "GitHub",
+                    "is_modal": true,
+                    "data": {
+                        "title": "Private Repository",
+                        "body": "This project was part of the curriculum for a course I took, and to protect its integrity, I don't make my code public. However, I can share the code with you if you are interested in seeing it. Please contact me!"
+                    }
+                }
+            ],
+            "bubble": {
+                "exists": false
+            },
+            "tags": [
+                {
+                    "text": "University of Michigan",
+                    "color": "yellow"
+                },
+                {
+                    "text": "EECS 482",
+                    "color": "yellow"
+                },
+                {
+                    "text": "C++",
+                    "color": "yellow"
+                },
+                {
+                    "text": "C",
+                    "color": "yellow"
+                },
+                {
+                    "text": "Concurrency",
+                    "color": "gray"
+                },
+                {
+                    "text": "Monitors",
+                    "color": "gray"
+                }
+            ]
+        },
+        {
+            "priority": 2,
+            "is_featured": false,
+            "category": "School",
+            "title": "Virtual Memory Pager",
+            "bodyText": "Implemented a kernel-level memory manager's system calls that support process creation / deletion / forking, memory allocation / deallocation, and fault handling. Used a least-recently-used eviction policy for swap-backed and file-backed pages. Maximized efficency by delaying work with a copy-on-write mechanism when handling process creation / forks.",
+            "image": "static/media/projects/482-p3/482p3.png",
+            "video": "static/media/projects/482-p3/482p3.mp4",
+            "links": [
+                {
+                    "text": "GitHub",
+                    "is_modal": true,
+                    "data": {
+                        "title": "Private Repository",
+                        "body": "This project was part of the curriculum for a course I took, and to protect its integrity, I don't make my code public. However, I can share the code with you if you are interested in seeing it. Please contact me!"
+                    }
+                }
+            ],
+            "bubble": {
+                "exists": false
+            },
+            "tags": [
+                {
+                    "text": "University of Michigan",
+                    "color": "yellow"
+                },
+                {
+                    "text": "EECS 482",
+                    "color": "yellow"
+                },
+                {
+                    "text": "C++",
+                    "color": "yellow"
+                },
+                {
+                    "text": "Memory Management",
+                    "color": "gray"
+                },
+                {
+                    "text": "Performance",
+                    "color": "gray"
+                },
+                {
+                    "text": "Address Space Safety",
+                    "color": "gray"
+                }
+            ]
+        },
+        {
+            "priority": 2,
+            "is_featured": false,
+            "category": "School",
+            "title": "Custom iPerf",
+            "bodyText": "Implemented iPerf, a common tool used to measure network bandwidth, with C++ sockets. The client mode sends TCP packets to a host for a specific amount of time, reporting bandwidth and RTT statistics. The server mode receives TCP packets and tracks network I/O during the lifetime of a connection.",
+            "image": "static/media/projects/489-p1/489p1.png",
+            "video": "static/media/projects/489-p1/489p1.mp4",
+            "links": [
+                {
+                    "text": "GitHub",
+                    "is_modal": true,
+                    "data": {
+                        "title": "Private Repository",
+                        "body": "This project was part of the curriculum for a course I took, and to protect its integrity, I don't make my code public. However, I can share the code with you if you are interested in seeing it. Please contact me!"
+                    }
+                }
+            ],
+            "bubble": {
+                "exists": false
+            },
+            "tags": [
+                {
+                    "text": "University of Michigan",
+                    "color": "yellow"
+                },
+                {
+                    "text": "EECS 489",
+                    "color": "yellow"
+                },
+                {
+                    "text": "C++",
+                    "color": "yellow"
+                },
+                {
+                    "text": "Network Programming",
+                    "color": "gray"
+                }
+            ]
+        },
+        {
+            "priority": 2,
+            "is_featured": false,
+            "category": "School",
+            "title": "Video Streaming with a CDN",
+            "bodyText": "Implemented an HTTP proxy for a video server that supports adaptive bitrate selection and a DNS load balancer that streams videos from the server closest to a client. The nameserver will select a video server based on geographical distance, then, after streaming begins, will adaptively change the bitrate based on throughput measurements.",
+            "image": "static/media/projects/489-p2/489p2.png",
+            "video": "static/media/projects/489-p2/489p2.mp4",
+            "links": [
+                {
+                    "text": "GitHub",
+                    "is_modal": true,
+                    "data": {
+                        "title": "Private Repository",
+                        "body": "This project was part of the curriculum for a course I took, and to protect its integrity, I don't make my code public. However, I can share the code with you if you are interested in seeing it. Please contact me!"
+                    }
+                }
+            ],
+            "bubble": {
+                "exists": false
+            },
+            "tags": [
+                {
+                    "text": "University of Michigan",
+                    "color": "yellow"
+                },
+                {
+                    "text": "EECS 489",
+                    "color": "yellow"
+                },
+                {
+                    "text": "C++",
+                    "color": "yellow"
+                },
+                {
+                    "text": "Network Programming",
+                    "color": "gray"
+                },
+                {
+                    "text": "Proxies",
+                    "color": "gray"
+                },
+                {
+                    "text": "Mininet",
+                    "color": "gray"
+                },
+                {
+                    "text": "DNS",
+                    "color": "gray"
+                }
+            ]
+        },
+        {
+            "priority": 2,
+            "is_featured": false,
+            "category": "School",
+            "title": "Network File Server",
+            "bodyText": "Implemented a multithreaded file server that supports concurrent operations to read, write, create and delete files / directories. Used the Boost library's upgradable reader/writer locks to maximize concurrency as threads are bound by slow network and disk I/O. Currently running this on one of my VPS's, ask me to try it out!",
+            "image": "static/media/projects/482-p4/482p4.png",
+            "video": "static/media/projects/482-p4/482p4.mp4",
+            "links": [
+                {
+                    "text": "GitHub",
+                    "is_modal": true,
+                    "data": {
+                        "title": "Private Repository",
+                        "body": "This project was part of the curriculum for a course I took, and to protect its integrity, I don't make my code public. However, I can share the code with you if you are interested in seeing it. Please contact me!"
+                    }
+                },
+                {
+                    "text": "Client GitHub",
+                    "is_modal": false,
+                    "data": "https://github.com/btschwartz12/file-server-client"
+                }
+            ],
+            "bubble": {
+                "exists": false
+            },
+            "tags": [
+                {
+                    "text": "University of Michigan",
+                    "color": "yellow"
+                },
+                {
+                    "text": "EECS 482",
+                    "color": "yellow"
+                },
+                {
+                    "text": "C++",
+                    "color": "yellow"
+                },
+                {
+                    "text": "Boost",
+                    "color": "yellow"
+                },
+                {
+                    "text": "Concurrency",
+                    "color": "gray"
+                },
+                {
+                    "text": "Network Programming",
                     "color": "gray"
                 }
             ]

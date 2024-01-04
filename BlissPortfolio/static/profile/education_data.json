@@ -101,7 +101,7 @@
                 },
                 {
                     "text": "Python",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "HTML",
@@ -109,11 +109,11 @@
                 },
                 {
                     "text": "JavaScript",
-                    "color": "gray"
+                    "color": "yellow"
                 },
                 {
                     "text": "React",
-                    "color": "red"
+                    "color": "yellow"
                 },
                 {
                     "text": "CSS",
@@ -125,7 +125,7 @@
                 },
                 {
                     "text": "AWS",
-                    "color": "red"
+                    "color": "yellow"
                 }
             ],
             "bubble": {
@@ -167,19 +167,19 @@
                 },
                 {
                     "text": "Python",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Functional Programming",
-                    "color": "red"
+                    "color": "gray"
                 },
                 {
                     "text": "Scheme",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "uC",
-                    "color": "blue"
+                    "color": "yellow"
                 }
             ],
             "bubble": {
@@ -218,7 +218,7 @@
                 },
                 {
                     "text": "C++",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Memory Management",
@@ -268,15 +268,15 @@
                 },
                 {
                     "text": "Python",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "C",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "x86",
-                    "color": "white"
+                    "color": "gray"
                 },
                 {
                     "text": "GDB",
@@ -292,15 +292,15 @@
                 },
                 {
                     "text": "XSS",
-                    "color": "red"
+                    "color": "gray"
                 },
                 {
                     "text": "SQL-Injections",
-                    "color": "red"
+                    "color": "gray"
                 },
                 {
                     "text": "CSRF",
-                    "color": "red"
+                    "color": "gray"
                 },
                 {
                     "text": "Cryptography",
@@ -350,7 +350,7 @@
                 },
                 {
                     "text": "Theory",
-                    "color": "green"
+                    "color": "gray"
                 },
                 {
                     "text": "Proofs",
@@ -405,7 +405,7 @@
                 },
                 {
                     "text": "C",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Memory Management",
@@ -413,11 +413,11 @@
                 },
                 {
                     "text": "Assembly",
-                    "color": "red"
+                    "color": "gray"
                 },
                 {
                     "text": "ARMv8",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Compilers",
@@ -464,11 +464,11 @@
                 },
                 {
                     "text": "Python",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Bash",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Unix",
@@ -531,7 +531,7 @@
                 },
                 {
                     "text": "C++",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "APIs",
@@ -578,7 +578,7 @@
                 },
                 {
                     "text": "Theory",
-                    "color": "green"
+                    "color": "gray"
                 },
                 {
                     "text": "Proofs",
@@ -642,11 +642,11 @@
                 },
                 {
                     "text": "Coursera",
-                    "color": "white"
+                    "color": "gray"
                 },
                 {
                     "text": "Python",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "SQL",
@@ -693,7 +693,7 @@
                 },
                 {
                     "text": "JavaScript",
-                    "color": "gray"
+                    "color": "yellow"
                 },
                 {
                     "text": "DOM",
@@ -709,11 +709,11 @@
                 },
                 {
                     "text": "Node.js",
-                    "color": "gray"
+                    "color": "yellow"
                 },
                 {
                     "text": "Express.js",
-                    "color": "red"
+                    "color": "gray"
                 },
                 {
                     "text": "Git",
@@ -721,7 +721,7 @@
                 },
                 {
                     "text": "REST APIs",
-                    "color": "red"
+                    "color": "gray"
                 },
                 {
                     "text": "Databases",
@@ -733,7 +733,7 @@
                 },
                 {
                     "text": "MongoDB",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Mongoose",
@@ -741,7 +741,7 @@
                 },
                 {
                     "text": "React",
-                    "color": "red"
+                    "color": "yellow"
                 },
                 {
                     "text": "Web3",

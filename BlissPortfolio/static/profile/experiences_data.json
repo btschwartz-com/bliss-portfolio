@@ -8,7 +8,7 @@
             "title": "May 2023",
             "cardTitle": "Hyland Software",
             "cardSubtitle": "Software Developer Intern",
-            "cardDetailedText": "Working full-time during the summer of 2023 and planning to be part-time the following school year. I'm working with the IS Services Delivery team to create a brand new service for all Hyland employees that tracks the SSL certificate statuses of Hyland-managed domains. The solution consists of a .NET Core MVC frontend with multiple C# microservices that communicate with Confluence, Jira, and work order REST APIs. Includes its own REST API for the frontend to communicate with, as well as a custom Boomi process to sync data and send reminders. Extensive use of Bitbucket, as well as build pipelines with Jenkins and Octopus Deploy. I'm also working on creating a custom Razor Class Library for viewing .NET logging in the UI of Hyland's applications.",
+            "cardDetailedText": "Working full-time during the summer of 2023 and planning to be part-time the following school year. I'm working with the IS Services Delivery team to create a brand new service for all Hyland employees that tracks the SSL certificate statuses of Hyland-managed domains. The solution consists of a .NET Core MVC frontend with multiple C# microservices that communicate with Confluence, Jira, and work order REST APIs. Includes its own REST API for the frontend to communicate with, as well as a custom Boomi process to sync data and send reminders. Extensive use of Bitbucket, as well as build pipelines with Jenkins and Octopus Deploy. I'm now working in an Agile environment with the IS Services Delivery team to contribute to several IS processes!",
             "tags": [
                 {
                     "text": "Summer 2023",
@@ -16,15 +16,15 @@
                 },
                 {
                     "text": "C#",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": ".NET Core MVC",
-                    "color": "red"
+                    "color": "yellow"
                 },
                 {
                     "text": "REST APIs",
-                    "color": "red"
+                    "color": "gray"
                 },
                 {
                     "text": "Confluence",
@@ -53,6 +53,50 @@
             ]
         },
         {
+            "title": "August 2022",
+            "cardTitle": "University of Michigan",
+            "cardSubtitle": "Teaching Assistant, EECS 281: Data Structures and Algorithms",
+            "cardDetailedText": "Worked during my junior year as a teaching assistant, teaching data structures and algorithms to over 1000 students in a core computer science course. My time consisted of conducting lab sections, holding office hours, answering student questions, writing exams, and providing feedback to the course. Coordinated with a 40+ member staff team and 4 professors to develop lessons, projects, labs, and assignments. Collaborated with other staff and professors to improve students' programming skills, resulting in 86% of students demonstrating an increased interest in computer science.",
+            "tags": [
+                {
+                    "text": "Fall 2022",
+                    "color": "yellow"
+                },
+                {
+                    "text": "Winter 2023",
+                    "color": "yellow"
+                },
+                {
+                    "text": "C++",
+                    "color": "yellow"
+                },
+                {
+                    "text": "Grading",
+                    "color": "gray"
+                },
+                {
+                    "text": "Office Hours",
+                    "color": "gray"
+                },
+                {
+                    "text": "Lab Teaching",
+                    "color": "gray"
+                },
+                {
+                    "text": "Exam Writing",
+                    "color": "gray"
+                },
+                {
+                    "text": "Slack",
+                    "color": "yellow"
+                },
+                {
+                    "text": "Piazza",
+                    "color": "yellow"
+                }
+            ]
+        },
+        {
             "title": "May 2022",
             "cardTitle": "Aclara Technologies",
             "cardSubtitle": "Software Engineer Intern",
@@ -72,7 +116,7 @@
                 },
                 {
                     "text": "Python",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "PyInstaller",
@@ -101,50 +145,6 @@
             ]
         },
         {
-            "title": "August 2022",
-            "cardTitle": "University of Michigan",
-            "cardSubtitle": "Teaching Assistant, EECS 281: Data Structures and Algorithms",
-            "cardDetailedText": "Worked during my junior year as a teaching assistant, teaching data structures and algorithms to over 1000 students in a core computer science course. My time consisted of conducting lab sections, holding office hours, answering student questions, writing exams, and providing feedback to the course. Coordinated with a 40+ member staff team and 4 professors to develop lessons, projects, labs, and assignments. Collaborated with other staff and professors to improve students' programming skills, resulting in 86% of students demonstrating an increased interest in computer science.",
-            "tags": [
-                {
-                    "text": "Fall 2022",
-                    "color": "yellow"
-                },
-                {
-                    "text": "Winter 2023",
-                    "color": "yellow"
-                },
-                {
-                    "text": "C++",
-                    "color": "blue"
-                },
-                {
-                    "text": "Grading",
-                    "color": "gray"
-                },
-                {
-                    "text": "Office Hours",
-                    "color": "gray"
-                },
-                {
-                    "text": "Lab Teaching",
-                    "color": "gray"
-                },
-                {
-                    "text": "Exam Writing",
-                    "color": "gray"
-                },
-                {
-                    "text": "Slack",
-                    "color": "blue"
-                },
-                {
-                    "text": "Piazza",
-                    "color": "blue"
-                }
-            ]
-        },
-        {
             "title": "April 2020",
             "cardTitle": "TruSource Marketing",
             "cardSubtitle": "Software Developer",
@@ -152,7 +152,7 @@
             "tags": [
                 {
                     "text": "Python",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Google Sheets API",
@@ -160,11 +160,11 @@
                 },
                 {
                     "text": "Swift",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Swift UI",
-                    "color": "red"
+                    "color": "gray"
                 },
                 {
                     "text": "Data Analysis",
@@ -184,11 +184,11 @@
             "tags": [
                 {
                     "text": "Java",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "C++",
-                    "color": "blue"
+                    "color": "yellow"
                 },
                 {
                     "text": "Grading",
