@@ -201,6 +201,14 @@ const ProjectCard = (props) => {
                 </Card.Body>
                 {project.tags && (
                     <Card.Footer style={styles.cardFooter}>
+                        <Badge
+                        key={project.date_added}
+                        bg='dark'
+                        text='light'
+                        style={styles.badgeStyle}
+                        >
+                        Added {project.date_added}
+                        </Badge>
                         {project.tags.map((tag) => (
                     <Badge
                         key={tag.text}
