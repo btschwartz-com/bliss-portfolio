@@ -207,7 +207,7 @@ const ProjectCard = (props) => {
                         text='light'
                         style={styles.badgeStyle}
                         >
-                        Added {project.date_added}
+                        {project.date_added}
                         </Badge>
                         {project.tags.map((tag) => (
                     <Badge
