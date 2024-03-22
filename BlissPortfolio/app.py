@@ -1,7 +1,8 @@
 import os
 import pathlib
 import flask
-from BlissPortfolio.blueprints.main import main_bp
+from blueprints import main_bp
+from config import Config
 from flask import jsonify
 from flask_limiter import Limiter
 from flask_limiter.util import get_remote_address
@@ -9,9 +10,9 @@ import redis
 import os
 
 app = flask.Flask(__name__)
-app.config.from_object('BlissPortfolio.config')
+app.config.from_object(Config)
 
-redis_url = os.getenv('REDISTOGO_URL', 'redis://localhost:6379')
+redis_url = os.getenv('REDIS_URL', 'redis://redis:6379/0')
 redis_client = redis.from_url(redis_url)
 
 limiter = Limiter(

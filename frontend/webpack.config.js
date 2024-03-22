@@ -5,7 +5,7 @@ const webpack = require('webpack');
 module.exports = {
   entry: path.resolve(__dirname, 'src', 'index.jsx'),
   output: {
-    path: path.resolve(__dirname, 'BlissPortfolio', 'static', 'js'),
+    path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js',
   },
   mode: "production",

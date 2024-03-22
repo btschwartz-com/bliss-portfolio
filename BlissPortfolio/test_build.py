@@ -2,7 +2,7 @@ import pytest
 from flask import Flask
 
 
-from BlissPortfolio import app # Replace with the name of your app
+from .app import app # Replace with the name of your app
 ENDPOINT = '/portfolio/'  # Replace with the endpoint you want to test
 
 @pytest.fixture
