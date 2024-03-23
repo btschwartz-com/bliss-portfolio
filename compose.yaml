@@ -5,15 +5,19 @@ services:
     image: redis
     ports:
       - 6379:6379
+    profiles:
+      - production
   
   frontend-build:
     container_name: bp-fe-build
     build:
       context: ./frontend
-      dockerfile: Dockerfile.build
+      dockerfile: Dockerfile
     volumes:
       - ./build:/src/build
     command: npx webpack --config /src/webpack.config.js
+    profiles:
+      - build
 
   server:
     container_name: bp-server
@@ -21,18 +25,15 @@ services:
       context: ./BlissPortfolio
     environment:
       - REDIS_URL=redis://redis:6379/0
-      - STARTUP_DELAY=10
     depends_on:
       - redis
-      - frontend-build
     ports:
       - 8000:8000
     volumes:
       - ./build:/app/build
-    command: >
-      /bin/sh -c "sleep $${STARTUP_DELAY} && 
-      cp /app/build/bundle.js /app/static/js/ &&
-      gunicorn 'app:app' --bind=0.0.0.0:8000"
+    command: /start-server.sh
+    profiles:
+      - production
 
 
    # # cp /app/build/bundle.js /app/static/js/ &&
