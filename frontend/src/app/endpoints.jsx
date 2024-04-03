@@ -10,14 +10,14 @@ const default_endpoints = {
 };
 
 const api_endpoints = {
-    navbar: 'https://icestationzebraassociates.live/api/v1/portfolio/navbar',
-    home: 'https://icestationzebraassociates.live/api/v1/portfolio/home',
-    social: 'https://icestationzebraassociates.live/api/v1/portfolio/social',
-    about: 'https://icestationzebraassociates.live/api/v1/portfolio/about',
-    education: 'https://icestationzebraassociates.live/api/v1/portfolio/education',
-    experiences: 'https://icestationzebraassociates.live/api/v1/portfolio/experiences',
-    projects: 'https://icestationzebraassociates.live/api/v1/portfolio/projects',
-    contact: 'https://icestationzebraassociates.live/api/v1/portfolio/contact',
+    navbar: 'https://test.btschwartz.com/api/v1/portfolio/navbar',
+    home: 'https://test.btschwartz.com/api/v1/portfolio/home',
+    social: 'https://test.btschwartz.com/api/v1/portfolio/social',
+    about: 'https://test.btschwartz.com/api/v1/portfolio/about',
+    education: 'https://test.btschwartz.com/api/v1/portfolio/education',
+    experiences: 'https://test.btschwartz.com/api/v1/portfolio/experiences',
+    projects: 'https://test.btschwartz.com/api/v1/portfolio/projects',
+    contact: 'https://test.btschwartz.com/api/v1/portfolio/contact',
 };
 
 const cache = {};
