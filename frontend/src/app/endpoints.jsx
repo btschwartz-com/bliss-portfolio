@@ -10,14 +10,14 @@ const default_endpoints = {
 };
 
 const api_endpoints = {
-    navbar: 'https://test.btschwartz.com/api/v1/portfolio/navbar',
-    home: 'https://test.btschwartz.com/api/v1/portfolio/home',
-    social: 'https://test.btschwartz.com/api/v1/portfolio/social',
-    about: 'https://test.btschwartz.com/api/v1/portfolio/about',
-    education: 'https://test.btschwartz.com/api/v1/portfolio/education',
-    experiences: 'https://test.btschwartz.com/api/v1/portfolio/experiences',
-    projects: 'https://test.btschwartz.com/api/v1/portfolio/projects',
-    contact: 'https://test.btschwartz.com/api/v1/portfolio/contact',
+    navbar: 'https://btschwartz.com/api/v1/portfolio/navbar',
+    home: 'https://btschwartz.com/api/v1/portfolio/home',
+    social: 'https://btschwartz.com/api/v1/portfolio/social',
+    about: 'https://btschwartz.com/api/v1/portfolio/about',
+    education: 'https://btschwartz.com/api/v1/portfolio/education',
+    experiences: 'https://btschwartz.com/api/v1/portfolio/experiences',
+    projects: 'https://btschwartz.com/api/v1/portfolio/projects',
+    contact: 'https://btschwartz.com/api/v1/portfolio/contact',
 };
 
 const cache = {};

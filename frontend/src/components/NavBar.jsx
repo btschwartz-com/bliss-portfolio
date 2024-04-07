@@ -71,7 +71,7 @@ const NavBar = () => {
         <JackInTheBox>
         <Navbar.Brand>
           <Link className="text_2" to="/">
-          {/* <Link className="text_2" to="https://test.btschwartz.com/"> */}
+          {/* <Link className="text_2" to="https://btschwartz.com/"> */}
           <img
             alt=""
             src={data?.logo?.source}
