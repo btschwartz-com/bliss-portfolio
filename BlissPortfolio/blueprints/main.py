@@ -32,6 +32,7 @@ def serve_public(path):
     return send_from_directory('public', path)
 
 @main_bp.route("/", defaults={"path": ""})
+@main_bp.route("", defaults={"path": ""})
 @main_bp.route("/<path:path>")
 def serve_react_app(path: str):
 
