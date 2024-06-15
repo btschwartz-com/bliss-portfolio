@@ -1720,7 +1720,7 @@
                 {
                     "text": "Live",
                     "is_modal": false,
-                    "data": "https://btschwartz.com/api/v1/"
+                    "data": "https://backup.btschwartz.com/api/v1/"
                 },
                 {
                     "text": "GitHub",
