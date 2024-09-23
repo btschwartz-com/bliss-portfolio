@@ -1,9 +1,6 @@
 services:
   redis:
-    container_name: bp-redis
     image: redis
-    ports:
-      - ${BP_REDIS_PORT:-6379}:6379
     profiles:
       - production
   
@@ -23,12 +20,12 @@ services:
     build:
       context: ./BlissPortfolio
     environment:
-      - REDIS_URL=redis://bp-redis:6379/0
+      - REDIS_URL=redis://redis:6379/0
     ports:
       - ${BP_SERVER_PORT:-8000}:8000
     volumes:
       - ./build:/app/build
-      - ${PORTFOLIO_DATA_SHARED_DIR}:/app/static/profile
+      #- ${PORTFOLIO_DATA_SHARED_DIR}:/app/static/profile
     command: /start-server.sh
     profiles:
       - production
@@ -43,3 +40,10 @@ services:
       command: npm run start
       profiles:
         - development
+
+  cloudflared:
+    restart: unless-stopped
+    image: cloudflare/cloudflared:latest
+    command: tunnel run
+    environment:
+      - TUNNEL_TOKEN=${TUNNEL_TOKEN}

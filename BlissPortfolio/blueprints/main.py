@@ -25,7 +25,7 @@ def serve_dog():
 @main_bp.route("/resume")
 @main_bp.route("/resume.pdf")
 def serve_resume():
-    return flask.redirect('https://btschwartz.com/api/resume.pdf')
+    return flask.redirect('https://api.btschwartz.com/api/resume.pdf')
 
 @main_bp.route("/public/<path:path>")
 def serve_public(path):
@@ -46,10 +46,11 @@ def serve_react_app(path: str):
     if client_ip == None:
         client_ip = 'unknown'
 
-    resp = requests.get(
-            'https://btschwartz.com/api/v1/funfact/random', 
-            data={'saul': client_ip, 'kim': f'portfolio @ {path}'}, 
-            timeout=5)
+    # this was nasty
+    # resp = requests.get(
+    #         'https://api.btschwartz.com/api/v1/funfact/random', 
+    #         data={'saul': client_ip, 'kim': f'portfolio @ {path}'}, 
+    #         timeout=5)
 
 
     print('kimmed up')
