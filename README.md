@@ -1,3 +1,3 @@
-My personal portfolio.
+My old personal portfolio.
 
-[btschwartz.com/portfolio](https://btschwartz.com/portfolio)
+[portfolio.btschwartz.com/portfolio](https://portfolio.btschwartz.com/portfolio)
